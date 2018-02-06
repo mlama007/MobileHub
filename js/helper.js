@@ -1,5 +1,5 @@
 /*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
+These are HTML strings. JavaScript functions
 replace the %data% placeholder text you see in them.
 */
 

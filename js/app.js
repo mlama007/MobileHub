@@ -1,5 +1,6 @@
-const projects = {
-	"firstProjects": [
+//array of objects conatining Links
+const topics = {
+	"Beginner": [
 		{
 			"title": "codecademy",
 			"link": "https://www.codecademy.com/learn",
@@ -11,7 +12,7 @@ const projects = {
 			"image": ["img/Codecademy.png"]
 		},
 	],
-	"secondProjects": [
+	"Intermediate": [
 		{
 			"title": "codecademy",
 			"link": "https://www.codecademy.com/learn",
@@ -36,24 +37,24 @@ const projects = {
 		},
 	]
 };
-projects.display = function () {
-	projects.firstProjects.forEach(function(firstProject){ 
+topics.display = function () {
+	topics.Beginner.forEach(function(topic){ 
         $("#first").append(HTMLprojectStart);
-        var replaceChars={ "%link%":firstProject.link, "%img%": firstProject.image, "%title%": firstProject.title };
+        var replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
         var formattedprojectTitle = HTMLprojectTitle.replace(/%link%|%img%|%title%/g,function(match) {return replaceChars[match];})
 		$("#first li:last").append(formattedprojectTitle);	
 	});
-	projects.secondProjects.forEach(function(firstProject){ 
+	topics.Intermediate.forEach(function(topic){ 
         $("#second").append(HTMLprojectStart);
-        var replaceChars={ "%link%":firstProject.link, "%img%": firstProject.image, "%title%": firstProject.title };
+        var replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
         var formattedprojectTitle = HTMLprojectTitle.replace(/%link%|%img%|%title%/g,function(match) {return replaceChars[match];})
 		$("#second li:last").append(formattedprojectTitle);	
 	});
-	projects.thirdProjects.forEach(function(firstProject){ 
+	topics.Advanced.forEach(function(topic){ 
         $("#third").append(HTMLprojectStart);
-        var replaceChars={ "%link%":firstProject.link, "%img%": firstProject.image, "%title%": firstProject.title };
+        var replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
         var formattedprojectTitle = HTMLprojectTitle.replace(/%link%|%img%|%title%/g,function(match) {return replaceChars[match];})
 		$("#third li:last").append(formattedprojectTitle);	
 	});
 };
-projects.display();
+topics.display();
