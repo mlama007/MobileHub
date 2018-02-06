@@ -1,39 +1,81 @@
 //array of objects conatining Links
 const topics = {
 	"Beginner": [
+		//Maria
 		{
 			"title": "codecademy",
 			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"]
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
+		//Varell
 		{
 			"title": "codecademy",
 			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"]
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
+		},
+		//Jannaee
+		{
+			"title": "codecademy",
+			"link": "https://www.codecademy.com/learn",
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
 	],
 	"Intermediate": [
+		//Maria
 		{
 			"title": "codecademy",
 			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"]
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
+		//Varell
 		{
 			"title": "codecademy",
 			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"]
-		}
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
+		},
+		//Jannaee
+		{
+			"title": "codecademy",
+			"link": "https://www.codecademy.com/learn",
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
+		},
 	],
-	"thirdProjects": [
+	"Advanded": [
+		//Maria
 		{
 			"title": "codecademy",
 			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"]
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
+		//Varell
 		{
 			"title": "codecademy",
 			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"]
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
+		},
+		//Jannaee
+		{
+			"title": "codecademy",
+			"link": "https://www.codecademy.com/learn",
+			"image": ["img/Codecademy.png"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
 	]
 };
