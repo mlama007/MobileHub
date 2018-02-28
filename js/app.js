@@ -1,86 +1,16 @@
-//array of objects conatining Links
-const topics = {
-	"Beginner": [
-		//Maria
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-		//Varell
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-		//Jannaee
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-	],
-	"Intermediate": [
-		//Maria
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-		//Varell
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-		//Jannaee
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-	],
-	"Advanded": [
-		//Maria
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-		//Varell
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-		//Jannaee
-		{
-			"title": "codecademy",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/Codecademy.png"],
-			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
-		},
-	]
-};
+/*
+These are HTML strings. JavaScript functions
+replace the %data% placeholder text you see in them.
+*/
+
+// Projects
+var HTMLprojectStart = '<li></li>';
+var HTMLprojectTitle = '<a href="%link%"><img src="%img%"/><span class="text-content"><span>%title%</span></span></a>';
+
+
+//Display content from topic
 topics.display = function () {
-	topics.Beginner.forEach(function(topic){ 
+	topics.CSS.forEach(function(topic){ 
         $("#first").append(HTMLprojectStart);
         var replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
 		var formattedprojectTitle = HTMLprojectTitle.replace(/%link%|%img%|%title%/g,
@@ -89,7 +19,7 @@ topics.display = function () {
 			});
 		$("#first li:last").append(formattedprojectTitle);	
 	});
-	topics.Intermediate.forEach(function(topic){ 
+	topics.HTML.forEach(function(topic){ 
         $("#second").append(HTMLprojectStart);
         var replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
         var formattedprojectTitle = HTMLprojectTitle.replace(/%link%|%img%|%title%/g,
@@ -98,7 +28,7 @@ topics.display = function () {
 			});
 		$("#second li:last").append(formattedprojectTitle);	
 	});
-	topics.Advanced.forEach(function(topic){ 
+	topics.JS.forEach(function(topic){ 
         $("#third").append(HTMLprojectStart);
         var replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
         var formattedprojectTitle = HTMLprojectTitle.replace(/%link%|%img%|%title%/g,
@@ -109,3 +39,5 @@ topics.display = function () {
 	});
 };
 topics.display();
+
+

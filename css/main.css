@@ -1,11 +1,9 @@
-.topicImg {
-    list-style-type: none;
-}
 
 .blockdiv{
     text-align: center;
 }
 
+/* TOPICS BOXES */
 .topics {
     display: flex;
     flex-wrap: wrap;
@@ -20,4 +18,13 @@
     padding: 2em 0;
     width: 5em;
     margin: .1em;    
+}
+
+
+/* IMAGES ON LINKS */
+.topicImg {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
