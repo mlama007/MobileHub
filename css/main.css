@@ -1,3 +1,23 @@
 .topicImg {
     list-style-type: none;
 }
+
+.blockdiv{
+    text-align: center;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topics li{
+    border: solid 1em black;    
+    list-style: none;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 2em 0;
+    width: 5em;
+    margin: .1em;    
+}
