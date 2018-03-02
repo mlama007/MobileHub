@@ -10,7 +10,7 @@ const topics = {
 			"difficulty" :"Beginner",
 		},
 		{
-			"title": "FLEXBOX FROGGY",
+			"title": "Flexbox Froggy",
 			"link": "http://flexboxfroggy.com/",
 			"image": ["img/css.svg"],
 			"difficulty" :"Intermediate",

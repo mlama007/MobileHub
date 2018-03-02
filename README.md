@@ -10,6 +10,7 @@ https://mlama007.github.io/MobileHub/
 * When re-clicked, it closes and all boxes show up again
 * Filter by difficulty using buttons (make other boxes disappear). 
     * "Beginner" "Intermediate" "Advanced" x3 Add 'ALL" to show all
+    * Filter by multiple options
 * Find resources (each find 5 resources for each category)
 * Service Workers
 
@@ -17,3 +18,4 @@ https://mlama007.github.io/MobileHub/
 * Upvote
 * Downvote
 * Logins
+
