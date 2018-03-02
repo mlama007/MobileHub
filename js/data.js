@@ -16,6 +16,7 @@ const topics = {
 			"link": "https://www.codecademy.com/learn",
 			"image": ["img/css.svg"],
 			"difficulty" :"Intermediate",
+			"difficulty" :"Beginner",
 			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
 		//Jannaee
@@ -27,7 +28,10 @@ const topics = {
 			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
 	],
-
+			"difficulty" :"Beginner",
+			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
+		},
+	],
 	//HTML Resources
 	"HTML": [
 		//Maria
