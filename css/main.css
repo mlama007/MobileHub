@@ -18,12 +18,22 @@
     font-weight: bold;
     padding: 2em 0;
     width: 5em;
-    margin: .1em;    
+    margin: .1em;
+    background-color: rgba(124, 194, 247, .5);
 }
 
+.topics li:hover{
+    background-color: rgba(27, 46, 88, 0.651);   
+}
+.selected {
+    color: yellow;
+}
 
-/* IMAGES ON LINKS */
-.topicImg {
+/* DISPLAY */
+.content {
+    display: none;
+}
+.visible {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
