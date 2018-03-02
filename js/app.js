@@ -1,5 +1,5 @@
 /*
-These are HTML strings. JavaScript functions
+These are HTML strings. JavaScript functions 
 replace the %data% placeholder text you see in them.
 */
 
@@ -105,3 +105,4 @@ topics.display = function () {
 topics.display();
 
 
+//Functionality of the Category Boxes

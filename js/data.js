@@ -15,7 +15,7 @@ const topics = {
 			"title": "css2",
 			"link": "https://www.codecademy.com/learn",
 			"image": ["img/css.svg"],
-			"difficulty" :"Beginner",
+			"difficulty" :"Intermediate",
 			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
 		//Jannaee
@@ -23,10 +23,11 @@ const topics = {
 			"title": "css3",
 			"link": "https://www.codecademy.com/learn",
 			"image": ["img/css.svg"],
-			"difficulty" :"Beginner",
+			"difficulty" :"Advanced",
 			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
 		},
 	],
+
 	//HTML Resources
 	"HTML": [
 		//Maria
