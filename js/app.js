@@ -69,17 +69,6 @@ topics.display = function () {
 		$("#Learning li:last").append(formattedContent);	
 	});
 
-	//displays Editors topic resources
-	topics.Editors.forEach(function(topic){ 
-        $("#Editors").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		$("#Editors li:last").append(formattedContent);	
-	});
-
 	//displays Resources topic resources
 	topics.Resources.forEach(function(topic){ 
         $("#Resources").append(listedResources);
@@ -100,6 +89,17 @@ topics.display = function () {
 				return replaceChars[match];
 			});
 		$("#Frameworks li:last").append(formattedContent);	
+	});
+
+	//displays Practice topic resources
+	topics.Practice.forEach(function(topic){ 
+        $("#Practice").append(listedResources);
+        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
+        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+			function(match) {
+				return replaceChars[match];
+			});
+		$("#Practice li:last").append(formattedContent);	
 	});
 };
 topics.display();
