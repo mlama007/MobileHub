@@ -12,9 +12,4 @@ Filter by difficulty using buttons (make other boxes disappear).
     "Beginner" "Intermediate" "Advanced" x3 Add 'ALL" to show all
 Find resources (each find 5 resources for each category)
 
-##How To
-*Open*
-*Write*
-*Closed*
-
 ##Future Ideas
