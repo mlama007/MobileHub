@@ -7,14 +7,13 @@ https://mlama007.github.io/MobileHub/
 * Add css to match sketches
 * Add header
 * When clicked, all other boxes disppear and new 'view' shows up
-* When reclicked, it closes and all boxes show up again
-* Filter by difficulty using buttons (make other boxes dissappear). 
+* When re-clicked, it closes and all boxes show up again
+* Filter by difficulty using buttons (make other boxes disappear). 
 *     "Beginner" "Intermediate" "Advanced" x3 Add 'ALL" to show all
 * Find resources (each find 5 resources for each category)
 * Service Workers
 
 ##Future Ideas
-
 * Upvote
 * Downvote
 * Logins
