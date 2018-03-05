@@ -4,8 +4,8 @@ replace the %data% placeholder text you see in them.
 */
 
 // Create list with content
-const listedResources = '<li></li>';
-const resourcesContent = '<a href="%link%"><img src="%img%"/><span class="text-content"><span>%title%</span></span></a>';
+const listedResources = '<li class="Topics-Content"></li>';
+const resourcesContent = '<p><a href="%link%"><img src="%img%"/><span class="text-content"><span>%title%</span></span></a><p>%description%<p><p>';
 
 
 //Display content from topic
@@ -15,9 +15,9 @@ topics.display = function () {
 	topics.CSS.forEach(function(topic){ 
 		$(".CSS").append(listedResources);
 		//Match %data% with object
-		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
+		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
