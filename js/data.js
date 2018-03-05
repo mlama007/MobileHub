@@ -8,7 +8,7 @@ const topics = {
 			"link": "http://ianlunn.github.io/Hover/",
 			"image": ["img/css.svg"],
 			"difficulty" :"Beginner",
-			"description" : "A collection of CSS3 powered hover effects to be applied to links, buttons, logos, SVG, featured images and so on. Easily apply to your own elements, modify or just use for inspiration. Available in CSS, Sass, and LESS."
+			"description" : "A collection of CSS3 powered hover effects to be applied to links, buttons, logos, SVG, featured images and so on."
 		},
 		{
 			"title": "Flexbox Froggy",
@@ -255,19 +255,19 @@ const topics = {
 			"description" : "Explanation of Git Commands"
 		},
 		{
-			"title": "Git Real- Learn more advanced Git by practicing the concepts of Git version control.",
-			"link": "https://www.codeschool.com/courses/git-real",
-			"image": ["img/Git.svg"],
-			"difficulty" :"Intermediate",
-			"description" : ""
-		},
-		{
 			"title": "Git Tutorial",
 			"link": "https://git-scm.com/docs/gittutorial",
 			"image": ["img/Git.svg"],
-			"difficulty" :"Intermediate",
-			"description" : ""
+			"difficulty" :"Beginner",
+			"description" : "A tutorial introduction to Git"
 		},
+		{
+			"title": "Git Real",
+			"link": "https://www.codeschool.com/courses/git-real",
+			"image": ["img/Git.svg"],
+			"difficulty" :"Intermediate",
+			"description" : "Learn more advanced Git by practicing the concepts of Git version control."
+		},		
 		//Varell
 		{
 			"title": "Git2",
@@ -322,21 +322,21 @@ const topics = {
 			"link": "https://www.codecademy.com/",
 			"image": ["img/Learning.svg"],
 			"difficulty" :"Beginner",
-			"description" : ""
+			"description" : "Codecademy is an online freemium interactive platform that offers free coding classes in 12 different programming languages."
 		},
 		{
 			"title": "Lynda",
 			"link": "https://www.lynda.com/",
 			"image": ["img/Learning.svg"],
 			"difficulty" :"Intermediate",
-			"description" : ""
+			"description" : "American online education company offering video courses taught by industry experts in software, creative, and business skills."
 		},		
 		{
 			"title": "Udacity",
 			"link": "https://www.udacity.com/",
 			"image": ["img/Learning.svg"],
 			"difficulty" :"Advanced",
-			"description" : ""
+			"description" : "Udacity is a for-profit educational organization founded by Sebastian Thrun, David Stavens, and Mike Sokolsky offering massive open online courses."
 		},
 		//Varell
 		{
@@ -388,39 +388,39 @@ const topics = {
 	"Resources": [
 		//Maria
 		{
-			"title": "Bitly - Shorten Links",
+			"title": "Bitly",
 			"link": "https://bitly.com/",
 			"image": ["img/Resources.svg"],
 			"difficulty" :"Beginner",
-			"description" : ""
+			"description" : "Shorten Links"
 		},
 		{
-			"title": "A collection of free books for developers",
+			"title": "DevFreeBooks",
 			"link": "https://devfreebooks.github.io/",
 			"image": ["img/Resources.svg"],
 			"difficulty" :"Beginner",
-			"description" : ""
+			"description" : "A collection of free books for developers."
 		},
 		{
 			"title": "Markup Validation Service",
 			"link": "https://validator.w3.org/",
 			"image": ["img/Resources.svg"],
 			"difficulty" :"Intermediate",
-			"description" : ""
+			"description" : "Check the markup (HTML, XHTML, …) of Web documents."
 		},
 		{
 			"title": "PageSpeed Insights",
 			"link": "https://developers.google.com/speed/pagespeed/insights/",
 			"image": ["img/Resources.svg"],
 			"difficulty" :"Advanced",
-			"description" : ""
+			"description" : "Make your web pages fast on all devices."
 		},
 		{
 			"title": "Service workers and base URIs",
 			"link": "https://jakearchibald.com/2016/service-workers-and-base-uris/",
 			"image": ["img/Resources.svg"],
 			"difficulty" :"Advanced",
-			"description" : ""
+			"description" : "Jake Archibald Explains Service Workers and base URIs."
 		},
 		//Varell
 		{
@@ -476,21 +476,21 @@ const topics = {
 			"link": "https://www.w3schools.com/jquery/jquery_ref_events.asp",
 			"image": ["img/Frameworks.svg"],
 			"difficulty" :"Beginner",
-			"description" : ""
+			"description" : "Event methods trigger or attach a function to an event handler for the selected elements."
 		},
 		{
 			"title": "React JS Tutorials",
 			"link": "https://www.youtube.com/playlist?list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b",
 			"image": ["img/Frameworks.svg"],
 			"difficulty" :"Intermediate",
-			"description" : ""
+			"description" : "React JS video tutorials playlist."
 		},
 		{
 			"title": "Front End Frameworks",
 			"link": "https://www.udacity.com/course/front-end-frameworks--ud894",
 			"image": ["img/Frameworks.svg"],
 			"difficulty" :"Advanced",
-			"description" : ""
+			"description" : "You'll learn key architectural design techniques that make frameworks incredibly powerful."
 		},
 		//Varell
 		{
@@ -546,21 +546,21 @@ const topics = {
 			"link": "https://leetcode.com/",
 			"image": ["img/Editors.svg"],
 			"difficulty" :"Beginner",
-			"description" : ""
+			"description" : "Level up your coding skills and quickly land a job."
 		},
 		{
-			"title": "JS- Build 30 things in 30 days with 30 tutorials",
+			"title": "JavaScript 30",
 			"link": "https://javascript30.com/",
 			"image": ["img/Editors.svg"],
 			"difficulty" :"Intermediate",
-			"description" : ""
+			"description" : "Build 30 things in 30 days with 30 tutorials."
 		},		
 		{
-			"title": "Level up your programming skills",
+			"title": "Exercism",
 			"link": "http://www.exercism.io/",
 			"image": ["img/Editors.svg"],
 			"difficulty" :"Advanced",
-			"description" : ""
+			"description" : "Level up your programming skills."
 		},
 		//Varell
 		{

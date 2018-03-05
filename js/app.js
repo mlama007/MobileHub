@@ -28,8 +28,9 @@ topics.display = function () {
 	//displays HTML topic resources
 	topics.HTML.forEach(function(topic){ 
         $(".HTML").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
+		//Replace %data% with object informtaion
+		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -39,8 +40,9 @@ topics.display = function () {
 	//displays JS topic resources
 	topics.JS.forEach(function(topic){ 
         $(".JS").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
+		//Replace %data% with object informtaion
+		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -50,8 +52,9 @@ topics.display = function () {
 	//displays Git topic resources
 	topics.Git.forEach(function(topic){ 
         $(".Git").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
+		//Replace %data% with object informtaion
+		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -61,8 +64,9 @@ topics.display = function () {
 	//displays Learning topic resources
 	topics.Learning.forEach(function(topic){ 
         $(".Learning").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
+		//Replace %data% with object informtaion
+		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -72,8 +76,9 @@ topics.display = function () {
 	//displays Resources topic resources
 	topics.Resources.forEach(function(topic){ 
         $(".Resources").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
+		//Replace %data% with object informtaion
+		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -83,8 +88,9 @@ topics.display = function () {
 	//displays Frameworks topic resources
 	topics.Frameworks.forEach(function(topic){ 
         $(".Frameworks").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
+		//Replace %data% with object informtaion
+		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -94,8 +100,9 @@ topics.display = function () {
 	//displays Practice topic resources
 	topics.Practice.forEach(function(topic){ 
         $(".Practice").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
+		//Replace %data% with object informtaion
+		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
