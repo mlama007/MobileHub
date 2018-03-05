@@ -12,11 +12,28 @@ const topics = {
 		},
 		//Varell
 		{
-			"title": "css2",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/css.svg"],
+			"hostingCompany": "MDN",
+			"title": "CSS Reference",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference",
+			"image": ["https://cdn.mdn.mozilla.net/static/img/web-docs-sprite.22a6a085cf14.svg"],
 			"difficulty" :"Intermediate",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
+			"type" : ["CSS"],
+		},
+		{
+			"hostingCompany": "CSS-TRICKS",
+			"title": "CSS Selectors",
+			"link": "https://css-tricks.com/how-css-selectors-work/",
+			"image": ["https://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-16/images/logo.svg"],
+			"difficulty" :"Beginner",
+			"type" : ["CSS"],
+		},
+		{
+			"hostingCompany": "YouTube",
+			"title": "Illustration with CSS",
+			"link": "https://www.youtube.com/watch?v=l7VUhEdM2aY",
+			"image": ["https://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-16/images/logo.svg"],
+			"difficulty" :"Advanced",
+			"type" : ["CSS"],
 		},
 		//Jannaee
 		{
@@ -40,11 +57,28 @@ const topics = {
 		},
 		//Varell
 		{
-			"title": "html2",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/html.svg"],
+			"hostingCompany": "HTMLGOODIES",
+			"title": "html",
+			"link": "https://www.htmlgoodies.com/",
+			"image": ["https://www.htmlgoodies.com/img/layout/logo.png"],
 			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
+			"type" : ["HTML"],
+		},
+		{
+			"hostingCompany": "DesignHooks",
+			"title": "10 great HTML5 and CSS3 tutorials to master web development",
+			"link": "http://designhooks.com/wp-content/uploads/2014/11/logo.png",
+			"image": ["http://designhooks.com/wp-content/uploads/2014/11/logo.png"],
+			"difficulty" :"Intermediate",
+			"type" : ["HTML"],
+		},
+		{
+			"hostingCompany": "HTML5 CANVAS TUTORIALS",
+			"title": "HTML5 CANVAS TUTORIALS",
+			"link": "https://www.html5canvastutorials.com/category/advanced/",
+			"image": ["https://www.html5canvastutorials.com/wp-content/themes/webkrunk/img/logo.png"],
+			"difficulty" :"Advanced",
+			"type" : ["HTML"],
 		},
 		//Jannaee
 		{
@@ -68,11 +102,26 @@ const topics = {
 		},
 		//Varell
 		{
-			"title": "js2",
-			"link": "https://www.codecademy.com/learn",
-			"image": ["img/js.svg"],
+			"hostingCompany": "JavaScript.com",
+			"title": "JavaScript.com",
+			"link": "https://www.javascript.com/",
+			"image": ["https://www.javascript.com/images/pages/shared/logo.svg"],
 			"difficulty" :"Beginner",
-			"type" : ["CSS", "HTML", "JS", "Frameworks", "Git", "Learning", "Editors", "Resources"],
+			"type" : ["JS"],
+		},
+		{
+			"title": "Javascript.info",
+			"link": "https://javascript.info/",
+			"image": [""],
+			"difficulty" :"Intermediate",
+			"type" : ["JS"],
+		},
+		{
+			"title": "Learning JavaScript Design Patterns",
+			"link": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/",
+			"image": [""],
+			"difficulty" :"Advanced",
+			"type" : ["JS"],
 		},
 		//Jannaee
 		{
