@@ -5,7 +5,7 @@ replace the %data% placeholder text you see in them.
 
 // Create list with content
 const listedResources = '<li class="Topics-Content"></li>';
-const resourcesContent = '<p><a href="%link%"><img src="%img%"/><span class="text-content"><span>%title%</span></span></a><p>%description%<p><p>';
+const resourcesContent = '<p><a href="%link%"><span class="text-content"><span>%title%</span></span></a><p>%description%<p><p>';
 
 
 //Display content from topic
@@ -15,9 +15,9 @@ topics.display = function () {
 	topics.CSS.forEach(function(topic){ 
 		$(".CSS").append(listedResources);
 		//Match %data% with object
-		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
+		const replaceChars={ "%link%":topic.link, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -30,7 +30,7 @@ topics.display = function () {
         $(".HTML").append(listedResources);
         const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -42,7 +42,7 @@ topics.display = function () {
         $(".JS").append(listedResources);
         const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -54,7 +54,7 @@ topics.display = function () {
         $(".Git").append(listedResources);
         const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -66,7 +66,7 @@ topics.display = function () {
         $(".Learning").append(listedResources);
         const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -78,7 +78,7 @@ topics.display = function () {
         $(".Resources").append(listedResources);
 		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -90,7 +90,7 @@ topics.display = function () {
         $(".Frameworks").append(listedResources);
 		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
@@ -102,7 +102,7 @@ topics.display = function () {
         $(".Practice").append(listedResources);
 		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title, "%description%": topic.description };
 		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%|%description%/g,
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 			function(match) {
 				return replaceChars[match];
 			});
