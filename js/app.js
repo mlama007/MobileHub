@@ -13,8 +13,8 @@
 	*/
 
 	// Create list with content
-	const listedResources = '<li></li>';
-	const resourcesContent = '<a href="%link%"><img src="%img%"/><span class="text-content"><span>%title%</span></span></a>';
+	const listedResources = '<li class="Topics-Content"></li>';
+	const resourcesContent = '<p><a href="%link%"><span class="text-content"><span>%title%</span></span></a><p>%description%<p><p>';
 
 	//Display content from topic
 	function display() {
@@ -28,10 +28,13 @@
 	// Displays all resouces under a given topic
 	// @param {string} topic
 	function parseData(name) {
+		//displays CSS topic resources
 		data[name].forEach(function(topic){ 
 			$("." + name).append(listedResources);
-			const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-			const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
+			//Match %data% with object
+			const replaceChars={ "%link%":topic.link, "%title%": topic.title, "%description%": topic.description };
+			//Replace %data% with object informtaion
+			const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
 				function(match) {
 					return replaceChars[match];
 				});

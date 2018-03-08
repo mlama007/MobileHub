@@ -12,21 +12,23 @@
 }
 
 .topics li{
-    border: solid 1em black;    
+    border: solid .4em #96e6b3;    
     list-style: none;
     font-size: 3em;
     font-weight: bold;
-    padding: 2em 0;
-    width: 5em;
+    padding: 1.8em 0;
+    width: 6em;
     margin: .1em;
-    background-color: rgba(124, 194, 247, .5);
 }
 
 .topics li:hover{
-    background-color: rgba(27, 46, 88, 0.651);   
+    background-color: #96e6b3;
+    color: white;
 }
+
+/* SELECTED */
 .selected {
-    color: yellow;
+    color: #f1bf98;
 }
 
 /* DISPLAY */
@@ -35,7 +37,11 @@
 }
 .visible {
     list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+}
+
+.Topics-Content{
+   border: solid .4em #96e6b3; 
+   background-color: #efe9f4;
+   margin: 0 20em .25em;
 }
