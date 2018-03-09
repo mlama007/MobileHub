@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 .blockdiv{
     text-align: center;
@@ -44,4 +47,11 @@
    border: solid .4em #96e6b3; 
    background-color: #efe9f4;
    margin: 0 20em .25em;
+}
+
+/* SEARCHBOX */
+#sectionSearchBox {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
