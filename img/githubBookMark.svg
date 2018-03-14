@@ -1,0 +1,32 @@
+<svg width="47" height="75" viewBox="0 0 47 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Github This project</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1758 331)">
+<g id="Github This project">
+<g id="bookmark">
+<use xlink:href="#path0_fill" fill="url(#pattern0)" transform="translate(1758 -331)"/>
+</g>
+<g id="Group 2">
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="translate(1773.85 -302.094)" fill="#FFFFFF"/>
+</g>
+<g id="github-box">
+<use xlink:href="#path2_fill" fill="url(#pattern1)" transform="translate(1768.84 -306.263)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<pattern id="pattern0" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="matrix(0.0332447 0 0 0.0208333 -0.297872 0)"/>
+</pattern>
+<pattern id="pattern1" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1" transform="matrix(0.0208333 0 0 0.0208333 0 0)"/>
+</pattern>
+<path id="path0_fill" d="M 0 0L 47 0L 47 75L 0 75L 0 0Z"/>
+<path id="path1_fill" d="M 0 0L 16.6776 0L 16.6776 19.1793L 0 19.1793L 0 0Z"/>
+<path id="path2_fill" d="M 0 0L 26.6842 0L 26.6842 26.6842L 0 26.6842L 0 0Z"/>
+<image id="image0" width="48" height="48" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAAOZJREFUaN7t2DEuBGEYx+GHYuMGGloXoOMaKr0ruIIrrCOwXMAJNnELjcYmtsE2q0AjS4adb95I/k/ylvPN+5t81RAR8Z/sYoI5lj3PHDfYa7n8Y4PFv86sVcRkgOU/57pFQItr8908dV1q4xcByxZfZd3dNgdeqncJqJaAagmoloBqCaiWgGoJqJaAagmoloBqCaiWgGqtAha4whEOcIGX6tgu/zQfcI6dFc9v4wz3Hc8aNOAOp9jqcM4Ix7itDnjFJQ7XOHMfYzwPGfDTNfmrVderd1OceL8CrYw+3jFt+I6IiB69AZCJp2u3zRO8AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAzLTA1VDA1OjE1OjMxKzAwOjAwCEWJsAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMy0wNVQwNToxNTozMSswMDowMHkYMQwAAAAodEVYdHN2ZzpiYXNlLXVyaQBmaWxlOi8vL3RtcC9tYWdpY2stWTFCaWlwSjHyDYizAAAAAElFTkSuQmCC"/>
+<image id="image1" width="48" height="48" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAAj1JREFUaN7t2MtqFEEUxvGfQTEqIqLZGUE3gguDFyLuIi5UiKAIvoYLEfUFfAPxDQRDUMEgKF4XghcMgoobLysXClEyQaNiHBfdA0PI9HRXV89E6A9qMdNV53x/qvpUVVOrVq1ay1nDmEQDzR63Bq5jRxnzM30wvrh9Tb0U1uQyMN9qE51MrsgAaGB96PRFVgMbigI0++06j9eBfrsqq/8eYGWJsVOYxmGMyl6OS6mJp7iDPRiPDdetMhxs67sbD9qefUnh7qZtOv2v9fw+RtrGH8qRLzrAUlXhgOyaPZz2WayN/QAYDAnaQWtCAcq8xNsiAmwPHRgKMC/uPrGQxoyqrOk8GzsZzunRO9DA2goA1mGuKEDIEnqIHxUAfMejooNCAD5UYD44dgjAQoUAf3oBsLlCgKFeAATdjvoRu1M1mFddFfqpB1VoEMcrADiB1TEDZm0q78U/C33Uo42s1W4od59oaRVu5sgXHaB1IdlVwvw+vMiZqzTAZ2zFEbxt+/+v5IJyGnslL2MnDWEMF/A4p/GoM/Aqhdik85o9mRFzvKDpSpbQM0n1GpWcX9qfvc4Rd7rfAE2cSvuM4Aqe4JpkeXXT5eUA8EZS+kJ0MSZA6I1sJ26Je60MUpk6PoZ3eI5PkuPFFC51GVf0+1EwwJzuH3cHsL/t98scOUMAZrMMdNK9gER5zIUA3A4BOI9vBRP9ytHnd8GYMzgTAI3kfD4hmcJuVWIBR3PEPCbZvbvFm8VVbAk1X6tWrVrV6x9kVrDXdy79twAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wMy0wNVQwNToxNjoyMCswMDowMImvOZkAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDMtMDVUMDU6MTY6MjArMDA6MDD48oElAAAAKHRFWHRzdmc6YmFzZS11cmkAZmlsZTovLy90bXAvbWFnaWNrLVZFOXJ4aFFLpqmkPAAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
