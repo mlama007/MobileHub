@@ -10,7 +10,7 @@
 	const topics = {
 		//CSS Resources
 		"CSS": [
-			//Maria
+			// Beginner
 			{
 				"title": "Hover.css",
 				"link": "http://ianlunn.github.io/Hover/",
@@ -19,12 +19,28 @@
 				"tag" : ["CSS3"],
 			},
 			{
+				"title": "CSS Gradient",
+				"link": "https://cssgradient.io/",
+				"difficulty" :"Beginner",
+				"description" : "CSS Gradient is a happy little website and web tool that allows you to get creative with gradients.",
+				"tag" : [],
+			},
+			// Intermediate
+			{
+				"title": "30 Seconds of CSS",
+				"link": "https://atomiks.github.io/30-seconds-of-css/",
+				"difficulty" :"Intermediate",
+				"description" : "A curated collection of useful CSS snippets you can understand in 30 seconds or less.",
+				"tag" : ["Snippets"],
+			},
+			{
 				"title": "Flexbox Froggy",
 				"link": "http://flexboxfroggy.com/",
 				"difficulty" :"Intermediate",
 				"description" : "Welcome to Flexbox Froggy, a game where you help Froggy and friends by writing CSS code!",
 				"tag" : ["Flexbox"],
 			},
+			// Advanced
 			{
 				"title": "CSS Almanac",
 				"link": "https://css-tricks.com/almanac/",
@@ -38,6 +54,20 @@
 				"difficulty" :"Advanced",
 				"description" : "Enter the CSS you would like validated.",
 				"tag" : ["Validation"],
+			},
+			{
+				"title": "CSS Grid",
+				"link": "https://css-tricks.com/snippets/css/complete-guide-grid/",
+				"difficulty" :"Advanced",
+				"description" : "CSS Grid Layout, is a two-dimensional grid-based layout system that aims to do nothing less than completely change the way we design grid-based user interfaces.",
+				"tag" : ["Validation"],
+			},			
+			{
+				"title": "Modern Layouts with CSS Grid",
+				"link": "https://www.youtube.com/watch?v=ahPRvVyw9Eo&t=69s",
+				"difficulty" :"Advanced",
+				"description" : "A look at new CSS tools and new possibilities in web design, with Singapore-based Hui Jing Chen.",
+				"tag" : ["CSS Grid"],
 			},
 			//Varell
 			{
@@ -62,33 +92,12 @@
 				"description" : "",
 				"tag" : [],
 			},
-			//Jannaee
-			{
-				"title": "css3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "css3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "css3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
-			},
+			
 		],
 	
 		//HTML Resources
 		"HTML": [
-			//Maria
+			// Beginner
 			{
 				"title": "Meet  the Ipsums",
 				"link": "http://meettheipsums.com/",
@@ -104,11 +113,34 @@
 				"tag" : ["Canvas"],
 			},
 			{
+				"title": "HTML 5.2",
+				"link": "https://www.w3.org/TR/html/",
+				"difficulty" :"Beginner",
+				"description" : "This specification defines the 5th major version, second minor revision of the core language of the World Wide Web: the Hypertext Markup Language (HTML).",
+				"tag" : [],
+			},
+			// Intermediate
+			{
 				"title": "Font Pairing",
 				"link": "https://fontpair.co/",
 				"difficulty" :"Intermediate",
 				"description" : "Font Pair helps you pair Google Fonts together",
 				"tag" : ["Font"],
+			},
+			{
+				"title": "How To Make Responsive HTML Email Coding Easy",
+				"link": "https://www.smashingmagazine.com/2017/01/making-responsive-html-email-coding-easy-with-mjml/",
+				"difficulty" :"Intermediate",
+				"description" : "MJML – How To Make Responsive HTML Email Coding Easy",
+				"tag" : [],
+			},
+			// Advanced
+			{
+				"title": "The Nine Principles Of Design Implementation",
+				"link": "https://www.smashingmagazine.com/2017/08/nine-principles-design-implementation/",
+				"difficulty" :"Advanced",
+				"description" : "Explore best practices for implementing designs using HTML and CSS.",
+				"tag" : [],
 			},
 			{
 				"title": "CSS Validation Service",
@@ -138,40 +170,33 @@
 				"difficulty" :"Advanced",
 				"description" : "",
 				"tag" : [],
-			},
-			//Jannaee
-			{
-				"title": "html3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "html3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "html3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
-			},
+			},			
 		],
 	
 		//JS Resources
 		"JS": [
-			//Maria
+			// Beginner
 			{
 				"title": "Micron.js",
 				"link": "https://www.cssscript.com/javascript-library-interactive-css3-animations-micron-js/",
 				"difficulty" :"Beginner",
 				"description" : "JavaScript Library For Interactive CSS3 Animations",
 				"tag" : ["Animations"],
+			},
+			{
+				"title": "Go Make Things",
+				"link": "https://gomakethings.com/",
+				"difficulty" :"Beginner",
+				"description" : "Learn vanilla JavaScript.",
+				"tag" : [],
+			},
+			// Intermediate
+			{
+				"title": "Javascript Tutorial",
+				"link": "https://www.tutorialspoint.com/javascript/index.htm",
+				"difficulty" :"Intermediate",
+				"description" : "This tutorial has been prepared for JavaScript beginners to help them understand the basic functionality of JavaScript to build dynamic web pages and web applications.",
+				"tag" : [],
 			},
 			{
 				"title": "JS Version Converter",
@@ -193,6 +218,14 @@
 				"difficulty" :"Intermediate",
 				"description" : "Explination on JS Promises",
 				"tag" : ["Promises"],
+			},
+			// Advanced
+			{
+				"title": "Implementing A Service Worker For Single-Page App WordPress Sites",
+				"link": "https://www.smashingmagazine.com/2017/10/service-worker-single-page-application-wordpress-sites/",
+				"difficulty" :"Advanced",
+				"description" : "Learn how to implement a service worker for singlepPage app wordPress sites.",
+				"tag" : [],
 			},
 			{
 				"title": "The JSON Validator",
@@ -222,33 +255,11 @@
 				"description" : "",
 				"tag" : [],
 			},
-			//Jannaee
-			{
-				"title": "js3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "js3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "js3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
-			},
 		],
 		
 		//Git Resources
 		"Git": [
-			//Maria
+			// Beginner
 			{
 				"title": "Using Git",
 				"link": "https://gist.github.com/hofmannsven/6814451",
@@ -256,20 +267,50 @@
 				"description" : "Explanation of Git Commands",
 				"tag" : ["Commands"],
 			},
+			
 			{
 				"title": "Git Tutorial",
 				"link": "https://git-scm.com/docs/gittutorial",
 				"difficulty" :"Beginner",
 				"description" : "A tutorial introduction to Git",
 				"tag" : ["Tutorial"],
+			},{
+				"title": "Got 15 minutes and want to learn Git?",
+				"link": "https://try.github.io/levels/1/challenges/1",
+				"difficulty" :"Beginner",
+				"description" : "Learn how to use Git.",
+				"tag" : [],
 			},
+			{
+				"title": "Git basics",
+				"link": "https://www.atlassian.com/git",
+				"difficulty" :"Beginner",
+				"description" : "Here is a basic overview of how Git works.",
+				"tag" : [],
+			},
+			// Intermediate		
+			{
+				"title": "Github Tutorial",
+				"link": "https://www.youtube.com/watch?v=0fKg7e37bQE",
+				"difficulty" :"Intermediate",
+				"description" : "Github Basics for Mac or Windows & Source Control Basics",
+				"tag" : [],
+			},
+			// Advanced
 			{
 				"title": "Git Real",
 				"link": "https://www.codeschool.com/courses/git-real",
-				"difficulty" :"Intermediate",
+				"difficulty" :"Advanced",
 				"description" : "Learn more advanced Git by practicing the concepts of Git version control.",
 				"tag" : ["Version Control"],
-			},		
+			},
+			{
+				"title": "Advanced Git Tutorials",
+				"link": "https://www.atlassian.com/git/tutorials/advanced-overview",
+				"difficulty" :"Advanced",
+				"description" : "Atlassian’s Git tutorials introduce the most common Git commands, and our Git Workflows modules discuss how these commands are typically used to facilitate collaboration.",
+				"tag" : [],
+			},	
 			//Varell
 			{
 				"title": "Git2",
@@ -292,38 +333,32 @@
 				"description" : "",
 				"tag" : [],
 			},
-			//Jannaee
-			{
-				"title": "Git3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Git3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Git3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
-			},
 		],
 		
 		//Learning Resources
 		"Learning": [
-			//Maria
+			// Beginner
 			{
 				"title": "Codecademy",
 				"link": "https://www.codecademy.com/",
 				"difficulty" :"Beginner",
 				"description" : "Codecademy is an online freemium interactive platform that offers free coding classes in 12 different programming languages.",
+				"tag" : [],
+			},
+			
+			{
+				"title": "Ready to try JavaScript?",
+				"link": "https://www.javascript.com/",
+				"difficulty" :"Beginner",
+				"description" : "Learn JS Basics.",
+				"tag" : [],
+			},
+			// Intermediate
+			{
+				"title": "Articles",
+				"link": "https://www.tutorialspoint.com/css/index.htm",
+				"difficulty" :"Intermediate",
+				"description" : "This tutorial will help both students as well as professionals who want to make their websites or personal blogs more attractive.",
 				"tag" : [],
 			},
 			{
@@ -332,7 +367,15 @@
 				"difficulty" :"Intermediate",
 				"description" : "American online education company offering video courses taught by industry experts in software, creative, and business skills.",
 				"tag" : [],
-			},		
+			},
+			// Advanced				
+			{
+				"title": "Learning3",
+				"link": "https://philipwalton.com/articles/",
+				"difficulty" :"Advanced",
+				"description" : "Library of articles about Fonr-end Development.",
+				"tag" : [],
+			},	
 			{
 				"title": "Udacity",
 				"link": "https://www.udacity.com/",
@@ -362,38 +405,121 @@
 				"description" : "",
 				"tag" : [],
 			},
-			//Jannaee
-			{
-				"title": "Learning3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Learning3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Learning3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
-			},
 		],
 		
 		//Resources Resources
 		"Resources": [
-			//Maria
+			// Beginner
 			{
 				"title": "Bitly",
 				"link": "https://bitly.com/",
 				"difficulty" :"Beginner",
 				"description" : "Shorten Links",
+				"tag" : [],
+			},
+			{
+				"title": "HERE",
+				"link": "HERE",
+				"difficulty" :"Beginner",
+				"description" : "HERE",
+				"tag" : [],
+			},
+			{
+				"title": "HERE",
+				"link": "HERE",
+				"difficulty" :"Beginner",
+				"description" : "HERE",
+				"tag" : [],
+			},
+			{
+				"title": "Friday Front-End",
+				"link": "https://fridayfrontend.curated.co/",
+				"difficulty" :"Beginner",
+				"description" : "Front-end development links tweeted daily, emailed weekly.",
+				"tag" : [],
+			},
+			{
+				"title": "Smashing Magazine",
+				"link": "smashingmagazine.com",
+				"difficulty" :"Beginner",
+				"description" : "Smashing Magazine is an online magazine for professional web designers and developers.",
+				"tag" : [],
+			},
+			{
+				"title": "Fresh Brewed",
+				"link": "freshbrewed.co",
+				"difficulty" :"Beginner",
+				"description" : "A weekly reading digest for front-end developers and UX designers.",
+				"tag" : [],
+			},
+			{
+				"title": "Web Tools Weekly",
+				"link": "https://webtoolsweekly.com/",
+				"difficulty" :"Beginner",
+				"description" : "A front-end development and web design newsletter with a focus on tools.",
+				"tag" : [],
+			},
+			{
+				"title": "WebOps Weekly",
+				"link": "webopsweekly.com",
+				"difficulty" :"Beginner",
+				"description" : "A weekly newsletter on Web operations, infrastructure, performance, the backend, and tooling, from the browser down to the metal.",
+				"tag" : [],
+			},
+			{
+				"title": "WDRL",
+				"link": "https://wdrl.info/",
+				"difficulty" :"Beginner",
+				"description" : "A handcrafted, carefully selected list of web development related resources. Curated and published usually every week.",
+				"tag" : [],
+			},
+			{
+				"title": "UX Beginners",
+				"link": "https://enboard.co/xcb3cf/",
+				"difficulty" :"Beginner",
+				"description" : "Enboard lets you create and follow boards filled with lists containing links, notes and checkboxes organized through categories.",
+				"tag" : [],
+			},
+			{
+				"title": "Indie Hackers",
+				"link": "https://www.indiehackers.com/",
+				"difficulty" :"Beginner",
+				"description" : "A group of founders helping each other start profitable online businesses and side projects.",
+				"tag" : [],
+			},
+			{
+				"title": "A List Apart",
+				"link": "http://alistapart.com/",
+				"difficulty" :"Beginner",
+				"description" : "A List Apart explores the design, development, and meaning of web content, with a special focus on web standards and best practices.",
+				"tag" : [],
+			},
+			{
+				"title": "Curated Lists",
+				"link": "https://github.com/pshah123/awesome-lists",
+				"difficulty" :"Beginner",
+				"description" : "Curated list of awesome lists.",
+				"tag" : [],
+			},
+			{
+				"title": "Free Web Development & Performance Ebooks",
+				"link": "http://www.oreilly.com/web-platform/free/",
+				"difficulty" :"Beginner",
+				"description" : "We’ve compiled the best insights from subject matter experts for you in one place.",
+				"tag" : [],
+			},
+			{
+				"title": "Free Programming Ebooks",
+				"link": "http://www.oreilly.com/programming/free/",
+				"difficulty" :"Beginner",
+				"description" : "We’ve compiled the best insights from subject matter experts and industry insiders for you in one place.",
+				"tag" : [],
+			},
+			{
+				"title": "Freebie: “Dropcast” Website Template (HTML, Sketch)",
+				"link": "https://tympanus.net/codrops/2018/02/23/freebie-dropcast-website-template-html-sketch/",
+				"difficulty" :"Beginner",
+				"description" : "Dropcast is a responsive HTML/CSS/Javascript template, comes with Sketch files and a fully working site with SCSS. It works very well for podcasts landing pages or blogs, and can be easily customized.",
 				"tag" : [],
 			},
 			{
@@ -403,6 +529,7 @@
 				"description" : "A collection of free books for developers.",
 				"tag" : ["Books"],
 			},
+			// Intermediate
 			{
 				"title": "Markup Validation Service",
 				"link": "https://validator.w3.org/",
@@ -410,6 +537,21 @@
 				"description" : "Check the markup (HTML, XHTML, …) of Web documents.",
 				"tag" : ["Validatior"],
 			},
+			{
+				"title": "TutorialsPoint",
+				"link": "https://www.tutorialspoint.com",
+				"difficulty" :"Intermediate",
+				"description" : "Learn new skills at your own pace from the comforts of your drawing room.",
+				"tag" : [],
+			},
+			{
+				"title": "UX Club",
+				"link": "https://uxclub.com",
+				"difficulty" :"Intermediate",
+				"description" : "On demand video training for UX designers.",
+				"tag" : ["UX"],
+			},
+			// Advanced
 			{
 				"title": "PageSpeed Insights",
 				"link": "https://developers.google.com/speed/pagespeed/insights/",
@@ -423,6 +565,27 @@
 				"difficulty" :"Advanced",
 				"description" : "Jake Archibald Explains Service Workers and base URIs.",
 				"tag" : ["Service workers"],
+			},
+			{
+				"title": "Front-End Case Studies",
+				"link": "https://github.com/andrew--r/frontend-case-studies",
+				"difficulty" :"Advanced",
+				"description" : "A curated list of technical talks and articles about real-world enterprise frontend development.",
+				"tag" : [],
+			},
+			{
+				"title": "Logo Design Love",
+				"link": "https://www.logodesignlove.com/",
+				"difficulty" :"Advanced",
+				"description" : "Logo Design Love is a website and book devoted to logos and visual identities.",
+				"tag" : [],
+			},
+			{
+				"title": "PluralSight",
+				"link": "https://www.pluralsight.com",
+				"difficulty" :"Advanced",
+				"description" : "Upgrade your skills with courses on the most popular programming languages, developer tools, software practices and application development platforms.",
+				"tag" : [],
 			},
 			//Varell
 			{
@@ -438,41 +601,19 @@
 				"difficulty" :"Intermediate",
 				"description" : "",
 				"tag" : [],
-			},
+			},			
 			{
 				"title": "Resources2",
 				"link": "https://www.codecademy.com/learn",
 				"difficulty" :"Advanced",
 				"description" : "",
 				"tag" : [],
-			},
-			//Jannaee
-			{
-				"title": "Resources3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Resources3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Resources3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
-			},
+			},			
 		],
 		
 		//Frameworks Resources
 		"Frameworks": [
-			//Maria
+			// Beginner
 			{
 				"title": "jQuery Event Methods",
 				"link": "https://www.w3schools.com/jquery/jquery_ref_events.asp",
@@ -481,10 +622,47 @@
 				"tag" : [],
 			},
 			{
+				"title": "Bootstrap",
+				"link": "http://getbootstrap.com/",
+				"difficulty" :"Beginner",
+				"description" : "Build responsive, mobile-first projects on the web with the world's most popular front-end component library.",
+				"tag" : [],
+			},
+			{
+				"title": "YUI",
+				"link": "https://yuilibrary.com/",
+				"difficulty" :"Intermediate",
+				"description" : "YUI is a free, open source JavaScript and CSS library for building richly interactive web applications.",
+				"tag" : [],
+			},
+			{
+				"title": "Semantic UI",
+				"link": "https://semantic-ui.com/",
+				"difficulty" :"Beginner",
+				"description" : "Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.",
+				"tag" : [],
+			},
+			// Intermediate
+			{
+				"title": "Pure.CSS",
+				"link": "https://purecss.io/",
+				"difficulty" :"Intermediate",
+				"description" : "A set of small, responsive CSS modules that you can use in every web project.",
+				"tag" : [],
+			},			
+			{
 				"title": "React JS Tutorials",
 				"link": "https://www.youtube.com/playlist?list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b",
 				"difficulty" :"Intermediate",
 				"description" : "React JS video tutorials playlist.",
+				"tag" : [],
+			},
+			// Advanced
+			{
+				"title": "Foundation",
+				"link": "https://foundation.zurb.com/",
+				"difficulty" :"Advanced",
+				"description" : "A Framework for any device, medium, and accessibility.",
 				"tag" : [],
 			},
 			{
@@ -516,33 +694,11 @@
 				"description" : "",
 				"tag" : [],
 			},
-			//Jannaee
-			{
-				"title": "Frameworks3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Frameworks3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Frameworks3",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
-			},
 		],
 	
 		//Practice Resources
 		"Practice": [
-			//Maria
+			// Beginner
 			{
 				"title": "Level up your coding skills",
 				"link": "https://leetcode.com/",
@@ -551,17 +707,47 @@
 				"tag" : [],
 			},
 			{
+				"title": "JS",
+				"link": "https://tiny.cards/decks/5388s6D/javascript",
+				"difficulty" :"Beginner",
+				"description" : "Learn JavaScript with this TinyCards deck.",
+				"tag" : [],
+			},
+			{
+				"title": "Khan Academy",
+				"link": "https://www.khanacademy.org/",
+				"difficulty" :"Beginner",
+				"description" : "Learn anything for free.",
+				"tag" : [],
+			},
+			// Intermediate
+			{
+				"title": "The Odin Project",
+				"link": "https://www.theodinproject.com/",
+				"difficulty" :"Intermediate",
+				"description" : "Our full stack curriculum is free and supported by a passionate open source community.",
+				"tag" : [],
+			},
+			{
 				"title": "JavaScript 30",
 				"link": "https://javascript30.com/",
 				"difficulty" :"Intermediate",
 				"description" : "Build 30 things in 30 days with 30 tutorials.",
 				"tag" : [],
-			},		
+			},	
+			// Advanced	
 			{
 				"title": "Exercism",
 				"link": "http://www.exercism.io/",
 				"difficulty" :"Advanced",
 				"description" : "Level up your programming skills.",
+				"tag" : [],
+			},			
+			{
+				"title": "Microsoft Virtual Academy",
+				"link": "mva.microsoft.com",
+				"difficulty" :"Advanced",
+				"description" : "Free Microsoft training delivered by experts",
 				"tag" : [],
 			},
 			//Varell
@@ -581,28 +767,6 @@
 			},
 			{
 				"title": "Practice",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
-			},
-			//Jannaee
-			{
-				"title": "Practice2",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Practice2",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
-			},
-			{
-				"title": "Practice2",
 				"link": "https://www.codecademy.com/learn",
 				"difficulty" :"Advanced",
 				"description" : "",
