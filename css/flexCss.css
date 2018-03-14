@@ -166,7 +166,7 @@ hr.style2 {
 }
 
 /*********************** Flex for submodules */
-.flex-container{
+/* .flex-container{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -184,9 +184,21 @@ li.flex-item {
 
 ul.flex-emphasis-item{
     flex-grow: 2;
+} */
+.items {
+    display: grid;
 }
 
-
+.listedItems {
+    display: grid;
+    /*  gap between items  */
+    grid-gap: .5em;
+    /*  set the columns*/
+    grid-template-columns: 20em 20em;
+}
+.viewAll{
+    text-align: right;
+}
 
 
 /*********************** LINK STYLES */
