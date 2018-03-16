@@ -1,5 +1,5 @@
 (function(undefined) {
-    //When Boxes are clicked
+    //When Categories are clicked
 
     window.MobileHub = window.MobileHub || {};
     var exports = {};
@@ -7,14 +7,15 @@
     //When Boxes are clicked
     const main = function() {
         $('.topics li').click(function() {
-		    const category = $(this).attr('class');
+			const category = $(this).attr('class');
 		    const removeSelected = $('.boxes').removeClass('selected');
 		    const addContent = $('.topicImg').addClass('content');
 			const removeVisibility= $('.topicImg').removeClass('visible');
+
 			$('.All').addClass('ViewContent');
 			$('.All').removeClass('NoContent');
 			
-
+			// When CSS clicked
 		    if (category === "boxes CSSBox") {
 		    	removeSelected
 		    	$('.CSSBox').addClass('selected');
@@ -22,7 +23,8 @@
 		    	removeVisibility
 		    	$('.CSS').removeClass('content');
 		    	$('.CSS').addClass('visible');
-		    }		
+			}
+			// When HTML clicked	
 		    else if (category === "boxes HTMLBox") {
 		    	removeSelected
 		    	$('.HTMLBox').addClass('selected');
@@ -30,7 +32,8 @@
 		    	removeVisibility
 		    	$('.HTML').removeClass('content');
 		    	$('.HTML').addClass('visible');
-		    }		
+			}
+			// When JS clicked	
 		    else if (category === "boxes JSBox") {
 		    	removeSelected
 		    	$('.JSBox').addClass('selected');
@@ -38,7 +41,8 @@
 		    	removeVisibility
 		    	$('.JS').removeClass('content');
 		    	$('.JS').addClass('visible');
-		    }			
+			}
+			// When Git clicked
 		    else if (category === "boxes GitBox") {
 		    	removeSelected
 		    	$('.GitBox').addClass('selected');
@@ -46,7 +50,8 @@
 		    	removeVisibility
 		    	$('.Git').removeClass('content');
 		    	$('.Git').addClass('visible');
-		    }
+			}
+			// When Learning clicked
 		    else if (category === "boxes LearningBox") {
 		    	removeSelected
 		    	$('.LearningBox').addClass('selected');
@@ -54,7 +59,8 @@
 		    	removeVisibility
 		    	$('.Learning').removeClass('content');
 		    	$('.Learning').addClass('visible');
-		    }			
+			}
+			// When Resources clicked			
 		    else if (category === "boxes ResourcesBox") {
 		    	removeSelected
 		    	$('.ResourcesBox').addClass('selected');
@@ -62,7 +68,8 @@
 		    	removeVisibility
 		    	$('.Resources').removeClass('content');
 		    	$('.Resources').addClass('visible');
-		    }
+			}
+			// When Frameworks clicked
 		    else if (category === "boxes FrameworksBox") {
 		    	removeSelected
 		    	$('.FrameworksBox').addClass('selected');
@@ -70,7 +77,8 @@
 		    	removeVisibility
 		    	$('.Frameworks').removeClass('content');
 		    	$('.Frameworks').addClass('visible');
-		    }			
+			}
+			// When Practice is clicked
 		    else if (category === "boxes PracticeBox") {
 		    	removeSelected
 		    	$('.PracticeBox').addClass('selected');
@@ -79,6 +87,7 @@
 		    	$('.Practice').removeClass('content');
 		    	$('.Practice').addClass('visible');
 			}
+			// When anything else is clicked
 			else{
 				$('.All').removeClass('ViewContent');
 				$('.All').addClass('NoContent');
