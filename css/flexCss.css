@@ -26,9 +26,9 @@ h2, h3, h4{ color: #171D1C;}
 
 .githubbookmark {
     position: fixed;
-    top: -26px;
-    right: 0;
-    width: 37px;
+    top: -1.5em;
+    right: 2em;
+    width: 3.5em;
 }
 
 .minilogoLetters{
@@ -40,12 +40,15 @@ h2, h3, h4{ color: #171D1C;}
 
 }
 
+.header2 {
+    text-align: center;
+}
+
 
 .logoSection{
     margin-top: 20px;
     text-align: center; 
     font-family: 'Yantramanav', sans-serif;
-
 }
 
 .logoSection a img{
@@ -185,11 +188,12 @@ li.flex-item {
 ul.flex-emphasis-item{
     flex-grow: 2;
 } */
-.items {
+
+.boxes {
     display: grid;
 }
 
-.listedItems {
+.topics {
     display: grid;
     /*  gap between items  */
     grid-gap: .5em;
@@ -199,6 +203,29 @@ ul.flex-emphasis-item{
 .viewAll{
     text-align: right;
 }
+
+/* SELECTED */
+.selected {
+    color: #f1bf98;
+}
+
+/* DISPLAY */
+.content {
+    display: none;
+}
+.visible {
+    list-style-type: none;
+    justify-content: center;
+}
+.Topics-Content{
+    margin: 0 20em .25em;
+ }
+ .NoContent{
+     display: none;
+ }
+ .ViewContent{
+     display: inline;
+ }
 
 
 /*********************** LINK STYLES */
@@ -229,7 +256,7 @@ footer {
 
 form.example input[type=text] {
     padding: 10px;
-    font-size: 17px;
+    font-size: 15px;
     border: 2px solid #BDBDBD;
     float: left;
     width: 80%;

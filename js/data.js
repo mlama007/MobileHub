@@ -1,7 +1,5 @@
 (function(undefined) {
 
-	window.MobileHub = window.MobileHub || {};
-	
 	let exports = {};
 	window.MobileHub = window.MobileHub || {};
 	window.MobileHub.topics = exports;
@@ -9,14 +7,15 @@
 	//array of objects conatining Resource Links
 	const topics = {
 		//CSS Resources
-		"CSS": [
+		"CSS":
+		[
 			// Beginner
 			{
 				"title": "Hover.css",
 				"link": "http://ianlunn.github.io/Hover/",
 				"difficulty" :"Beginner",
 				"description" : "A collection of CSS3 powered hover effects to be applied to links, buttons, logos, SVG, featured images and so on.",
-				"tag" : ["CSS3"],
+				"tag" : ["CSS3"],				
 			},
 			{
 				"title": "CSS Gradient",

@@ -5,15 +5,9 @@
         <title>Mobile Hub | A Curated Collection of Web Development Resources</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/flexcss.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400" rel="stylesheet">
-    
-        <!-- Scripts -->
-        <script src="js/data.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/appView.js"></script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-        
+            
         <!-- Icons made by <a href="https://www.flaticon.com/authors/vectors-market" -->
     </head>
     <body>
@@ -39,19 +33,66 @@
                     <hr class="style">
                 </div>
                 <div class="containerlist">
-                    <ul id="css" class="listedItems">
-                        <li class="items item1"><a href="#">HTML</a></li>
-                        <li class="items item2"><a href="css-articles.html">CSS</a></li>
-                        <li class="items item3"><a href="#">Javascript</a></li>
-                        <li class="items item4"><a href="#">Git</a></li>
-                        <li class="items item5"><a href="#">Learning</a></li>
-                        <li class="items item6"><a href="#">Resources</a></li>
-                        <li class="items item7"><a href="#">Frameworks</a></li>
-                        <li class="items item8"><a href="#">Practice</a></li>
+                    <ul id="css" class= "topics">
+                        <li class="boxes HTMLBox"><a href="css-articles.html">HTML</a></li>
+                        <li class="boxes CSSBox"><a href="#View">CSS</a></li>
+                        <li class="boxes JSBox"><a href="#View">Javascript</a></li>
+                        <li class="boxes GitBox"><a href="#View">Git</a></li>
+                        <li class="boxes LearningBox"><a href="#View">Learning</a></li>
+                        <li class="boxes ResourcesBox"><a href="#View">Resources</a></li>
+                        <li class="boxes FrameworksBox"><a href="#View">Frameworks</a></li>
+                        <li class="boxes PracticeBox"><a href="#View">Practice</a></li>
                     </ul>
                 <div>  
                 <p class="viewAll" style="margin-left:100px;">View all articles >></p>    
             </article>
+
+            <!-- Articles -->
+            <!-- <section class="searchBox">
+                <input type="text" placeholder="Enter text to search..."/>
+            </section> -->
+            
+            <!-- Topics Content -->
+            <div id="View" class="All NoContent">
+                <!-- "header" Section -->
+                <div class="wrapper">
+                    <div class="header2">
+                        <img class="logoSection" src="img/logo.svg">
+                    </div>
+
+                    <!-- Search -->
+                    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                        <input type="text" placeholder="Search.." name="search2">
+                        <button type="submit"><img src="img/magnify.svg" class="fa fa-search"></button>
+                    </form>
+
+                    <!-- Topics Section -->
+                    <article class="nav" id="filterSection">
+                        <div>
+                            <p>of returned articles</p>  
+                            <hr class="style">
+                        </div>
+                        <div class="flex-container">
+                            <ul id="css" class="flex-emphasis-item ">
+                                        <li>All</li>
+                                        <li>Beginner</li>
+                                        <li>Intermediate</li>
+                                        <li>Advance</li>
+                            </ul>
+                        <div>     
+                    </article>
+                </div>
+                <ul class="content CSS topicImg"></ul>
+                <ul class="content HTML topicImg"></ul>
+                <ul class="content JS topicImg"></ul>
+                <ul class="content Git topicImg"></ul>
+                <ul class="content Learning topicImg"></ul>
+                <ul class="content Resources topicImg"></ul>
+                <ul class="content Frameworks topicImg"></ul>
+                <ul class="content Practice topicImg"></ul>
+            </div>
+
+            <!-- Who we are -->
             <div class="main">
                 <h3>Who are we? </h3>
                 <p>We are a small group of developers who met through the 2018 Grow with Google Challenge. This mulit month long online educational series was created by Udacity and sponsored by Google.</p>
@@ -89,6 +130,12 @@
         </div><!-- End of Wrapper -->
 
 
+        <!-- Scripts -->
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/dataCat.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/appView.js"></script>
 
     </body>
 </html>

@@ -10,8 +10,10 @@
 		    const category = $(this).attr('class');
 		    const removeSelected = $('.boxes').removeClass('selected');
 		    const addContent = $('.topicImg').addClass('content');
-		    const removeVisibility= $('.topicImg').removeClass('visible');
-
+			const removeVisibility= $('.topicImg').removeClass('visible');
+			$('.All').addClass('ViewContent');
+			$('.All').removeClass('NoContent');
+			
 
 		    if (category === "boxes CSSBox") {
 		    	removeSelected
@@ -76,7 +78,11 @@
 		    	removeVisibility
 		    	$('.Practice').removeClass('content');
 		    	$('.Practice').addClass('visible');
-		    }	
+			}
+			else{
+				$('.All').removeClass('ViewContent');
+				$('.All').addClass('NoContent');
+			}
       });
     }
     
