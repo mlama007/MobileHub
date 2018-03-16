@@ -1,109 +1,70 @@
-/*
-These are HTML strings. JavaScript functions 
-These are HTML strings. JavaScript functions
-replace the %data% placeholder text you see in them.
-*/
+(function(undefined) {
+	
+	window.MobileHub = window.MobileHub || {};
 
-// Create list with content
-const listedResources = '<li></li>';
-const resourcesContent = '<a href="%link%"><img src="%img%"/><span class="text-content"><span>%title%</span></span></a>';
+	var exports = {};
+	window.MobileHub.topics = window.MobileHub.topics || exports;
 
+	const data = window.MobileHub.topics.data;
+	const data2 = window.MobileHub.categories.data;
+	
+	/*
+	These are HTML strings. JavaScript functions 
+	replace the %data% placeholder text you see in them.
+	*/
 
-//Display content from topic
-topics.display = function () {
+	// Img and intro to each category
+	const categoryDetails = '<h1 class = "categoryName">%title%</h1> <div class="intro header-content"><p>%intro%</p></div>';
 
-	//displays CSS topic resources
-	topics.CSS.forEach(function(topic){ 
-		$("#CSS").append(listedResources);
-		//Match %data% with object
-		const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-		//Replace %data% with object informtaion
-		const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		//Add content to page
-		$("#CSS li:last").append(formattedContent);	
-	});
+	// Create list with content
+	const listedResources = '<li class="Topics-Content"></li>';
+	const resourcesContent = '<p><a href="%link%"><span class="text-content"><span>%title%</span></span></a><p>%description%<p><p>';
 
-	//displays HTML topic resources
-	topics.HTML.forEach(function(topic){ 
-        $("#HTML").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		$("#HTML li:last").append(formattedContent);	
-	});
+	//Display content from topic
+	function display() {
+		const types = ['CSS', 'HTML', 'JS', 'Git', 'Learning', 'Resources', 'Frameworks', 'Practice', ];
+		types.forEach(function(type){
+			parseData(type);
+		});
+		types.forEach(function(type){
+			catIntro(type);
+		});
+	}
+	// Displays all resouces under a given topic
+	// @param {string} topic
+	function parseData(name) {
+		//displays CSS topic resources
+		data[name].forEach(function(topic){ 
+			$("." + name).append(listedResources);
+			//Match %data% with object
+			const replaceChars={ "%link%":topic.link, "%title%": topic.title, "%description%": topic.description };
+			//Replace %data% with object informtaion
+			const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
+				function(match) {
+					return replaceChars[match];
+				});
+			$("." + name + " li:last").append(formattedContent);	
+		})
+	}
 
-	//displays JS topic resources
-	topics.JS.forEach(function(topic){ 
-        $("#JS").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		$("#JS li:last").append(formattedContent);	
-	});
+	function catIntro(name){
+		const category = data2[name];
+		console.log(category);
+		function data(category){ 
+			console.log(category);
+			$(".header2").append(categoryDetails);
+				//Match %data% with object
+				const replaceChars={ "%title%": category.title, "%intro%": category.intro};
+				//Replace %data% with object informtaion
+				const formattedContent1 = categoryDetails.replace(/%title%|%intro%/g,
+					function(match) {
+						return replaceChars[match];
+					});
+				$(".header2").append(formattedContent1);	
+		}
+		data(category);
+	}
 
-	//displays Git topic resources
-	topics.Git.forEach(function(topic){ 
-        $("#Git").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		$("#Git li:last").append(formattedContent);	
-	});
+	display();
 
-	//displays Learning topic resources
-	topics.Learning.forEach(function(topic){ 
-        $("#Learning").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		$("#Learning li:last").append(formattedContent);	
-	});
-
-	//displays Editors topic resources
-	topics.Editors.forEach(function(topic){ 
-        $("#Editors").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		$("#Editors li:last").append(formattedContent);	
-	});
-
-	//displays Resources topic resources
-	topics.Resources.forEach(function(topic){ 
-        $("#Resources").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		$("#Resources li:last").append(formattedContent);	
-	});
-
-	//displays Frameworks topic resources
-	topics.Frameworks.forEach(function(topic){ 
-        $("#Frameworks").append(listedResources);
-        const replaceChars={ "%link%":topic.link, "%img%": topic.image, "%title%": topic.title };
-        const formattedContent = resourcesContent.replace(/%link%|%img%|%title%/g,
-			function(match) {
-				return replaceChars[match];
-			});
-		$("#Frameworks li:last").append(formattedContent);	
-	});
-};
-topics.display();
-
-
-//Functionality of the Category Boxes
+})();

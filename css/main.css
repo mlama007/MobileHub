@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-
 }
 
 html, body {
@@ -18,131 +17,18 @@ body {
 body p, h1, h2, h3, h4{
     font-family: 'Yantramanav', sans-serif;
     font-weight: normal;
-    margin: 0;
-    padding: 0;
 }
 
 h2, h3, h4{ color: #171D1C;}
-
-a {
-    transition: color 0.3s ease;
-    text-decoration: none;
-}
-
-a:hover {
-    color: tomato;
-}
-/************************ Navigation Menu*/
-/* <!--    Made by Erik Terwan    -->
-<!--   24th of November 2015   -->
-<!--    All rights reserved    --> */
-
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 40px;
-  left: 20px;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child{  transform-origin: 0% 0%;}
-
-#menuToggle span:nth-last-child(2){  transform-origin: 0% 100%;}
-
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-
-#menuToggle input:checked ~ span:nth-last-child(2){  transform: rotate(-45deg) translate(0, -1px);}
-
-
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -62px;
-  padding: 50px;
-  padding-top: 125px;
-  background: #f0f0f0;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-
-#menuToggle input:checked ~ ul{  transform: none;}
-
 
 
 /***************************Logo Section*/
 
 .githubbookmark {
     position: fixed;
-    top: -14px;
-    right: 10px;
-    width: 70px;
+    top: -1.5em;
+    right: 2em;
+    width: 3.5em;
 }
 
 .minilogoLetters{
@@ -151,8 +37,11 @@ a:hover {
     font-weight: bold;
     color: #96E6b3;
     text-decoration: none;
-    padding-left: 20px;
 
+}
+
+.header2 {
+    text-align: center;
 }
 
 
@@ -160,7 +49,6 @@ a:hover {
     margin-top: 20px;
     text-align: center; 
     font-family: 'Yantramanav', sans-serif;
-
 }
 
 .logoSection a img{
@@ -230,39 +118,6 @@ article.nav div.flex-container{
 .nav ul li{ list-style-type: none;}
 .nav p {color: #ffffff;}
 
-/* Parent Container for Nav View All CTA */
-.viewAll{ 
-   display: flex;
-    height: auto;
-    width: 100%;
-    padding-left: 80%;
-    font-size: .5em;
-    font-weight: bold;
-    justify-content: flex-end;
-}
-
-/* Child Container for Nav View All CTA */
-.viewAll-item {
-    width: 100px; 
-    margin: auto;  
-}
-
-p.viewAll a{
-        -webkit-border-radius: 3;
-        -moz-border-radius: 3;
-        border-radius: 3px;
-        color: #dddddd;
-        font-size: 20px;
-        background: #747474;
-        padding: 6px 5px 6px 9px;
-        white-space: nowrap;
-        text-decoration: none;
-}
-p.viewAll a:hover{
-    color: #000000;
-    text-decoration: underline;
-}      
-
 hr.style {
     border: .5px solid #F1BF98;
     margin-top: -12px; 
@@ -314,7 +169,7 @@ hr.style2 {
 }
 
 /*********************** Flex for submodules */
-.flex-container{
+/* .flex-container{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -332,9 +187,45 @@ li.flex-item {
 
 ul.flex-emphasis-item{
     flex-grow: 2;
+} */
+
+.boxes {
+    display: grid;
 }
 
+.topics {
+    display: grid;
+    /*  gap between items  */
+    grid-gap: .5em;
+    /*  set the columns*/
+    grid-template-columns: 20em 20em;
+}
+.viewAll{
+    text-align: right;
+}
 
+/* SELECTED */
+.selected {
+    color: #f1bf98;
+}
+
+/* DISPLAY */
+.content {
+    display: none;
+}
+.visible {
+    list-style-type: none;
+    justify-content: center;
+}
+.Topics-Content{
+    margin: 0 20em .25em;
+ }
+ .NoContent{
+     display: none;
+ }
+ .ViewContent{
+     display: inline;
+ }
 
 
 /*********************** LINK STYLES */
@@ -365,7 +256,7 @@ footer {
 
 form.example input[type=text] {
     padding: 10px;
-    font-size: 17px;
+    font-size: 15px;
     border: 2px solid #BDBDBD;
     float: left;
     width: 80%;
