@@ -60,7 +60,7 @@
 				function(match) {
 					return replaceChars1[match];
 				});
-			$("." + name).append(formattedContent1);	
+			$(".header2 ." + name).append(formattedContent1);	
 		}
 		data(category);
 	}
