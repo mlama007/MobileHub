@@ -22,7 +22,8 @@
 		    	addContent
 		    	removeVisibility
 		    	$('.CSS').removeClass('content');
-		    	$('.CSS').addClass('visible');
+				$('.CSS').addClass('visible');
+				// $('.main').style.display = "none";
 			}
 			// When HTML clicked	
 		    else if (category === "boxes HTMLBox") {
