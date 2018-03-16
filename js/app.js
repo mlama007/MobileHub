@@ -18,7 +18,7 @@
 
 	// Create list with content
 	const listedResources = '<li class="Topics-Content"></li>';
-	const resourcesContent = '<p><a href="%link%"><span class="text-content"><span>%title%</span></span></a><p>%description%<p><p>';
+	const resourcesContent = '<p><a href="%link%" target="_blank"><span class="text-content"><span>%title%</span></span></a><p>%description%<p><p>';
 
 	//Display content from topic
 	function display() {
