@@ -56,6 +56,8 @@ h2, h3, h4{ color: #171D1C;}
 .logoSection a img{
     margin:0 20px; 
     vertical-align: middle;
+    border: 1px solid white;
+    z-index: 100;
 
 }
 
@@ -64,6 +66,7 @@ h2, h3, h4{ color: #171D1C;}
     font-size: 2.5em;
     text-decoration: none;
     vertical-align: middle;
+    white-space: nowrap;
 }
 
 .logoTagLine{
@@ -74,10 +77,6 @@ h2, h3, h4{ color: #171D1C;}
     text-decoration: none;
     color:#171D1C;
 }
-
-
-
-
 
 /*********************** Flex Wrappers ***********************/
 
@@ -170,7 +169,7 @@ hr.style2 {
 }
 
 /*********************** Flex for submodules */
-/* .flex-container{
+ .flex-container{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -179,28 +178,29 @@ hr.style2 {
     flex-wrap: wrap;
 }
 
-li.flex-item {
+.flex-item {
     padding: 0px;
     width: auto;
     margin-top: 0px;
     font-weight: bold;
 }
 
-ul.flex-emphasis-item{
+ .flex-emphasis-item{
     flex-grow: 2;
-} */
+}  
 
 .boxes {
     display: grid;
 }
 
-.topics {
-    display: grid;
-    /*  gap between items  */
+/*.topics {
+     display: grid;
+     gap between items  
     grid-gap: .5em;
-    /*  set the columns*/
+    /*  set the columns
     grid-template-columns: 20em 20em;
-}
+}*/
+
 .viewAll{
     text-align: right;
 }
@@ -219,16 +219,27 @@ ul.flex-emphasis-item{
     justify-content: center;
 }
 .Topics-Content{
-    margin: 0 20em .25em;
+    border: 1px solid pink;
+}
+p.intro.header-content{
+    border: 4px solid yellow;
+}
+
+.topicimg.visible{
+    border: 1px solid red;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.NoContent{
+    display: none;
  }
- .NoContent{
-     display: none;
- }
+
  .ViewContent{
      display: inline;
      background-color: #171D1C;
  }
-
 
 /*********************** LINK STYLES */
 

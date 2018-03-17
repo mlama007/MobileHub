@@ -7,12 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400" rel="stylesheet">
-            
         <!-- Icons made by <a href="https://www.flaticon.com/authors/vectors-market" -->
     </head>
     <body>
-        <!-- Header Section -->
         <div class="wrapper">
+            <!-- Header Section -->
             <img class="githubbookmark" src="img/githubBookMark.svg">
             <div class="logoSection">
                 <a href="#"><img src="img/logo.svg">
@@ -25,8 +24,8 @@
                     <p>This is a professionally curated repository of web design and developmental resources. We are a small group of developers and designers looking to help fellow coders quickly access information that is relevant to them on their learning process.</p>
                 </div>
             </header>
-            
-            <!-- Topics Section -->
+            <!-- End of Header Section -->
+            <!-- Topics Title of Content-->
             <article class="nav">
                 <div>
                     <p>Ready to explore? Select a subject below:</p>  
@@ -38,22 +37,20 @@
                         <li class="boxes CSSBox"><a href="#View">CSS</a></li>
                         <li class="boxes JSBox"><a href="#View">Javascript</a></li>
                         <li class="boxes GitBox"><a href="#View">Git</a></li>
+                    </ul>
+                <div>  
+                <div class="containerlist">
+                    <ul id="css" class= "topics">
                         <li class="boxes LearningBox"><a href="#View">Learning</a></li>
                         <li class="boxes ResourcesBox"><a href="#View">Resources</a></li>
                         <li class="boxes FrameworksBox"><a href="#View">Frameworks</a></li>
                         <li class="boxes PracticeBox"><a href="#View">Practice</a></li>
                     </ul>
-                <div>  
+                <div>                      
             </article>
 
-            <!-- Articles -->
-            <!-- <section class="searchBox">
-                <input type="text" placeholder="Enter text to search..."/>
-            </section> -->
-            
-            <!-- Topics Content -->
+            <!-- Topics List of Content -->
             <div id="View" class="All NoContent">
-                <!-- "header" Section -->
                 <div class="wrapper">
                     <div class="header2">
                         <img class="logoSection" src="img/logo.svg">
@@ -73,7 +70,7 @@
                         <button type="submit"><img src="img/magnify.svg" class="fa fa-search"></button>
                     </form>
 
-                    <!-- Topics Section -->
+                <!-- Topics Section
                     <article class="nav" id="filterSection">
                         <div>
                             <p>of returned articles</p>  
@@ -81,22 +78,25 @@
                         </div>
                         <div class="flex-container">
                             <ul id="css" class="flex-emphasis-item ">
-                                        <li>All</li>
-                                        <li>Beginner</li>
-                                        <li>Intermediate</li>
-                                        <li>Advance</li>
+                                <li class="flex-item">All</li>
+                                <li class="flex-item">Beginner</li>
+                                <li class="flex-item">Intermediate</li>
+                                <li class="flex-item">Advance</li>
                             </ul>
                         <div>     
                     </article>
+                -->
                 </div>
-                <ul class="content CSS topicImg"></ul>
-                <ul class="content HTML topicImg"></ul>
-                <ul class="content JS topicImg"></ul>
-                <ul class="content Git topicImg"></ul>
-                <ul class="content Learning topicImg"></ul>
-                <ul class="content Resources topicImg"></ul>
-                <ul class="content Frameworks topicImg"></ul>
-                <ul class="content Practice topicImg"></ul>
+                <div><!--Displayed Content-->
+                    <ul class="content CSS topicImg"></ul>
+                    <ul class="content HTML topicImg"></ul>
+                    <ul class="content JS topicImg"></ul>
+                    <ul class="content Git topicImg"></ul>
+                    <ul class="content Learning topicImg"></ul>
+                    <ul class="content Resources topicImg"></ul>
+                    <ul class="content Frameworks topicImg"></ul>
+                    <ul class="content Practice topicImg"></ul>
+                </div>
             </div>
 
             <!-- Who we are -->
@@ -135,14 +135,11 @@
             <aside class="aside aside-2">&nbsp;</aside>
             <footer class="footer"><p>&copy; Copyright 2018</p></footer>
         </div><!-- End of Wrapper -->
-
-
         <!-- Scripts -->
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
         <script src="js/dataResources.js"></script>
         <script src="js/dataCategories.js"></script>
         <script src="js/app.js"></script>
         <script src="js/appView.js"></script>
-
     </body>
 </html>
