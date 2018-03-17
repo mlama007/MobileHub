@@ -1,12 +1,13 @@
 (function(undefined) {
-	
-	window.MobileHub = window.MobileHub || {};
 
 	var exports = {};
-	window.MobileHub.topics = window.MobileHub.topics || exports;
+	window.MobileHub = window.MobileHub || exports;
+	if(window.MobileHub) exports = window.MobileHub;
 
-	const data = window.MobileHub.topics.data;
-	const data2 = window.MobileHub.categories.data;
+	// Dependencies
+	const filter = window.MobileHub.filter;
+	const topics = window.MobileHub.topics.data;
+	const categories = window.MobileHub.categories.data;
 	
 	/*
 	These are HTML strings. JavaScript functions 
@@ -20,21 +21,33 @@
 	const listedResources = '<li class="Topics-Content"></li>';
 	const resourcesContent = '<p><a href="%link%" target="_blank"><span class="text-content"><span>%title%</span></span></a><p>%description%<p><p>';
 
-	//Display content from topic
-	function display() {
+	//Display all content from all topics
+	function displayAll() {
 		const types = ['CSS', 'HTML', 'JS', 'Git', 'Learning', 'Resources', 'Frameworks', 'Practice', ];
 		types.forEach(function(type){
-			parseData(type);
+			parseTopic(type);
 		});
 		types.forEach(function(type){
 			catIntro(type);
 		});
 	}
-	// Displays all resouces under a given topic
+
+	// Display all content from topic
+	function displayTopic(topic) {
+		parseTopic(topic);
+	}
+
+	// Display all content from topic matching field
+	function displayTopicField(topic, field) {
+		let filteredResources = filter.setSearchCriteria(topic, field, "");
+		parseResources(filteredResources);
+	}
+
+	// Displays all resources under a given topic and displays in browser
 	// @param {string} topic
-	function parseData(name) {
+	function parseTopic(name) {
 		//displays Category topic resources
-		data[name].forEach(function(topic){ 
+		topics[name].forEach(function(topic){ 
 			$("." + name).append(listedResources);
 			//Match %data% with object
 			const replaceChars={ "%link%":topic.link, "%title%": topic.title, "%description%": topic.description };
@@ -47,12 +60,28 @@
 		})
 	}
 
+	// Display all resources given and displays in browser
+	function parseResources(resources) {
+		//displays Category topic resources
+		resouces.forEach(function(resource){ 
+			$("." + name).append(listedResources);
+			//Match %data% with object
+			const replaceChars={ "%link%":resource.link, "%title%": resource.title, "%description%": resource.description };
+			//Replace %data% with object informtaion
+			const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
+				function(match) {
+					return replaceChars[match];
+				});
+			$("." + name + " li:last").append(formattedContent);	
+		})		
+	}
+
 	// Categories title and intro displayed
 	function catIntro(name){
-		const category = data2[name];
+		const category = categories[name];
 		// console.log(category);
-		function data(category){ 
-			console.log(category);
+		(function data(category){ 
+			//console.log(category);
 			//Match %data% with object
 			const replaceChars1={ "%title%": category.title, "%intro%": category.intro};
 			//Replace %data% with object informtaion
@@ -61,10 +90,31 @@
 					return replaceChars1[match];
 				});
 			$(".header2 ." + name).append(formattedContent1);	
-		}
-		data(category);
+		})(category);
 	}
 
-	display();
+	displayAll();
+
+	// Tied to exports to make it usable in HTML
+	exports.show = function(difficulty) {
+		switch (difficulty) {
+			case 'All':
+				// need way to get topic selected
+				displayTopic("CSS");
+			break;
+			case 'Beginner':
+				// need way to get topic and difficulty selected
+				displayTopicField("CSS", difficulty);;
+			break;
+			case 'Intermediate':
+				// need way to get topic and difficulty selected
+				displayTopicField("Intermediate", difficulty);;
+			break;
+			case 'Advance':
+				// need way to get topic and difficulty selected
+				displayTopicField("Advance", difficulty);;
+			break;
+		}
+	};
 
 })();
