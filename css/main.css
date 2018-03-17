@@ -96,11 +96,14 @@ h2, h3, h4{ color: #171D1C;}
   
 .header{ 
     justify-content: center;
+    padding: 2% 25%;
+    /* this padding has to match what's in the .main class */
+
 
 }
-.header-content{
+/* .header-content{
     padding: 15px 100px;
-}
+} */
 
 /*********************** Navigation Section*/
 .nav {
@@ -109,12 +112,12 @@ h2, h3, h4{ color: #171D1C;}
     text-align: left;
 }  
 
-article.nav div{
+/* article.nav div{
     margin: 0 20%;
 }
 article.nav div.flex-container{
     margin: 0 20%;
-}
+} */
 .nav ul li{ list-style-type: none;}
 .nav p {color: #ffffff;}
 
@@ -137,7 +140,7 @@ hr.style2 {
 .main {
     text-align: left;
     background: #ffffff;
-    padding: 50px 100px;
+    padding: 2% 25%;
   }
 
 
@@ -189,8 +192,19 @@ hr.style2 {
     flex-grow: 2;
 }  
 
-.boxes {
+/* .boxes {
     display: grid;
+
+} */
+.containerlist {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
 }
 
 /*.topics {
@@ -240,6 +254,12 @@ p.intro.header-content{
      display: inline;
      background-color: #171D1C;
  }
+
+
+
+
+
+
 
 /*********************** LINK STYLES */
 
