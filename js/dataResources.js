@@ -5,7 +5,7 @@
 	window.MobileHub.topics = exports;
 
 	//array of objects conatining Resource Links
-	const topics = {
+	exports.data = {
 		//CSS Resources
 		"CSS":
 		[
@@ -774,5 +774,4 @@
 		],
 	};
 
-	exports.data = topics;
 })();
