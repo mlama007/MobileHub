@@ -1,18 +1,22 @@
-<html>
+<!doctype html>
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Mobile Hub | A Curated Collection of Web Development Resources</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400" rel="stylesheet">
-        <!-- Icons made by <a href="https://www.flaticon.com/authors/vectors-market" -->
-
-        <!-- hamburger Icon js -export after it proves successful -->
-
     </head>
     <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        
         <div class="wrapper">
             <!--Hamburger Navigation Section -->
             <nav id="navBar"> 
@@ -22,16 +26,15 @@
                     <span></span>
                     <span></span>
                     <ul id="menu">
-                        <a href="#"><li>Mobile Home</li></a>
+                        <a href="#"><li>Home</li></a>
                         <a href="#"><li>HTML</li></a>
                         <a href="#"><li>CSS</li></a>
-                        <a href="#"><li>Resources</li></a>
                         <a href="#"><li>Javascript</li></a>
-                        <a href="#"><li>Learning</li></a>
                         <a href="#"><li>Git</li></a>
+                        <a href="#"><li>Learning</li></a>
+                        <a href="#"><li>Resources</li></a>
                         <a href="#"><li>Frameworks</li></a>
-                        <a href="#"><li>Something else</li></a>
-                        <a href="#"><li>Another thing</li></a>
+                        <a href="#"><li>Practice</li></a>
                     </ul>
                 </div>
             </nav>
@@ -135,12 +138,13 @@
                 
                 <!-- Profile Segment -->
                 <article class="contributorProfile-container">
-                    <div class="contributorProfile-item">
-                        <img src="img/maria.svg">
-                        <p><strong>Maria Lamado</strong><br />
-                            Front-End Developer<br />
-                            Protein, iron, and calcium are some of.</p>
-                    </div>
+                    <a href="#" style="color: #828282; text-decoration: none; font-weight: bold;">
+                            <div class="contributorProfile-item">
+                                <img src="img/maria.svg">
+                                <p style="font-size: 15px; font-weight: normal; text-align: center;">Maria Lamado<br />UI/UX Designer</p>
+                                <p style="font-weight: 300;">Protein, iron, and calcium are some of. <br />read more</p>
+                            </div>
+                    </a>
                     <a href="#" style="color: #828282; text-decoration: none; font-weight: bold;">
                         <div class="contributorProfile-item">
                             <img src="img/jannaee.svg">
@@ -148,15 +152,15 @@
                             <p style="font-weight: 300;">Protein, iron, and calcium are some of. <br />read more</p>
                         </div>
                     </a>
-                    <div class="contributorProfile-item">
-                            <img src="img/varell.svg">
-                            <p><strong>Varell Hawkins</strong><br /> Front-End Developer<br />
-                                Protein, iron, and calcium are some of.</p>
-                    </div>
+                    <a href="#" style="color: #828282; text-decoration: none; font-weight: bold;">
+                            <div class="contributorProfile-item">
+                                <img src="img/varell.svg">
+                                <p style="font-size: 15px; font-weight: normal; text-align: center;">Varell Hawkins<br />UI/UX Designer</p>
+                                <p style="font-weight: 300;">Protein, iron, and calcium are some of. <br />read more</p>
+                            </div>
+                    </a>
                 </article>
-
-                <hr class="style2">
-
+                <hr>
                 <h3>Interested in contributing? </h3>
                 <p>We are a small group of developers who met through the 2018 Grow with Google Challenge. This mulit month long online educational series was created by Udacity and sponsored by Google.</p>
             </div>
