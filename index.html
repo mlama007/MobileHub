@@ -8,9 +8,80 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400" rel="stylesheet">
         <!-- Icons made by <a href="https://www.flaticon.com/authors/vectors-market" -->
+
+        <!-- hamburger Icon js -export after it proves succesfull -->
+        <script>
+            // Initial scroll position
+            var scrollState = 0;
+
+            // Store navbar classes
+            var navClasses = document.getElementById('navBar').classList;
+
+            // returns current scroll position
+            var scrollTop = function() {
+            return window.scrollY;
+            };
+
+            // Primary scroll event function
+            var scrollDetect = function(home, down, up) {
+            // Current scroll position
+            var currentScroll = scrollTop();
+            if (scrollTop() === 0) {
+                home();
+            } else if (currentScroll > scrollState) {
+                down();
+            } else {
+                up();
+            }
+            // Set previous scroll position
+            scrollState = scrollTop();
+            };
+
+            function homeAction() {
+            console.log("home");
+            }
+
+            function downAction() {
+            navClasses.remove('open');
+            navClasses.add('collapse');
+            }
+
+            function upAction() {
+            navClasses.remove('collapse');
+            navClasses.add('open');
+            }
+
+            window.addEventListener("scroll", function() {
+            scrollDetect(homeAction, downAction, upAction);
+            });
+
+        </script>
+
     </head>
     <body>
         <div class="wrapper">
+            <!--Hamburger Navigation Section -->
+            <nav id="navBar"> 
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="#"><li>Mobile Home</li></a>
+                        <a href="#"><li>HTML</li></a>
+                        <a href="#"><li>CSS</li></a>
+                        <a href="#"><li>Resources</li></a>
+                        <a href="#"><li>Javascript</li></a>
+                        <a href="#"><li>Learning</li></a>
+                        <a href="#"><li>Git</li></a>
+                        <a href="#"><li>Frameworks</li></a>
+                        <a href="#"><li>Something else</li></a>
+                        <a href="#"><li>Another thing</li></a>
+                    </ul>
+                </div>
+            </nav>
+                
             <!-- Header Section -->
             <img class="githubbookmark" src="img/githubBookMark.svg">
             <div class="logoSection">
@@ -102,7 +173,9 @@
 
             <!-- Who we are -->
             <div class="main">
-                <h3>Who are we? </h3>
+                    
+                <h3>Who We Are </h3>
+                <hr class="style2">
                 <p>We are a small group of developers who met through the 2018 Grow with Google Challenge. This mulit month long online educational series was created by Udacity and sponsored by Google.</p>
                 <p>We are all located in Raleigh, North Carolina and were placed in the same Mobile Web Specialist program. Soon, we teamed up to help each other by sharing useful tips and resources that would help us grow technically and professionally. And now we'd like to extend the same resources to you. </p>
                 
@@ -114,11 +187,13 @@
                             Front-End Developer<br />
                             Protein, iron, and calcium are some of.</p>
                     </div>
-                    <div class="contributorProfile-item">
+                    <a href="#" style="color: #828282; text-decoration: none; font-weight: bold;">
+                        <div class="contributorProfile-item">
                             <img src="img/jannaee.svg">
-                            <p><strong>Jannaee Sick</strong><br /> Designer and Front-End Developer<br />
-                                Protein, iron, and calcium are some of.</p>
-                    </div>
+                            <p style="font-size: 15px; font-weight: normal; text-align: center;">Jannaee Sick<br />UI/UX Designer</p>
+                            <p style="font-weight: 300;">Protein, iron, and calcium are some of. <br />read more</p>
+                        </div>
+                    </a>
                     <div class="contributorProfile-item">
                             <img src="img/varell.svg">
                             <p><strong>Varell Hawkins</strong><br /> Front-End Developer<br />
