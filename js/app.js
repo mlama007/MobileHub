@@ -48,7 +48,7 @@
 	function parseTopic(name) {
 		//displays Category topic resources
 		topics[name].forEach(function(topic){ 
-			$("." + name).append(listedResources);
+			$(".articleList ." + name).append(listedResources);
 			//Match %data% with object
 			const replaceChars={ "%link%":topic.link, "%title%": topic.title, "%description%": topic.description };
 			//Replace %data% with object informtaion
@@ -56,7 +56,7 @@
 				function(match) {
 					return replaceChars[match];
 				});
-			$("." + name + " li:last").append(formattedContent);	
+			$(".articleList ." + name + " li:last").append(formattedContent);	
 		})
 	}
 
@@ -64,7 +64,7 @@
 	function parseResources(resources) {
 		//displays Category topic resources
 		resouces.forEach(function(resource){ 
-			$("." + name).append(listedResources);
+			$(".articleList ." + name).append(listedResources);
 			//Match %data% with object
 			const replaceChars={ "%link%":resource.link, "%title%": resource.title, "%description%": resource.description };
 			//Replace %data% with object informtaion
@@ -72,7 +72,7 @@
 				function(match) {
 					return replaceChars[match];
 				});
-			$("." + name + " li:last").append(formattedContent);	
+			$(".articleList ." + name + " li:last").append(formattedContent);	
 		})		
 	}
 
