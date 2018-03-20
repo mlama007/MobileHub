@@ -8,6 +8,7 @@
 	const filter = window.MobileHub.filter;
 	const topics = window.MobileHub.topics.data;
 	const categories = window.MobileHub.categories.data;
+	const contributors = window.MobileHub.contributors.data;
 	
 	/*
 	These are HTML strings. JavaScript functions 
@@ -116,5 +117,7 @@
 			break;
 		}
 	};
+
+	
 
 })();

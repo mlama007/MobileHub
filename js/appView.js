@@ -11,7 +11,10 @@
 		    const removeSelected = $('.boxes').removeClass('selected');
 		    const addContent = $('.topicImg').addClass('content');
 			const removeVisibility= $('.topicImg').removeClass('visible');
-
+			
+			$('.aboutUs').addClass('NoContent');
+			
+			
 			$('.All').addClass('ViewContent');
 			$('.All').removeClass('NoContent');
 			
@@ -92,6 +95,8 @@
 			else{
 				$('.All').removeClass('ViewContent');
 				$('.All').addClass('NoContent');
+				console.log("HERE");
+				$('.aboutUs').removeClass('NoContent');
 			}
       });
     }
