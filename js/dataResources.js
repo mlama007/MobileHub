@@ -73,25 +73,49 @@
 				"title": "CSS Reference",
 				"link": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference",
 				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
+				"description" : "CSS Reference which includes all of the key words",
+				"tag" : ['CSS', 'MDN'],
 			},
 			{
 				"title": "CSS Selectors",
 				"link": "https://css-tricks.com/how-css-selectors-work/",
 				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
+				"description" : "Quick resource for using CSS selectors",
+				"tag" : ['CSS', 'Selectors'],
 			},
 			{
 				"title": "Illustration with CSS",
 				"link": "https://www.youtube.com/watch?v=l7VUhEdM2aY",
 				"image": ["https://cdn.css-tricks.com/wp-content/themes/CSS-Tricks-16/images/logo.svg"],
 				"difficulty" :"Advanced",
-				"description" : "",
-				"tag" : [],
+				"description" : "Create impressive art using a single div",
+				"tag" : ['CSS', 'Single Div'],
+				'type': 'video'
 			},
-			
+			{
+				"title": "Tailwind",
+				"link": "https://tailwindcss.com/docs/what-is-tailwind/",
+				"difficulty" :"Intermediate",
+				"description" : "Utility classes to help find patterns in CSS and reduce repetition",
+				"tag" : ['CSS', 'Utility'],
+				'type': 'Framework'
+			},
+			{
+				"title": "CSS Keylogger",
+				"link": "https://css-tricks.com/css-keylogger/",
+				"difficulty" :"Advanced",
+				"description" : "Discovery that CSS can be used to obtain the keys a user presses.",
+				"tag" : ['CSS', 'Exploit'],
+				'type': ''
+			},
+			{
+				"title": "CSS Grid",
+				"link": "https://cssgrid.io/",
+				"difficulty" :"Beginner",
+				"description" : "25 Videos that go through fundamentals to real world appliation of css grid.",
+				"tag" : ['CSS', 'Grid'],
+				'type': 'Video'
+			},
 		],
 	
 		//HTML Resources
@@ -168,8 +192,40 @@
 				"link": "https://www.html5canvastutorials.com/category/advanced/",
 				"difficulty" :"Advanced",
 				"description" : "",
-				"tag" : [],
-			},			
+				"tag" : ['Canvas'],
+			},
+			{
+				"title": "HTML5 Elements",
+				"link": "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+				"difficulty" :"Advanced",
+				"description" : "Guide to using the HTML5 features.",
+				"tag" : ['HTML5'],
+				'type': ''
+			},
+			{
+				"title": "HTML5 Up",
+				"link": "https://html5up.net/",
+				"difficulty" :"Beginner",
+				"description" : "HTML5 Templates",
+				"tag" : ['Template'],
+				'type': ''
+			},
+			{
+				"title": "W3C Markup Validation Service",
+				"link": "https://validator.w3.org/",
+				"difficulty" :"Beginner",
+				"description" : "Checks your html to verify no errors exist",
+				"tag" : ['HTML', 'Validator'],
+				'type': 'Tool'
+			},
+			{
+				"title": "Web Design/HTML Challenges",
+				"link": "https://en.wikiversity.org/wiki/Web_Design/HTML_Challenges",
+				"difficulty" :"Intermediate",
+				"description" : "Exercises to help you choose meaningful markup.",
+				"tag" : ['HTML', 'Challange'],
+				'type': 'Tool'
+			},
 		],
 	
 		//JS Resources
@@ -254,6 +310,14 @@
 				"description" : "",
 				"tag" : [],
 			},
+			{
+				"title": "",
+				"link": "",
+				"difficulty" :"",
+				"description" : "",
+				"tag" : [''],
+				'type': ''
+			},
 		],
 		
 		//Git Resources
@@ -332,6 +396,30 @@
 				"description" : "",
 				"tag" : [],
 			},
+			{
+				"title": "",
+				"link": "",
+				"difficulty" :"",
+				"description" : "",
+				"tag" : [''],
+				'type': ''
+			},
+			{
+				"title": "",
+				"link": "",
+				"difficulty" :"",
+				"description" : "",
+				"tag" : [''],
+				'type': ''
+			},
+			{
+				"title": "",
+				"link": "",
+				"difficulty" :"",
+				"description" : "",
+				"tag" : [''],
+				'type': ''
+			},
 		],
 		
 		//Learning Resources
@@ -403,6 +491,30 @@
 				"difficulty" :"Advanced",
 				"description" : "",
 				"tag" : [],
+			},
+			{
+				"title": "",
+				"link": "",
+				"difficulty" :"",
+				"description" : "",
+				"tag" : [''],
+				'type': ''
+			},
+			{
+				"title": "",
+				"link": "",
+				"difficulty" :"",
+				"description" : "",
+				"tag" : [''],
+				'type': ''
+			},
+			{
+				"title": "",
+				"link": "",
+				"difficulty" :"",
+				"description" : "",
+				"tag" : [''],
+				'type': ''
 			},
 		],
 		
@@ -588,10 +700,10 @@
 			},
 			//Varell
 			{
-				"title": "Resources2",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
+				"title": "HTML Goodies",
+				"link": "https://www.htmlgoodies.com/",
+				"difficulty" :"",
+				"description" : "Full of helpful answers to years of people's questions.",
 				"tag" : [],
 			},
 			{
@@ -673,25 +785,28 @@
 			},
 			//Varell
 			{
-				"title": "Frameworks2",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
+				"title": "Angular",
+				"link": "https://angular.io/",
+				"difficulty" :"",
+				"description" : "Homepage for the Angular project",
+				"tag" : ['Angular', 'Google'],
+				'type': ''
 			},
 			{
-				"title": "Frameworks2",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
+				"title": "",
+				"link": "",
+				"difficulty" :"",
 				"description" : "",
-				"tag" : [],
+				"tag" : [''],
+				'type': ''
 			},
 			{
-				"title": "Frameworks2",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
+				"title": "",
+				"link": "",
+				"difficulty" :"",
 				"description" : "",
-				"tag" : [],
+				"tag" : [''],
+				'type': ''
 			},
 		],
 	
@@ -751,27 +866,50 @@
 			},
 			//Varell
 			{
-				"title": "Practice",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Beginner",
-				"description" : "",
-				"tag" : [],
+				"title": "Codecademy",
+				"link": "https://www.codecademy.com/",
+				"description" : "Code Interactively for Freed",
+				"difficulty" :"Beginneer",
+				"tag" : [''],
+				'type': ''
 			},
 			{
-				"title": "Practice",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
-				"description" : "",
-				"tag" : [],
+				"title": "Free Code Camp (FCC)",
+				"link": "https://www.freecodecamp.org/",
+				"description" : "Ever growing resources to learn to code for free with an in-depth front-end cirriculum that over covers server and database programming.",
+				"difficulty" : "Advance",
+				"tag" : [''],
+				'type': ''
 			},
 			{
-				"title": "Practice",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Advanced",
+				"title": "",
+				"link": "",
 				"description" : "",
-				"tag" : [],
+				"difficulty" :"",
+				"tag" : [''],
+				'type': ''
 			},
 		],
+
+		// Tools Resources
+		"Tools": [
+			{
+				"title": "Bazel",
+				"link": "https://bazel.build/",
+				"description" : "Build and test software of any size, quickly and reliably",
+				"difficulty" :"",
+				"tag" : [''],
+				'type': 'Tool'
+			},
+			{
+				"title": "WebPack",
+				"link": "https://webpack.js.org/",
+				"description" : "Javascript bundler",
+				"difficulty" :"",
+				"tag" : [''],
+				'type': 'Tool'
+			},
+		]
 	};
 
 })();
