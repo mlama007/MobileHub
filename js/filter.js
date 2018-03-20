@@ -34,8 +34,9 @@
     
     
     exports.filter = Object.create(filter);
+    CssFilterByDifficulty = Object.create(filter);
     // Example of how to use filter
     // @params{string, string, string} (topic, field, searchText)
-    // CssFilterByDifficulty.setSearchCriteria("CSS", "difficulty", "Beginner");
-    // console.log(CssFilterByDifficulty.searchByField());
+     CssFilterByDifficulty.setSearchCriteria("HTML", "difficulty", "Intermediate");
+     console.log(CssFilterByDifficulty.searchByField());
 })();

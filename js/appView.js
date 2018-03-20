@@ -12,9 +12,7 @@
 		    const addContent = $('.topicImg').addClass('content');
 			const removeVisibility= $('.topicImg').removeClass('visible');
 			
-			$('.aboutUs').addClass('NoContent');
-			
-			
+			$('.aboutUs').addClass('NoContent');		
 			$('.All').addClass('ViewContent');
 			$('.All').removeClass('NoContent');
 			
@@ -25,8 +23,7 @@
 		    	addContent
 		    	removeVisibility
 		    	$('.CSS').removeClass('content');
-				$('.CSS').addClass('visible');
-				// $('.main').style.display = "none";
+				$('.CSS').addClass('visible');				
 			}
 			// When HTML clicked	
 		    else if (category === "boxes HTMLBox") {
