@@ -102,12 +102,6 @@ h2, h3, h4{ color: #171D1C;}
     text-decoration: none;
 
 }
-
-.header2 {
-    text-align: center;
-}
-
-
 .logoSection{
     margin-top: 20px;
     text-align: center; 
@@ -320,29 +314,28 @@ h2, h3, h4{ color: #171D1C;}
 
 /* Callout Navigation */
 .nav {
+    /* display: flex; */
+    align-content: flex-start;
     margin: 0;
     background-color: #171D1C;
     text-align: left;
 }  
 
-/* article.nav div{
-    margin: 0 20%;
-}
-article.nav div.flex-container{
-    margin: 0 20%;
-} */
 .nav ul li{ list-style-type: none;}
-.nav p {color: #ffffff;}
+.nav p {
+    color: #ffffff;
+    padding: 0 0 0 25%;
+}
 
 hr.style {
-    border: .5px solid #F1BF98;
-    margin-top: -12px; 
+    border-top: 1px solid #d3d3d3;
+    margin: 30px -20px 20px;
 }
 
 
 hr.style2 {
-    border: .5px solid #d3d3d3;
-    width: 100%;
+    border-top: 1px solid #d3d3d3;
+    margin: 5px 0;
 }
 
 
@@ -408,10 +401,7 @@ hr.style2 {
     flex-grow: 2;
 }  
 
-/* .boxes {
-    display: grid;
 
-} */
 .containerlist {
     padding: 0;
     margin: 0;
@@ -422,15 +412,21 @@ hr.style2 {
     align-content: flex-start;
 
 }
+.containerlist p{
+    flex-direction: column;
+}
 
-/*.topics {
-     display: grid;
-     gap between items  
-    grid-gap: .5em;
-    /*  set the columns
-    grid-template-columns: 20em 20em;
-}*/
+.topics {
+    display: flex;
+    width: 55%;
+    height: 200px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
+ul li.boxes {
+    padding: 5px;
+}
 .viewAll{
     text-align: right;
 }
@@ -453,10 +449,6 @@ li.Topics-Content{
     margin: 15px 0;
     padding: 5px 20px;
 }
-p.intro.header-content{
-    border: 4px solid yellow;
-    line-height: 20px;
-}
 
 
 .topicimg.visible{
@@ -472,11 +464,43 @@ p.intro.header-content{
 
  .ViewContent{
      display: inline;
-     /* background-color: #171D1C; */
+     background-color: #171D1C;
  }
 
 
+/* Need to check with Maria about renaming this class */
 
+/* This also works as the flex container for the articles section */
+.header2 {
+    color: #f1f1f1;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+/* These are the items*/
+.header2 .logoSection {
+
+    padding: 10px;
+    margin: 25px;
+    flex: 0 0 auto; 
+    border: 4px solid yellow;
+    background-color: white;
+
+
+}
+.categoryName {
+    flex: 1 0 auto; 
+    border: 4px solid pink;
+    text-align: center;
+}
+
+p.intro.header-content{
+    flex: 2 0 auto; 
+    border: 4px solid yellow;
+    line-height: 20px;
+}
 
 
 
@@ -541,7 +565,7 @@ form.searchBoxForm::after {
 
 /*********************** Filter Buttons  */
 #filterSection{
-    background-color: #ffffff;
+
 }
 .filterButtons{
     position: absolute;
@@ -556,6 +580,7 @@ form.searchBoxForm::after {
 .filterButtons{
     text-decoration: none;
     list-style-type: none;
+    display: inline-flex;
 }
 
   

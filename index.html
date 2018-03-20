@@ -40,7 +40,7 @@
             </nav>
                 
             <!-- Header Section -->
-            <img class="githubbookmark" src="img/githubBookMark.svg">
+            <img class="githubbookmark" alt="github bookmark icon" src="img/githubBookMark.svg">
             <div class="logoSection">
                 <a href="#"><img src="img/logo.svg">
                     <span class="logoLetters">&#60;Mobile Hub &#47;&#62;</span>
@@ -51,15 +51,15 @@
                 <div class="header-content">
                     <p>This is a professionally curated repository of web design and developmental resources. We are a small group of developers and designers looking to help fellow coders quickly access information that is relevant to them on their learning process.</p>
                 </div>
+    
             </header>
             <!-- End of Header Section -->
             <!-- Topics Title of Content-->
+            
             <article class="nav">
-                <div style="margin: 0 24%;">
-                    <p>Ready to explore? Select a subject below:</p>  
-                    <hr class="style">
-                </div>
-                
+              <p>Ready to explore? Select a subject below:</p>
+              <hr>
+
                 <div class="containerlist">
                     <ul id="css" class= "topics">
                         <li class="boxes HTMLBox"><a href="#View">HTML</a></li>
@@ -71,14 +71,14 @@
                         <li class="boxes FrameworksBox"><a href="#View">Frameworks</a></li>
                         <li class="boxes PracticeBox"><a href="#View">Practice</a></li>
                     </ul>
-                <div>        
+                </div>        
             </article>
 
             <!-- Topics List of Content -->
             <div id="View" class="All NoContent">
                 <div class="wrapper">
                     <div class="header2">
-                        <img class="logoSection" src="img/logo.svg">
+                        <img class="logoSection" src="img/logo.svg">  <!--why is this not showing up? -->
                         <ul class="content CSS topicImg"></ul>
                         <ul class="content HTML topicImg"></ul>
                         <ul class="content JS topicImg"></ul>
@@ -95,23 +95,18 @@
                     <button type="submit"><img src="img/magnify.svg" class="fa fa-search"></button>
                 </form>
 
-                Topics Section
+                <!-- Topics Section -->
                     <article class="nav" id="filterSection">
-                        <div>
-                            <p>of returned articles</p>  
-                            <hr class="style">
-                        </div>
-                        <div class="flex-container">
-                            <ul id="css" class="flex-emphasis-item ">
-                                <li class="flex-item">All</li>
-                                <li class="flex-item">Beginner</li>
-                                <li class="flex-item">Intermediate</li>
-                                <li class="flex-item">Advance</li>
-                            </ul>
-                        <div>     
+                        <ul id="css" class="flex-container">
+                            <li class="flex-item">All</li>
+                            <li class="flex-item">Beginner</li>
+                            <li class="flex-item">Intermediate</li>
+                            <li class="flex-item">Advance</li>
+                        </ul>
+
                     </article>
-               
-                </div>
+                    <p>Showing <span style="color:#0b7dda;">47</span> of <span id="">58</span> articles</p>                 
+                </div><!--End of Wrapper-->
                 <div class="articleList"><!--Displayed Content-->
                     <ul class="content CSS topicImg"></ul>
                     <ul class="content HTML topicImg"></ul>
