@@ -573,8 +573,7 @@ input::-webkit-input-placeholder {	color: #999;}
 
 
 /*********************** Filter Buttons  */
- 
- .filterSection-Container {
+.filterSection-Container {
   font-family: 'Yantramanav', sans-serif;
   padding: 0;
   margin: 0;
@@ -584,27 +583,22 @@ input::-webkit-input-placeholder {	color: #999;}
 }
 
 .filterflex-item {
+   background-color: #171D1C;
   padding: 10px 50px;
   margin: 0 10px;
   border: 2px solid #ffffff;
   width: auto;
-  height: 43px;
+    height: 50px;
   color: white;
   font-weight: bold;
-  font-size: 1em;
+    font-size: .80em;
   text-align: center;
 }
-  
- #filterSection li a{
-      color: #ffffff;
-      font-size: 1em;
-  }
 
- #filterSection li a:hover{
-      color: #000000;
-      background-color: #96E6b3;
-  }
-
+.filterflex-item:hover {
+    background-color: #96E6b3;
+    color:#171D1C;
+}
 
 /* ==========================================================================
    Helper classes
