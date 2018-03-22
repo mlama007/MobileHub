@@ -1,4 +1,4 @@
-(function(undefined) {
+(function($, undefined) {
 
 	var exports = {};
 	window.MobileHub = window.MobileHub || exports;
@@ -64,7 +64,7 @@
 	// Display all resources given and displays in browser
 	function parseResources(resources) {
 		//displays Category topic resources
-		resouces.forEach(function(resource){ 
+		resources.forEach(function(resource){ 
 			$(".articleList ." + name).append(listedResources);
 			//Match %data% with object
 			const replaceChars={ "%link%":resource.link, "%title%": resource.title, "%description%": resource.description };
@@ -99,10 +99,6 @@
 	// Tied to exports to make it usable in HTML
 	exports.show = function(difficulty) {
 		switch (difficulty) {
-			case 'All':
-				// need way to get topic selected
-				displayTopic("CSS");
-			break;
 			case 'Beginner':
 				// need way to get topic and difficulty selected
 				displayTopicField("CSS", difficulty);;
@@ -115,9 +111,12 @@
 				// need way to get topic and difficulty selected
 				displayTopicField("Advance", difficulty);;
 			break;
+			default:
+				displayTopic("CSS");
+			break;
 		}
 	};
 
 	
 
-})();
+})(jQuery);
