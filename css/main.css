@@ -1,6 +1,6 @@
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
-   html {
+html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -397,10 +397,6 @@ hr.style2 {
     font-weight: bold;
 }
 
- .flex-emphasis-item{
-    flex-grow: 2;
-}  
-
 
 .containerlist {
     padding: 0;
@@ -536,22 +532,19 @@ input {	outline: none;}
 input[type=search] {
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
-	font-family: inherit;
+    font-family: 'Yantramanav', sans-serif;
     font-size: 100%;
 }
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
-	display: none;    ;
+	display: none; 
 }
 
 input[type=search] {
-	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	/*background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;*/
 	border: solid 1px #ccc;
-	padding: 9px 10px 9px 32px;
-    width: 60%;
-	-webkit-border-radius: 1em;
-	-moz-border-radius: 1em;
-	border-radius: 1em;
+	padding: 11px 10px 9px 11px;
+    width: 55%;
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
     transition: all .5s;
@@ -559,10 +552,8 @@ input[type=search] {
 }
 
 input[type=search]:focus {
-	width: 130px;
 	background-color: #fff;
 	border-color: #66CC75;
-	
 	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	box-shadow: 0 0 5px rgba(109,207,246,.5);
@@ -576,23 +567,22 @@ input::-webkit-input-placeholder {	color: #999;}
 .filterSection-Container {
   font-family: 'Yantramanav', sans-serif;
   padding: 0;
-  margin: 0;
+  margin: 20px 0 0 0;
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
 .filterflex-item {
-   background-color: #171D1C;
-  padding: 10px 50px;
-  margin: 0 10px;
-  border: 2px solid #ffffff;
-  width: auto;
-    height: 50px;
-  color: white;
-  font-weight: bold;
-    font-size: .80em;
-  text-align: center;
+    background-color: #171D1C;
+    padding: 0px 20px;
+    margin: 0 5px;
+    border: 1px solid #ffffff;
+    width: auto;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
 
 .filterflex-item:hover {
