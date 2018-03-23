@@ -16,6 +16,10 @@ html {
     text-shadow: none;
 }
 
+a:-webkit-any-link{
+    text-decoration: none;
+}
+
 hr {
     display: block;
     height: 1px;
@@ -67,6 +71,7 @@ html, body {
     margin: 0;
     height: 100%;
     color: #828282;
+    background-color: #171D1C;
 }
 
 body {     
@@ -103,16 +108,19 @@ h2, h3, h4{ color: #171D1C;}
 
 }
 .logoSection{
-    margin-top: 20px;
-    text-align: center; 
+    text-align: center;
     font-family: 'Yantramanav', sans-serif;
+    background-color: #ffffff;
+    height: 160px;
 }
 
 .logoSection a img{
     margin:0 20px; 
+    padding-top: 22px;
     vertical-align: middle;
     border: 1px solid white;
     z-index: 100;
+
 
 }
 
@@ -153,6 +161,7 @@ h2, h3, h4{ color: #171D1C;}
     justify-content: center;
     padding: 2% 25%;
     text-align: left;
+    background-color: #ffffff;
 
 
 }
@@ -443,26 +452,54 @@ hr.style2 {
 }
 li.Topics-Content{
     background: #ffffff;
-    margin: 15px 15px 25px 25px;
-    padding: 6px 20px;
+    margin: 15px -240px 45px 25px;
+    padding: 6px 30px;
     width: 90%;
 }
 
 li.Topics-Content.flex-item{
     border-left: 15px solid #0b7dda;
 }
-.articleList{
-     background-color: #171D1C;
+
+li.Topics-Content.flex-item p:nth-child(2){
+    margin-top: -15px;
 }
-/* let's change .text-content to article link or titles */
+
+/* Color for filtration of articles */
+#beginnerHighlight{border-left: 15px solid #0b7dda;}
+#intermediateHighlight{border-left: 15px solid #0b7dda;}
+#advanceHighlight{border-left: 15px solid #f1bf98;}
+
+p.articleCount{
+    color: #ffffff;
+    background-color: #171D1C;
+    font-size: .75em;
+    margin-bottom: -10px;
+}
+
+#matchedArticles{
+    color:#0b7dda; 
+    text-decoration: underline;
+}
+
+#totalArticles{
+    color: #f1bf98;
+    text-decoration: underline;
+}
+
+
 
 span.text-content{
     color: #171D1C;
+    font-weight: 800;
+    font-size: 1.35em;
     text-decoration: none;
 }
 
-
-.topicimg.visible{
+span.text-content:hover{
+    text-decoration: underline;
+}
+.topicimg.visible,  div.articleCountContainer.flex-container{
     justify-content: center;
     margin: 0;
     padding: 2% 25%;
@@ -734,7 +771,7 @@ input::-webkit-input-placeholder {	color: #999;}
 
     a,
     a:visited {
-        text-decoration: underline;
+        /* text-decoration: underline; */
     }
 
     a[href]:after {

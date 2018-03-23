@@ -492,30 +492,6 @@
 				"description" : "",
 				"tag" : [],
 			},
-			{
-				"title": "",
-				"link": "",
-				"difficulty" :"",
-				"description" : "",
-				"tag" : [''],
-				'type': ''
-			},
-			{
-				"title": "",
-				"link": "",
-				"difficulty" :"",
-				"description" : "",
-				"tag" : [''],
-				'type': ''
-			},
-			{
-				"title": "",
-				"link": "",
-				"difficulty" :"",
-				"description" : "",
-				"tag" : [''],
-				'type': ''
-			},
 		],
 		
 		//Resources Resources
