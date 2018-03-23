@@ -152,7 +152,7 @@ h2, h3, h4{ color: #171D1C;}
 .header{ 
     justify-content: center;
     padding: 2% 25%;
-    text-align: justify;
+    text-align: left;
 
 
 }
@@ -347,8 +347,8 @@ hr.style2 {
 
 .main {
     background: #ffffff;
-    padding: 2% 25%;
-    text-align: justify;
+    padding: 5% 25%;
+    text-align: left;
 
   }
 
@@ -448,6 +448,9 @@ li.Topics-Content{
     border-left: 15px solid #0b7dda;
 }
 
+li.Topics-Content.flex-item{
+    border: 15px solid #0b7dda;
+}
 .articleList{
      background-color: #171D1C;
 }
@@ -460,10 +463,12 @@ span.text-content{
 
 
 .topicimg.visible{
-    /* border: 1px solid red; */
     justify-content: center;
     margin: 0;
     padding: 2% 25%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
 }
 
 .NoContent{
