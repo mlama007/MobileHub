@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900" rel="stylesheet">
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -44,7 +44,7 @@
             <div class="logoSection">
                 <a href="#"><img src="img/logo.svg">
                     <span class="logoLetters">&#60;Mobile Hub &#47;&#62;</span>
-                    <br/>A Library For Students of Web Design & Development
+                    <br/>A Library For Students of Web Design &mp; Development
                 </a>
             </div>
             <header class="header">
@@ -58,7 +58,7 @@
             
             <article class="nav">
               <p>Ready to explore? Select a subject below:</p>
-                <hr class="style2">
+                <!-- <hr class="style2"> -->
 
                 <div class="containerlist">
                     <ul id="css" class= "topics">
@@ -74,30 +74,27 @@
                 </div>        
             </article>
 
-            <!-- Topics List of Content -->
+        <!-- Topics List of Content -->
 
-                <!-- Search -->
-                    <form class="flex-container" style="    background-color: #171D1C;
-">
-                        <input  class="flex-item" type="search" placeholder="Search">
-                    </form>
+        <!-- Search -->
+            <form class="searchForm flex-container" style="background-color: #171D1C;">
+                <input class="flex-item" type="search" placeholder="Search">
+            </form>
 
-
-                <!-- Topics Section -->
-                    <!--filter buttons-->
-                    <article class="nav" id="filterSection">
-                        <div id="css" class="filterSection-Container">
-                          <button class="filterflex-item">All</button>
-                          <button class="filterflex-item">Beginner</button>
-                          <button class="filterflex-item">Intermediate</button>
-                          <button class="filterflex-item">Advance</button>
-                        <div>
-                    </article>
+        <!-- Topics Section -->
+            <!--filter buttons-->
+            <article class="nav" id="filterSection">
+                <div id="css" class="filterSection-Container">
+                    <button class="filterflex-item">All</button>
+                    <button class="filterflex-item">Beginner</button>
+                    <button class="filterflex-item">Intermediate</button>
+                    <button class="filterflex-item">Advance</button>
+                <div>
+            </article>
 
             <div id="View" class="All NoContent">
-                <div class="wrapper">
-                    <div class="header2">
-                         <img class="logoSection" src="img/logo.svg"> <!--why is this not showing up? -->
+                    <div class="header2 flex-container">
+                        <!-- <img class="logoSection" src="img/logo-white.svg" width="95px;"> why is this not showing up? -->
                         <ul class="content CSS topicImg"></ul>
                         <ul class="content HTML topicImg"></ul>
                         <ul class="content JS topicImg"></ul>
@@ -107,11 +104,10 @@
                         <ul class="content Frameworks topicImg"></ul>
                         <ul class="content Practice topicImg"></ul>
                     </div>
-
                     <p>Showing <span style="color:#0b7dda;">47</span> of <span id="">58</span> articles</p>                 
                 </div><!--End of Wrapper-->
-                <div class="articleList"><!--Displayed Content-->
-                    <ul class="content CSS topicImg"></ul>
+                <div class="articleList flex-item"><!--Displayed Content-->
+                    <ul class="content CSS topicImg flex-item"></ul>
                     <ul class="content HTML topicImg"></ul>
                     <ul class="content JS topicImg"></ul>
                     <ul class="content Git topicImg"></ul>
@@ -120,7 +116,6 @@
                     <ul class="content Frameworks topicImg"></ul>
                     <ul class="content Practice topicImg"></ul>
                 </div>
-            </div>
 
             <!-- Who we are -->
             <div class="main aboutUs">

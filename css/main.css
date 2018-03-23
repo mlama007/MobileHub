@@ -97,7 +97,7 @@ h2, h3, h4{ color: #171D1C;}
 .minilogoLetters{
     font-size: 20px;
     font-family: 'Yantramanav', sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     color: #96E6b3;
     text-decoration: none;
 
@@ -140,7 +140,7 @@ h2, h3, h4{ color: #171D1C;}
 .wrapper {
     display: flex;  
     flex-flow: row wrap;
-    font-weight: bold;
+    font-weight: 500;
     flex: 1 0 auto;
 }
   
@@ -247,7 +247,7 @@ h2, h3, h4{ color: #171D1C;}
   }
   
   #menu a {color: white; text-decoration: none;}
-  #menu a:hover{color: black; font-weight: bold;}
+  #menu a:hover{color: black; font-weight: 500;}
 
   #menuToggle input:checked ~ ul { transform: none;}
   
@@ -394,7 +394,7 @@ hr.style2 {
     padding: 0px;
     width: auto;
     margin-top: 0px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 
@@ -403,7 +403,7 @@ hr.style2 {
     margin: 0;
     list-style: none;
     display: flex; 
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-content: flex-start;
 
@@ -414,15 +414,15 @@ hr.style2 {
 
 .topics {
     display: flex;
-    width: 55%;
+    width:55%;
     height: 200px;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
-ul li.boxes {
+/* ul li.boxes {
     padding: 5px;
-}
+} */
 .viewAll{
     text-align: right;
 }
@@ -439,13 +439,23 @@ ul li.boxes {
 }
 .visible {
     list-style-type: none;
-    justify-content: center;
+    /* justify-content: center; */
 }
 li.Topics-Content{
     background: #ffffff;
-    margin: 15px 0;
-    padding: 5px 20px;
-    border: 1px solid gold;
+    margin: 15px 15px 25px -23px;
+    padding: 6px 20px;
+    border-left: 15px solid #0b7dda;
+}
+
+.articleList{
+     background-color: #171D1C;
+}
+/* let's change .text-content to article link or titles */
+
+span.text-content{
+    color: #171D1C;
+    text-decoration: none;
 }
 
 
@@ -473,30 +483,25 @@ li.Topics-Content{
     color: #f1f1f1;
     text-align: center;
     display: flex;
-    justify-content: center;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
     padding: 2% 20%;
 
 }
 
 /* These are the items*/
 .header2 .logoSection {
-
-    padding: 10px;
-    margin: 25px;
     flex: 0 0 auto; 
-    background-color: white;
-
-
 }
 .categoryName {
     flex: 1 0 auto; 
-    text-align: left;
+    text-align: center;
+    margin-bottom: -15px;
 }
 
 p.intro.header-content{
     line-height: 35px;
     text-align: left;
-    padding-right: 60px;
 }
 
 
@@ -504,14 +509,16 @@ p.intro.header-content{
 
 /*********************** LINK STYLES */
 
-a:link, :visited {color: #F1BF98;}
+/* a:link, :visited {color: #F1BF98;} */
 .nav a:hover {color: #96E6b3;}
 
-.nav a:link{
+.nav a{
+    color:#f1bf98;
     text-decoration: none;
     font-family: 'Yantramanav', sans-serif;
-    font-weight: 200;
+    font-weight: 500;
     font-size: 1.5em;
+    line-height: 2em;
 }
 
 /*********************** Footer Section*/
@@ -534,6 +541,7 @@ input[type=search] {
 	-webkit-box-sizing: content-box;
     font-family: 'Yantramanav', sans-serif;
     font-size: 100%;
+
 }
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
@@ -548,7 +556,6 @@ input[type=search] {
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
     transition: all .5s;
-
 }
 
 input[type=search]:focus {
@@ -562,12 +569,14 @@ input[type=search]:focus {
 input:-moz-placeholder {color: #999;}
 input::-webkit-input-placeholder {	color: #999;}
 
-
+.searchForm {
+    background-color: #171D1C;
+}
 /*********************** Filter Buttons  */
 .filterSection-Container {
   font-family: 'Yantramanav', sans-serif;
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 20px 0 45px 0;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -581,7 +590,7 @@ input::-webkit-input-placeholder {	color: #999;}
     width: auto;
     height: 35px;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
 }
 
