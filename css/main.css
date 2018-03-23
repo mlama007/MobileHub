@@ -443,13 +443,13 @@ hr.style2 {
 }
 li.Topics-Content{
     background: #ffffff;
-    margin: 15px 15px 25px -23px;
+    margin: 15px 15px 25px 25px;
     padding: 6px 20px;
-    border-left: 15px solid #0b7dda;
+    width: 90%;
 }
 
 li.Topics-Content.flex-item{
-    border: 15px solid #0b7dda;
+    border-left: 15px solid #0b7dda;
 }
 .articleList{
      background-color: #171D1C;
@@ -486,12 +486,8 @@ span.text-content{
 /* This also works as the flex container for the articles section */
 .header2 {
     color: #f1f1f1;
-    text-align: center;
     display: flex;
-    /* justify-content: space-between; */
-    flex-wrap: wrap;
-    padding: 2% 20%;
-
+    justify-content: center;
 }
 
 /* These are the items*/
