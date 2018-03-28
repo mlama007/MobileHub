@@ -237,7 +237,7 @@ h2, h3, h4{ color: #171D1C;}
   #menu {
     position: fixed;
     height:100%;
-    width: 275px;
+    width: 300px;
     margin:-57px 0 0 -50px;
     padding-top:100px;
     background: #44Abe2;
@@ -250,17 +250,50 @@ h2, h3, h4{ color: #171D1C;}
     font-family: 'Yantramanav', sans-serif;
     font-weight: 100;
   }
-  
-  #menu li {
-    padding: 20px;
-    font-size: 22px;
-  }
-  
+
   #menu a {color: white; text-decoration: none;}
   #menu a:hover{color: black; font-weight: 500;}
 
   #menuToggle input:checked ~ ul { transform: none;}
   
+  #menu li{
+    padding: 20px;
+    font-size: 22px;
+  }
+  button.dropdown-btn a:hover{
+    color: black; font-weight: 500;
+  }
+  .dropdown-btn, .dropdown-container a {
+    display: block;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 21px;
+  }
+
+  .active, .dropdown-container a {
+    background-color:rgb(63, 150, 197);
+    color: #ffffff;
+    width: 303px;
+    padding: 15px 15px 15px 62px;
+    margin: 0 -43px;
+    text-align: left;
+  }
+
+  .dropdown-container {
+    display: none;
+    background-color: rgb(63, 150, 197);
+    padding: 15px 15px 15px -62px;
+    width: 260px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 400px;
+}
+ 
   nav {
     position: fixed;
     top: 0;
