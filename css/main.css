@@ -96,7 +96,8 @@ h2, h3, h4{ color: #171D1C;}
     position: fixed;
     top: -0.75em;
     right: 2em;
-    width: 3.5em
+    width: 3.5em;
+    z-index: 0;
 }
 
 .minilogoLetters{
@@ -185,7 +186,7 @@ h2, h3, h4{ color: #171D1C;}
   #menuToggle input {
     display: block;
     width: 30px;
-    height: 32px;
+    height: 60px;
     position: absolute;
     cursor: pointer;
     opacity: 0; 
@@ -234,10 +235,11 @@ h2, h3, h4{ color: #171D1C;}
   }
   
   #menu {
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -65px;
-    padding: 130px 50px 50px 60px;
+    position: fixed;
+    height:100%;
+    width: 275px;
+    margin:-57px 0 0 -50px;
+    padding-top:100px;
     background: #44Abe2;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -247,11 +249,10 @@ h2, h3, h4{ color: #171D1C;}
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     font-family: 'Yantramanav', sans-serif;
     font-weight: 100;
-    line-height: 1em;
   }
   
   #menu li {
-    padding: 10px 0;
+    padding: 20px;
     font-size: 22px;
   }
   
