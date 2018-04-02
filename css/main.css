@@ -408,18 +408,30 @@ hr.style2 {
 
 /* Profile Container's Children's Style */
 .contributorProfile-item{
+    font-size: 15px;
     padding: 28px;
-    width: 155px;
-    height: 275px;
+    width: 30%;
     margin: 30px 5px 5px 5px;
     text-align: center;
-    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
+
+.contributorProfile-item h3{
+    font-weight: bold;   
+  }
 
 .contributorProfile-item img{
   width: 100%;    
+}
+
+.profileLinks img{
+  height: 1em;
+  width: auto;
+  padding-right: .5em;
+}
+
+.positions {
+    color: #44ABE2;
 }
 
 /*********************** Flex for submodules */
