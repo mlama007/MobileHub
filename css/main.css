@@ -286,10 +286,10 @@ h2, h3, h4{ color: #171D1C;}
     display: none;
     background-color: rgb(63, 150, 197);
     padding: 15px 15px 15px -62px;
-    width: 260px;
     overflow-y: auto;
     overflow-x: hidden;
     height: 400px;
+    margin-left: -2em;
 }
  
   nav {
@@ -424,9 +424,9 @@ hr.style2 {
 }
 
 .profileLinks img{
-  height: 1em;
+  height: 1.2em;
   width: auto;
-  padding-right: .5em;
+  padding-right: 1em;
 }
 
 .positions {
@@ -601,6 +601,22 @@ p.intro.header-content{
     font-size: 1.5em;
     line-height: 2em;
 }
+
+#down {
+    display: flex;
+    height: auto;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+#down ul{
+    margin-left: 1em;
+}
+#down li{
+    padding: 0 0 0 3em;
+}
+
 
 /*********************** Footer Section*/
 footer {
