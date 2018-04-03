@@ -152,7 +152,6 @@ h2, h3, h4{ color: #171D1C;}
 }
   
 .wrapper > * {
-    /* padding: 10px; */
     flex: 1 100%;
 }
   
@@ -388,7 +387,7 @@ hr.style2 {
 
 .main {
     background: #ffffff;
-    padding: 5% 25%;
+    padding: 5% 15%;
     text-align: left;
 
   }
@@ -408,9 +407,8 @@ hr.style2 {
 /* Profile Container's Children's Style */
 .contributorProfile-item{
     font-size: 15px;
-    padding: 28px;
-    width: 30%;
-    margin: 30px 5px 5px 5px;
+    padding: 1em;
+    width: 31%;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

@@ -117,3 +117,15 @@
         padding-right: 1.2em;    
     }    
 }
+@media screen and (max-width: 725px) {  
+    .contributorProfile-item {
+        width: 20em;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    .contributorProfile-container {
+        display: inherit;
+        text-align: center;
+    }
+    
+}
