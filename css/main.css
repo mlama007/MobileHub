@@ -633,7 +633,7 @@ input[type=search] {
 	/*background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;*/
 	border: solid 1px #ccc;
 	padding: 11px 10px 9px 11px;
-    width: 55%;
+    width: 40%;
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
     transition: all .5s;

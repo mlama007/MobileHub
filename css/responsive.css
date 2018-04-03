@@ -106,11 +106,19 @@
     }
     .filterflex-item {
         padding: 0.5em;
-    }
+    }    
+    input[type=search] {
+        width: 55%;        
+    }  
 }
 
 @media screen and (max-width: 550px) {  
     .topics li{    
         padding-right: 1.2em;    
-    }
+    }    
 }
+/* @media screen and (max-width: 750px) {  
+    input[type=search] {
+        width: 55%;        
+    }   
+} */
