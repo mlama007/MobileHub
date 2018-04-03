@@ -11,6 +11,7 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
         <link href="https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900" rel="stylesheet">
     </head>
     <body>
@@ -33,14 +34,18 @@
                             <i class="fa fa-caret-down"></i>
                         </button>
                         <div class="dropdown-container">
-                                <a href="#">HTML</a>
-                                <a href="#">CSS</a>
-                                <a href="#">Javascript</a>
-                                <a href="#">GIT</a>
-                                <a href="#">Learning</a>
-                                <a href="#">Resources</a>                                
-                                <a href="#">Frameworks</a>  
-                                <a href="#">Practice</a>                                                              
+                            
+                                <ul id="css" class= "topics">
+                                    <li class="boxes HTMLBox"><a href="#View">HTML</a></li>
+                                    <li class="boxes CSSBox"><a href="#View">CSS</a></li>
+                                    <li class="boxes JSBox"><a href="#View">Javascript</a></li>
+                                    <li class="boxes GitBox"><a href="#View">Git</a></li>
+                                    <li class="boxes LearningBox"><a href="#View">Learning</a></li>
+                                    <li class="boxes ResourcesBox"><a href="#View">Resources</a></li>
+                                    <li class="boxes FrameworksBox"><a href="#View">Frameworks</a></li>
+                                    <li class="boxes PracticeBox"><a href="#View">Practice</a></li>
+                                </ul>
+                                                                                      
                         </div>                        
                     </ul>
                 </div>
@@ -49,9 +54,10 @@
             <!-- Header Section -->
             <a target="_blank" href="https://github.com/mlama007/MobileHub"><img class="githubbookmark" alt="github bookmark icon" src="img/githubBookMark.svg"></a>
             <div class="logoSection">
-                <a href="#"><img src="img/logo.svg">
-                    <span class="logoLetters">&#60;Mobile Hub &#47;&#62;</span>
-                    <br/>A Library For Students of Web Design &amp; Development
+                <a href="#">
+                    <img src="img/logo.svg">
+                    <br/><span class="logoLetters">&#60;Mobile Hub &#47;&#62;</span>
+                    <br/><span class="logoWords">A Library For Students of Web Design &amp; Development</span>
                 </a>
             </div>
             <header class="header">
@@ -134,7 +140,7 @@
                     
                 <h3>Who We Are </h3>
                 <hr class="style2">
-                <p>We are a small group of developers who met through the 2018 Grow with Google Challenge. This mulit month long online educational series was created by Udacity and sponsored by Google.</p>
+                <p>We are a small group of developers who met through the 2018 Grow with Google Challenge. This multi month long online educational series was created by Udacity and sponsored by Google.</p>
                 <p>We are all located in Raleigh, North Carolina and were placed in the same Mobile Web Specialist program. Soon, we teamed up to help each other by sharing useful tips and resources that would help us grow technically and professionally. And now we'd like to extend the same resources to you. </p>
                 
                 <!-- Profile Segment -->

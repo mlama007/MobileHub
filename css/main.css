@@ -111,7 +111,6 @@ h2, h3, h4{ color: #171D1C;}
     text-align: center;
     font-family: 'Yantramanav', sans-serif;
     background-color: #ffffff;
-    height: 160px;
 }
 
 .logoSection a img{
@@ -366,7 +365,7 @@ h2, h3, h4{ color: #171D1C;}
 .nav ul li{ list-style-type: none;}
 .nav p {
     color: #ffffff;
-    padding: 0 0 0 25%;
+    text-align: center;
 }
 
 hr.style {
@@ -457,10 +456,8 @@ hr.style2 {
     margin: 0;
     list-style: none;
     display: flex; 
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
-    align-content: flex-start;
-
 }
 .containerlist p{
     flex-direction: column;
@@ -468,15 +465,16 @@ hr.style2 {
 
 .topics {
     display: flex;
-    width:55%;
     height: 200px;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 0;
+    margin-left: -5em;
+}
+.topics li{    
+    padding-right: 8em;    
 }
 
-/* ul li.boxes {
-    padding: 5px;
-} */
 .viewAll{
     text-align: right;
 }
@@ -755,120 +753,3 @@ input::-webkit-input-placeholder {	color: #999;}
     clear: both;
 }
 
-/*********************** Media Queries*/
-@media all and (min-width: 600px) {
-    .aside { flex: 1 auto; }
-    .header-content {
-        /*background-color: #96E6b3;Testing colors*/
-    } 
-}
-@media all and (max-width: 600px) {
-    .aside { flex: 1 auto; }
-    .header-content {
-        /*background-color: #96E6b3;Testing colors*/
-    } 
-} 
-
-@media all and (min-width: 800px) {
-     /* We invert order of first sidebar and main
-   * And tell the main element to take twice as much width as the other two sidebars 
-   */
-    .main    { 
-        /*background-color: pink; Testing colors*/
-        flex: 3 0px; 
-    }
-}
-  
-@media screen and (min-width: 1750px) {  
-    .topics {
-        margin: 0 8em;
-    }
-}
-@media screen and (min-width: 2050px) {  
-    .topics {
-        margin: 0 15em;
-    }
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        /* text-decoration: underline; */
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
