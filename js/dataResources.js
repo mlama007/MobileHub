@@ -2,10 +2,9 @@
 
 	let exports = {};
 	window.MobileHub = window.MobileHub || {};
-	window.MobileHub.topics = exports;
-
+	
 	//array of objects conatining Resource Links
-	exports.data = {
+	window.MobileHub.Resources = {
 		//CSS Resources
 		"CSS":
 		[
@@ -116,6 +115,13 @@
 				"tag" : ['CSS', 'Grid'],
 				'type': 'Video'
 			},
+			{
+				"title": "CSS Validation Service",
+				"link": "https://validator.w3.org/nu/#textarea",
+				"difficulty" :"Advanced",
+				"description" : "This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change.",
+				"tag" : ["Validation"],
+			},
 		],
 	
 		//HTML Resources
@@ -164,13 +170,6 @@
 				"difficulty" :"Advanced",
 				"description" : "Explore best practices for implementing designs using HTML and CSS.",
 				"tag" : [],
-			},
-			{
-				"title": "CSS Validation Service",
-				"link": "https://validator.w3.org/nu/#textarea",
-				"difficulty" :"Advanced",
-				"description" : "This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change.",
-				"tag" : ["Validation"],
 			},
 			//Varell
 			{
@@ -310,14 +309,6 @@
 				"description" : "",
 				"tag" : [],
 			},
-			{
-				"title": "",
-				"link": "",
-				"difficulty" :"",
-				"description" : "",
-				"tag" : [''],
-				'type': ''
-			},
 		],
 		
 		//Git Resources
@@ -431,8 +422,7 @@
 				"difficulty" :"Beginner",
 				"description" : "Codecademy is an online freemium interactive platform that offers free coding classes in 12 different programming languages.",
 				"tag" : [],
-			},
-			
+			},			
 			{
 				"title": "Ready to try JavaScript?",
 				"link": "https://www.javascript.com/",

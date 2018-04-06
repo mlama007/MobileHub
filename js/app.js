@@ -5,10 +5,10 @@
 	if(window.MobileHub) exports = window.MobileHub;
 
 	// Dependencies
-	const filter = window.MobileHub.filter;
-	const topics = window.MobileHub.topics.data;
-	const categories = window.MobileHub.categories.data;
-	const contributors = window.MobileHub.contributors.data;
+	const filter = window.MobileHub.Filter;
+	const resources = window.MobileHub.Resources;
+	const categories = window.MobileHub.Categories.data;
+	const contributors = window.MobileHub.Contributors.data;
 	
 	/*
 	These are HTML strings. JavaScript functions 
@@ -24,7 +24,8 @@
 
 	//Display all content from all topics
 	function displayAll() {
-		const types = ['CSS', 'HTML', 'JS', 'Git', 'Learning', 'Resources', 'Frameworks', 'Practice', ];
+		
+		const types = window.MobileHub.Categories.getCategories();
 		types.forEach(function(type){
 			parseTopic(type);
 		});
@@ -40,7 +41,7 @@
 
 	// Display all content from topic matching field
 	function displayTopicField(topic, field) {
-		let filteredResources = filter.setSearchCriteria(topic, field, "");
+		let filteredResources = filter.setSearchCriteria({topic: [topic]});
 		parseResources(filteredResources);
 	}
 
@@ -48,7 +49,7 @@
 	// @param {string} topic
 	function parseTopic(name) {
 		//displays Category topic resources
-		topics[name].forEach(function(topic){ 
+		resources[name].forEach(function(topic){ 
 			$(".articleList ." + name).append(listedResources);
 			//Match %data% with object
 			const replaceChars={ "%link%":topic.link, "%title%": topic.title, "%description%": topic.description };
@@ -115,8 +116,6 @@
 				displayTopic("CSS");
 			break;
 		}
-	};
-
-	
+	};	
 
 })(jQuery);
