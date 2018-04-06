@@ -88,6 +88,7 @@
     .filterflex-item {
         font-size: .8em;
     }
+    
 }
 
 @media screen and (max-width: 480px) {  
@@ -110,6 +111,10 @@
     input[type=search] {
         width: 55%;        
     }  
+    .main {
+        background: #ffffff;
+        padding: 5% 5%;
+    }
 }
 
 @media screen and (max-width: 550px) {  
