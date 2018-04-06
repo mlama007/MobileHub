@@ -1,0 +1,769 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+a:-webkit-any-link{
+    text-decoration: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   MOBILE HUB - Custom Styles
+   ========================================================================== */
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    color: #828282;
+    background-color: #171D1C;
+}
+
+body {     
+    position: relative;
+    display: flex;/*sticky bottom*/
+    flex-direction: column; /*sticky bottom*/
+}
+
+body p, h1, h2, h3, h4{
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: normal;
+}
+
+h2, h3, h4{ color: #171D1C;}
+
+
+/* ==========================================================================
+    Logo Section
+========================================================================== */
+
+.githubbookmark {
+    position: fixed;
+    right: 2em;
+    width: 3.5em;
+    z-index: 0;
+}
+
+.minilogoLetters{
+    font-size: 20px;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 500;
+    color: #96E6b3;
+    text-decoration: none;
+
+}
+.logoSection{
+    text-align: center;
+    font-family: 'Yantramanav', sans-serif;
+    background-color: #ffffff;
+}
+
+.logoSection a img{
+    margin:0 20px; 
+    padding-top: 22px;
+    vertical-align: middle;
+    border: 1px solid white;
+    z-index: 100;
+
+
+}
+
+.logoLetters{
+    color:#96E6b3; 
+    font-size: 2.5em;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.logoTagLine{
+    margin-left: 15%;
+    color:#171D1C;
+}
+.logoSection a:link{
+    text-decoration: none;
+    color:#171D1C;
+}
+
+
+/* ==========================================================================
+    Flex Wrappers and Controls
+========================================================================== */
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: 500;
+    flex: 1 0 auto;
+}
+  
+.wrapper > * {
+    flex: 1 100%;
+}
+  
+.header{ 
+    justify-content: center;
+    padding: 2% 25%;
+    text-align: left;
+    background-color: #ffffff;
+
+
+}
+
+
+/* ==========================================================================
+    Navigation
+========================================================================== */
+
+/* Hamburger Navigation */
+#menuToggle {
+    display: block;
+    position: relative;
+    top:20px;
+    left: 40px;
+     z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle input {
+    display: block;
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; 
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+  
+  /* Hamburger Icon */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  
+  /* Transform hamburger into a crossmark */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: white;
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  #menu {
+    position: fixed;
+    height:100%;
+    width: 300px;
+    margin:-57px 0 0 -50px;
+    padding-top:100px;
+    background: #44Abe2;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+  }
+
+  #menu a {color: white; text-decoration: none;}
+  #menu a:hover{color: black; font-weight: 500;}
+
+  #menuToggle input:checked ~ ul { transform: none;}
+  
+  #menu li{
+    padding: 20px;
+    font-size: 22px;
+  }
+  button.dropdown-btn a:hover{
+    color: black; font-weight: 500;
+  }
+  .dropdown-btn, .dropdown-container a {
+    display: block;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 21px;
+  }
+
+  .active, .dropdown-container a {
+    background-color:rgb(63, 150, 197);
+    color: #ffffff;
+    width: 303px;
+    padding: 15px 15px 15px 62px;
+    margin: 0 -43px;
+    text-align: left;
+  }
+
+  .dropdown-container {
+    display: none;
+    background-color: rgb(63, 150, 197);
+    padding: 15px 15px 15px -62px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 400px;
+    margin-left: -2em;
+}
+ 
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 73px;
+  }
+  
+  .collapse {
+    -webkit-animation: collapse .5s ease forwards;
+            animation: collapse .5s ease forwards;
+  }
+  
+  .open {
+    -webkit-animation: open .5s ease forwards;
+            animation: open .5s ease forwards;
+  }
+  
+  @-webkit-keyframes collapse {
+    from {
+      opacity: 1;
+      top: 0;
+    }
+    to {
+      opacity: 0;
+      top: -73px;
+    }
+  }
+  
+  @keyframes collapse {
+    from {
+      opacity: 1;
+      top: 0;
+    }
+    to {
+      opacity: 0;
+      top: -73px;
+    }
+  }
+  @-webkit-keyframes open {
+    from {
+      opacity: 0;
+      top: -73px;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  @keyframes open {
+    from {
+      opacity: 0;
+      top: -73px;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  
+  /* end of hamburger navigation */
+
+/* Callout Navigation */
+.nav {
+    /* display: flex; */
+    align-content: flex-start;
+    margin: 0;
+    background-color: #171D1C;
+    text-align: left;
+}  
+
+.nav ul li{ list-style-type: none;}
+.nav p {
+    color: #ffffff;
+    text-align: center;
+}
+
+hr.style {
+    border-top: 1px solid #d3d3d3;
+    margin: 30px -20px 20px;
+}
+
+
+hr.style2 {
+    border-top: 1px solid #d3d3d3;
+    margin: 5px 0;
+}
+
+
+
+
+/*********************** Main Section */
+.aside-1 { background:  #ffffff;}
+.aside-2 { background: #ffffff;} /* Hidden Aside Sections for future call out or ads? */
+
+.main {
+    background: #ffffff;
+    padding: 5% 15%;
+    text-align: left;
+
+  }
+
+
+/* Profile Container's Parent Style */
+
+.contributorProfile-container{
+    display: flex;
+    margin: 0 0 60px 0;
+    padding: 0;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+}
+
+/* Profile Container's Children's Style */
+.contributorProfile-item{
+    font-size: 15px;
+    padding: 1em;
+    width: 31%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contributorProfile-item h3{
+    font-weight: bold;   
+  }
+
+.contributorProfile-item img{
+  width: 100%;    
+}
+
+.profileLinks img{
+  height: 1.2em;
+  width: auto;
+  padding-right: 1em;
+}
+
+.positions {
+    color: #44ABE2;
+}
+
+/*********************** Flex for submodules */
+ .flex-container{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    padding: 0px;
+    width: auto;
+    margin-top: 0px;
+    font-weight: 500;
+}
+
+
+.containerlist {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.containerlist p{
+    flex-direction: column;
+}
+
+.topics {
+    display: flex;
+    height: 200px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+    margin-left: -5em;
+}
+.topics li{    
+    padding-right: 8em;    
+}
+
+.viewAll{
+    text-align: right;
+}
+
+
+/*********************** Dynamically displayed content | SELECTED */
+.selected {
+    color: #f1bf98;
+}
+
+/* DISPLAY */
+.content {
+    display: none;
+}
+.visible {
+    list-style-type: none;
+    /* justify-content: center; */
+}
+li.Topics-Content{
+    background: #ffffff;
+    margin: 15px -240px 45px 25px;
+    padding: 6px 30px;
+    width: 90%;
+}
+
+li.Topics-Content.flex-item{
+    border-left: 15px solid #0b7dda;
+}
+
+li.Topics-Content.flex-item p:nth-child(2){
+    margin-top: -15px;
+}
+
+/* Color for filtration of articles */
+#beginnerHighlight{border-left: 15px solid #0b7dda;}
+#intermediateHighlight{border-left: 15px solid #0b7dda;}
+#advanceHighlight{border-left: 15px solid #f1bf98;}
+
+p.articleCount{
+    color: #ffffff;
+    background-color: #171D1C;
+    font-size: .75em;
+    margin-bottom: -10px;
+}
+
+#matchedArticles{
+    color:#0b7dda; 
+    text-decoration: underline;
+}
+
+#totalArticles{
+    color: #f1bf98;
+    text-decoration: underline;
+}
+
+
+
+span.text-content{
+    color: #171D1C;
+    font-weight: 800;
+    font-size: 1.35em;
+    text-decoration: none;
+}
+
+span.text-content:hover{
+    text-decoration: underline;
+}
+.topicimg.visible,  div.articleCountContainer.flex-container{
+    justify-content: center;
+    margin: 0;
+    padding: 2% 25%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+}
+
+.NoContent{
+    display: none;
+ }
+
+ .ViewContent{
+     display: inline;
+     background-color: #171D1C;
+ }
+
+
+/* Need to check with Maria about renaming this class */
+
+/* This also works as the flex container for the articles section */
+.header2 {
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+}
+
+/* These are the items*/
+.header2 .logoSection {
+    flex: 0 0 auto; 
+}
+.categoryName {
+    flex: 1 0 auto; 
+    text-align: center;
+    margin-bottom: -15px;
+}
+
+p.intro.header-content{
+    line-height: 35px;
+    text-align: left;
+}
+
+
+
+
+/*********************** LINK STYLES */
+
+/* a:link, :visited {color: #F1BF98;} */
+.nav a:hover {color: #96E6b3;}
+
+.nav a{
+    color:#f1bf98;
+    text-decoration: none;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+#down {
+    display: flex;
+    height: auto;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+#down ul{
+    margin-left: 1em;
+}
+#down li{
+    padding: 0 0 0 3em;
+}
+
+
+/*********************** Footer Section*/
+footer {
+    background: #44Abe2;
+    flex-shrink: 0; /*sticky bottom*/
+  }
+
+.footer p {
+    text-align: center;
+    color: #ffffff;
+}
+  
+
+/************************** Search Input style */
+
+input {	outline: none;}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 100%;
+
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+input[type=search] {
+	/*background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;*/
+	border: solid 1px #ccc;
+	padding: 11px 10px 9px 11px;
+    width: 40%;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+    transition: all .5s;
+}
+
+input[type=search]:focus {
+	background-color: #fff;
+	border-color: #66CC75;
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+input:-moz-placeholder {color: #999;}
+input::-webkit-input-placeholder {	color: #999;}
+
+.searchForm {
+    background-color: #171D1C;
+}
+/*********************** Filter Buttons  */
+.filterSection-Container {
+  font-family: 'Yantramanav', sans-serif;
+  padding: 0;
+  margin: 20px 0 45px 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.filterflex-item {
+    background-color: #171D1C;
+    padding: 0px 20px;
+    margin: 0 5px;
+    border: 1px solid #ffffff;
+    width: auto;
+    height: 35px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+.filterflex-item:hover {
+    background-color: #96E6b3;
+    color:#171D1C;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+ .hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+

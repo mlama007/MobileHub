@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mobile Hub | A Curated Collection of Web Development Resources</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link href="https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900" rel="stylesheet">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <div class="wrapper">
+            <!--Hamburger Navigation Section -->
+            <nav id="navBar"> 
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="#"><li>Home</li></a>
+                        <a href="#aboutUs"><li>About Us</li></a>
+                        <a target="_blank" href="https://github.com/mlama007/MobileHub"><li>Fork this project</li></a>
+                        <button class="dropdown-btn">Articles
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+                            <ul id="down" class= "topics">
+                                <li class="boxes HTMLBox"><a href="#View">HTML</a></li>
+                                <li class="boxes CSSBox"><a href="#View">CSS</a></li>
+                                <li class="boxes JSBox"><a href="#View">Javascript</a></li>
+                                <li class="boxes GitBox"><a href="#View">Git</a></li>
+                                <li class="boxes LearningBox"><a href="#View">Learning</a></li>
+                                <li class="boxes ResourcesBox"><a href="#View">Resources</a></li>
+                                <li class="boxes FrameworksBox"><a href="#View">Frameworks</a></li>
+                                <li class="boxes PracticeBox"><a href="#View">Practice</a></li>
+                            </ul>                                                                                      
+                        </div>                        
+                    </ul>
+                </div>
+            </nav>
+                
+            <!-- Header Section -->
+            <a target="_blank" href="https://github.com/mlama007/MobileHub"><img class="githubbookmark" alt="github bookmark icon" src="img/githubBookMark.svg"></a>
+            <div class="logoSection">
+                <a href="#">
+                    <img src="img/logo.svg">
+                    <br/><span class="logoLetters">&#60;Mobile Hub &#47;&#62;</span>
+                    <br/><span class="logoWords">A Library For Students of Web Design &amp; Development</span>
+                </a>
+            </div>
+            <header class="header">
+                <div class="header-content">
+                    <p>This is a professionally curated repository of web design and developmental resources. We are a small group of developers and designers looking to help fellow coders quickly access information that is relevant to them on their learning process.</p>
+                </div>
+    
+            </header>
+            <!-- End of Header Section -->
+            <!-- Topics Title of Content-->
+            
+            <article class="nav">
+              <p>Ready to explore? Select a subject below:</p>
+                <!-- <hr class="style2"> -->
+
+                <div class="containerlist">
+                    <ul id="css" class= "topics">
+                        <li class="boxes HTMLBox"><a href="#View">HTML</a></li>
+                        <li class="boxes CSSBox"><a href="#View">CSS</a></li>
+                        <li class="boxes JSBox"><a href="#View">Javascript</a></li>
+                        <li class="boxes GitBox"><a href="#View">Git</a></li>
+                        <li class="boxes LearningBox"><a href="#View">Learning</a></li>
+                        <li class="boxes ResourcesBox"><a href="#View">Resources</a></li>
+                        <li class="boxes FrameworksBox"><a href="#View">Frameworks</a></li>
+                        <li class="boxes PracticeBox"><a href="#View">Practice</a></li>
+                    </ul>
+                </div>        
+            </article>
+
+        <!-- Topics List of Content -->
+
+        <!-- Search -->
+            <form class="searchForm flex-container" style="background-color: #171D1C;">
+                <input class="flex-item" type="search" placeholder="Search">
+            </form>
+
+        <!-- Topics Section -->
+            <!--filter buttons-->
+            <article class="nav" id="filterSection">
+                <div id="css" class="filterSection-Container">
+                    <button class="filterflex-item">All</button>
+                    <button class="filterflex-item">Beginner</button>
+                    <button class="filterflex-item">Intermediate</button>
+                    <button class="filterflex-item">Advance</button>
+                <div>
+            </article>
+
+            <div id="View" class="All NoContent">
+                <div class="header2">
+                    <!-- <img class="logoSection" src="img/logo-white.svg" width="95px;"> why is this not showing up? -->
+                    <ul class="content CSS topicImg"></ul>
+                    <ul class="content HTML topicImg"></ul>
+                    <ul class="content JS topicImg"></ul>
+                    <ul class="content Git topicImg"></ul>
+                    <ul class="content Learning topicImg"></ul>
+                    <ul class="content Resources topicImg"></ul>
+                    <ul class="content Frameworks topicImg"></ul>
+                    <ul class="content Practice topicImg"></ul>
+                </div>
+
+            <div class="articleCountContainer flex-container">
+                <p class="articleCount flex-item">Showing <span id="matchedArticles">13 Beginner</span> and <span id="totalArticles">12 Intermediate</span> Articles</p>                 
+            </div>
+            </div>
+
+            <!-- Begining of Displayed Articles Content -->
+            <div class="articleList flex-container">
+                <ul class="content CSS topicImg"></ul>
+                <ul class="content HTML topicImg"></ul>
+                <ul class="content JS topicImg"></ul>
+                <ul class="content Git topicImg"></ul>
+                <ul class="content Learning topicImg"></ul>
+                <ul class="content Resources topicImg"></ul>
+                <ul class="content Frameworks topicImg"></ul>
+                <ul class="content Practice topicImg"></ul>
+            </div>
+
+            <!-- Who we are -->
+            <div class="main aboutUs" id="aboutUs">
+                    
+                <h3>Who We Are </h3>
+                <hr class="style2">
+                <p>We are a small group of developers who met through the 2018 Grow with Google Challenge. This multi month long online educational series was created by Udacity and sponsored by Google.</p>
+                <p>We are all located in Raleigh, North Carolina and were placed in the same Mobile Web Specialist program. Soon, we teamed up to help each other by sharing useful tips and resources that would help us grow technically and professionally. And now we'd like to extend the same resources to you. </p>
+                
+                <!-- Profile Segment -->
+                <article class="contributorProfile-container">
+                    <a href="#" style="color: #828282; text-decoration: none; font-weight: bold;">
+                        <div class="contributorProfile-item">
+                            <img src="img/maria.svg">
+                            <h3>Maria Lamardo</h3>                            
+                            <div class="profileLinks"><a target="_blank" href="https://github.com/mlama007"><img src="img/Github.png" alt="github"></a><a target="_blank" href="https://www.linkedin.com/in/marialamardo/"><img src="img/LinkedIn.png" alt="github"></a></div>
+                            <p class="positions"> Front-End Developer<br />UI/UX Designer<br />BCaBA</p>
+                        </div>
+                    </a>
+                    <a href="#" style="color: #828282; text-decoration: none; font-weight: bold;">
+                        <div class="contributorProfile-item">
+                            <img src="img/jannaee.svg">
+                            <h3>Jannaee Sick</h3>                            
+                            <div class="profileLinks"><a target="_blank" href="https://github.com/jannaee"><img src="img/Github.png" alt="github"></a><a target="_blank" href="https://www.linkedin.com/in/jannaee/"><img src="img/LinkedIn.png" alt="github"></a></div>
+                            <p class="positions"> Front-End Developer<br />UI/UX Designer</p>
+                        </div>
+                    </a>
+                    <a href="#" style="color: #828282; text-decoration: none; font-weight: bold;">
+                        <div class="contributorProfile-item">
+                            <img src="img/varell.svg">
+                            <h3>Varell Hawkins</h3>                            
+                            <div class="profileLinks"><a target="_blank" href="https://github.com/participator"><img src="img/Github.png" alt="github"></a><a target="_blank" href="https://www.linkedin.com/in/varell-j-h-31588212/"><img src="img/LinkedIn.png" alt="github"></a></div>
+                            <p class="positions"> Front-End Developer</p>
+                        </div>
+                    </a>
+                </article>
+                <hr>
+                <h3>Interested in contributing? </h3>
+                <p>We are a small group of developers who met through the 2018 Grow with Google Challenge. This mulit month long online educational series was created by Udacity and sponsored by Google.</p>
+            </div>
+            <footer class="footer"><p>&copy; Copyright 2018</p></footer>
+        </div><!-- End of Wrapper -->
+        
+        <!-- Scripts -->
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <script src="js/dataResources.js"></script>
+        <script src="js/dataCategories.js"></script>
+        <script src="js/dataContributors.js"></script>
+        <script src="js/filter.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/appView.js"></script>
+        <script src="js/navigation.js"></script>
+    </body>
+</html>
