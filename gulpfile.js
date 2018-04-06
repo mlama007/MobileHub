@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver');
 
 gulp.task('js', function() {
-  return gulp.src('builds/sassEssentials/js/myscript.js')
+  return gulp.src('builds/js/myscript.js')
     .pipe(jshint('./.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'));
 });
@@ -19,16 +19,16 @@ gulp.task('sass', function () {
         console.error('Error!', err.message);
     })
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('builds/sassEssentials/css'));
+    .pipe(gulp.dest('builds/css'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('builds/sassEssentials/js/**/*', ['js']);
+  gulp.watch('builds/js/**/*', ['js']);
   gulp.watch(['process/sass/**/*'], ['sass']);
 });
 
 gulp.task('webserver', function() {
-    gulp.src('builds/sassEssentials/')
+    gulp.src('builds/')
         .pipe(webserver({
             livereload: true,
             open: true
