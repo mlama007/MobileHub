@@ -2,7 +2,7 @@
 
     let exports = {};
 	window.MobileHub = window.MobileHub || {};
-	window.MobileHub.contributors = exports;
+	window.MobileHub.Contributors = exports;
 
     exports.data = {
 		"Maria Lamardo" : {
@@ -15,7 +15,7 @@
 		"Varell" : {
             "img" : "varell.svg",
             "name" : "Varell",
-			"title" : ["Front-End Developer"],
+			"title" : ["Front-End Developer", "CISSP Associate"],
 			"intro" : "This goes on front Page.",
 			"summary" : "This goes on front Contributors Page. I'm gonna build me an airport, put my name on it. A-coodle-doodle-doo. A-coodle-doodle-doo. So maybe you could start jete-ing, and stop je-terrorizing me!",
 		},
