@@ -97,6 +97,43 @@
 			}
       });
     }
+	
+	
+	/*
+	Hide other buttons when either all, beginner, intermediate, or advanced button is clicked
+	*/
+	
+	function hideButtons() {
+	// Hide all the other buttons apart from the one clicked
+	$('#all-button').click(function() {
+		$('#beginner-button').hide();
+		$('#intermediate-button').hide();
+		$('#advance-button').hide();
+	}); // click ends
+	
+	
+	$('#beginner-button').click(function() {
+		$('#all-button').hide();
+		$('#intermediate-button').hide();
+		$('#advance-button').hide();
+	}); // click ends
+	
+	$('#intermediate-button').click(function() {
+		$('#all-button').hide();
+		$('#beginner-button').hide();
+		$('#advance-button').hide();
+	}); // click ends
+	
+	
+	$('#advance-button').click(function() {
+		$('#all-button').hide();
+		$('#beginner-button').hide();
+		$('#intermediate-button').hide();
+	}); // click ends
+	} // func hideButtons ends
+	
+	
     
     $(document).ready(main);
+	hideButtons();
 })();
