@@ -41,8 +41,8 @@
                     matchedResources.push(...resources[this.categories]);
                 }
                 else {
-                    for ( var prop in resources) {
-                        matchedResources.push(...resources[prop]);
+                    for ( var category in resources) {
+                        matchedResources.push(...resources[category]);
                     }                    
                 }
                 return matchedResources;
@@ -154,12 +154,11 @@
     exports.filter = Object.create(_filter);
 
     // Examples
-    var CssFilterByDifficulty = Object.create(_filter);
+    var _filterByDifficulty = Object.create(_filter);
     // Example of how to use filter
     // @params{string[], {string, string[]}} (topic, fieldText)
      let allCategories = categories.getCategories();
      //CssFilterByDifficulty.setAllCategories({categories: categories.getCategories()});
-     CssFilterByDifficulty.setFilterCriteria();
-     //console.log(CssFilterByDifficulty.getFilteredResultsFromAllCategories());
-     console.log("Filtered Results: ", CssFilterByDifficulty.getFilteredResults())
+     _filterByDifficulty.setFilterCriteria({propertyText: [{property: 'difficulty', text: 'beginner'}]});
+     //console.log("Filtered Results: ", _filterByDifficulty.getFilteredResults())
 })();
