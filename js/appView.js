@@ -1,9 +1,6 @@
 (function(undefined) {
     //When Categories are clicked
 
-    window.MobileHub = window.MobileHub || {};
-    var exports = {};
-
     //When Boxes are clicked
     const main = function() {
         $('.topics li').click(function() {

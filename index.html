@@ -35,14 +35,14 @@
                         </button>
                         <div class="dropdown-container">
                             <ul id="down" class= "topics">
-                                <li class="boxes HTMLBox"><a href="#View">HTML</a></li>
-                                <li class="boxes CSSBox"><a href="#View">CSS</a></li>
-                                <li class="boxes JSBox"><a href="#View">Javascript</a></li>
-                                <li class="boxes GitBox"><a href="#View">Git</a></li>
-                                <li class="boxes LearningBox"><a href="#View">Learning</a></li>
-                                <li class="boxes ResourcesBox"><a href="#View">Resources</a></li>
-                                <li class="boxes FrameworksBox"><a href="#View">Frameworks</a></li>
-                                <li class="boxes PracticeBox"><a href="#View">Practice</a></li>
+                                <li class="boxes HTMLBox" data-category="HTML"><a href="#View">HTML</a></li>
+                                <li class="boxes CSSBox" data-category="CSS"><a href="#View">CSS</a></li>
+                                <li class="boxes JSBox" data-category="JS"><a href="#View">Javascript</a></li>
+                                <li class="boxes GitBox" data-category="Git"><a href="#View">Git</a></li>
+                                <li class="boxes LearningBox" data-category="Learning"><a href="#View">Learning</a></li>
+                                <li class="boxes ResourcesBox" data-category="Resources"><a href="#View">Resources</a></li>
+                                <li class="boxes FrameworksBox" data-category="Frameworks"><a href="#View">Frameworks</a></li>
+                                <li class="boxes PracticeBox" data-category="Practice"><a href="#View">Practice</a></li>
                             </ul>                                                                                      
                         </div>                        
                     </ul>
@@ -73,14 +73,14 @@
 
                 <div class="containerlist">
                     <ul id="css" class= "topics">
-                        <li class="boxes HTMLBox"><a href="#View">HTML</a></li>
-                        <li class="boxes CSSBox"><a href="#View">CSS</a></li>
-                        <li class="boxes JSBox"><a href="#View">Javascript</a></li>
-                        <li class="boxes GitBox"><a href="#View">Git</a></li>
-                        <li class="boxes LearningBox"><a href="#View">Learning</a></li>
-                        <li class="boxes ResourcesBox"><a href="#View">Resources</a></li>
-                        <li class="boxes FrameworksBox"><a href="#View">Frameworks</a></li>
-                        <li class="boxes PracticeBox"><a href="#View">Practice</a></li>
+                        <li class="boxes HTMLBox" data-category="HTML"><a href="#View">HTML</a></li>
+                        <li class="boxes CSSBox" data-category="CSS"><a href="#View">CSS</a></li>
+                        <li class="boxes JSBox" data-category="JS"><a href="#View">Javascript</a></li>
+                        <li class="boxes GitBox" data-category="Git"><a href="#View">Git</a></li>
+                        <li class="boxes LearningBox" data-category="Learning"><a href="#View">Learning</a></li>
+                        <li class="boxes ResourcesBox" data-category="Resources"><a href="#View">Resources</a></li>
+                        <li class="boxes FrameworksBox" data-category="Frameworks"><a href="#View">Frameworks</a></li>
+                        <li class="boxes PracticeBox" data-category="Practice"><a href="#View">Practice</a></li>
                     </ul>
                 </div>        
             </article>
@@ -96,10 +96,10 @@
             <!--filter buttons-->
             <article class="nav" id="filterSection">
                 <div id="css" class="filterSection-Container">
-                    <button class="filterflex-item">All</button>
-                    <button class="filterflex-item" data-selected='true'>Beginner</button>
-                    <button class="filterflex-item" data-selected='true'>Intermediate</button>
-                    <button class="filterflex-item">Advance</button>
+                    <button class="filterflex-item" data-difficulty="All">All</button>
+                    <button class="filterflex-item" data-difficulty="Beginner">Beginner</button>
+                    <button class="filterflex-item" data-difficulty="Intermediate">Intermediate</button>
+                    <button class="filterflex-item" data-difficulty="Advanced">Advanced</button>
                 <div>
             </article>
 
@@ -176,7 +176,8 @@
         </div><!-- End of Wrapper -->
         
         <!-- Scripts -->
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+        <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script> -->
+        <script src="js/jQuery-3.2.1.min.js"></script>
         <script src="js/dataResources.js"></script>
         <script src="js/dataCategories.js"></script>
         <script src="js/dataProperties.js"></script>
