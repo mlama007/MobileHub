@@ -637,6 +637,22 @@
 				"description" : "Beautiful, free images and photos that you can download and use for any project. Better than any royalty free or stock photos.",
 				"tag" : ["image"],
 			},
+			{
+				"title": "20 cutting-edge web tools to try now",
+				"link": "https://www.creativebloq.com/features/20-cutting-edge-web-tools-to-try-now",
+				"difficulty" :"Beginner",
+				"description" : "Get up to date with the hottest new tools around.",
+				"tag" : ["tools"],
+				"createdDate": "2018-07-03",
+			},
+			{
+				"title": "API Directory",
+				"link": "https://www.programmableweb.com/apis/directory",
+				"difficulty" :"Beginner",
+				"description" : "Maintained database of APIs along with tutorials on how to use APIs",
+				"tag" : ["tools"],
+				"createdDate": "2018-08-02",
+			},
 			// Intermediate
 			{
 				"title": "Markup Validation Service",
@@ -837,6 +853,14 @@
 				"description" : "Learn anything for free.",
 				"tag" : [],
 			},
+			{
+				"title": "Design Challenge",
+				"link": "https://designchallenge.xyz/",
+				"difficulty" :"Beginner",
+				"description" : "Design Challenge is a directory of challenges created to test the processes and creativity of any designer in settings such as mentoring, hiring, and self-improvement of skills.",
+				"tag" : ["design", "exercises"],
+				"createdDate": "2018-08-02",
+			},
 			// Intermediate
 			{
 				"title": "The Odin Project",
@@ -935,7 +959,32 @@
 				"tag" : ['free'],
 				'type': 'Tool'
 			},
-		]
+			{
+				"title": "colorsafe",
+				"link": "http://colorsafe.co/",
+				"description" : "Enter a background color, and determine the styling of your text. Accessible text colors are generated with WCAG Guidelines recommend contrast ratio of 4.5 for small text or 3 for large text which is 24px or 18px bold.",
+				"difficulty" :"Beginner",
+				"tag" : ['color scheme', 'generator'],
+				'type': 'Tool'
+			},
+			{
+				"title": "stackshare",
+				"link": "https://stackshare.io/",
+				"description" : "Discover & compare tech stacks.",
+				"difficulty" :"Beginner",
+				"tag" : ['job search', 'generator'],
+				'type': 'Tool'
+			},
+			{
+				"title": "Chrome: Command Line API Reference",
+				"link": "https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference",
+				"description" : "The Command Line API contains a collection of convenience functions for performing common tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and starting the profiler, and monitoring DOM events.",
+				"difficulty" :"Intermediate",
+				"tag" : ['chrome', 'console', 'api'],
+				'type': 'Tool'
+			},
+		],
+
 	};
 
 })();
