@@ -29,7 +29,7 @@
 				difficulty: "Beginner",
 				description: "See how the text colors look on the various background colors.",
 				tag: [],
-			}
+			},
 			// Intermediate
 			{
 				"title": "30 Seconds of CSS",
