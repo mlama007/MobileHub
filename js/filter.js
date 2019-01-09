@@ -45,11 +45,15 @@
                         matchedResources.push(...resources[category]);
                     }                    
                 }
+                // debugging purposes
+                console.table(matchedResources);
                 return matchedResources;
             }
 
             matchedResources.push(..._getResourceCategory(resources, this.categories, this.propertyText));
 
+            // debugging purposes
+            console.table(matchedResources);
             return matchedResources;
         },
     }
@@ -68,7 +72,7 @@
             }
         }
         else if (typeof resourceCategory === 'string') {
-            resourcesMatching(..._getResource(allResources[resourceCategory], propertyText));
+            resourcesMatching.push(..._getResource(allResources[resourceCategory], propertyText));
         }
         // search all Categories
         else if (resourceCategory === undefined || resourceCategory === 'undefined' ) {
@@ -153,12 +157,11 @@
     
     exports.filter = Object.create(_filter);
 
-    // Examples
-    var _filterByDifficulty = Object.create(_filter);
     // Example of how to use filter
     // @params{string[], {string, string[]}} (topic, fieldText)
-     let allCategories = categories.getCategories();
-     //CssFilterByDifficulty.setAllCategories({categories: categories.getCategories()});
-     _filterByDifficulty.setFilterCriteria({propertyText: [{property: 'difficulty', text: 'beginner'}]});
-     //console.log("Filtered Results: ", _filterByDifficulty.getFilteredResults())
+    //  let allCategories = categories.getCategories();
+     // exports.filter.setFilterCriteria({categories: allCategories, propertyText: [{property: 'difficulty', text: 'beginner'}]});
+     // exports.filter.setFilterCriteria({categories: 'HTML', propertyText: [{property: 'difficulty', text: 'beginner'}]});
+    //  exports.filter.setFilterCriteria({categories: ['HTML'], propertyText: [{property: 'difficulty', text: 'beginner'}]});
+    //  console.log("[Filtered Results]: ", exports.filter.getFilteredResults())
 })();
