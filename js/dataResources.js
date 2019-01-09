@@ -917,6 +917,26 @@
 			},
 		],
 
+		"Startup": [
+			{
+				"title": "Samaschool",
+				"link": "https://www.samaschool.org/",
+				"description" : "Samaschool equips people to benefit from independent work and advocates for an economy in which all workers thrive.",
+				"difficulty" :"",
+				"tag" : ['entrepreneur', 'startup'],
+				'type': 'education'
+			},
+			{
+				"title": "Dubsado",
+				"link": "https://www.dubsado.com/",
+				"description" : "Dubsado is a business management software built to save you time, impress your clients, and grow your business. ",
+				"difficulty" :"",
+				"tag" : ['entrepreneur', 'startup'],
+				'type': 'tool'
+			}
+
+		],
+
 		// Tools Resources
 		"Tools": [
 			{
