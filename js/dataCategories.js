@@ -38,6 +38,14 @@
 			"title" : "Practice",
 			"intro" : "The Practice section includes links to coding exercises to improve your skills.",
 		},
+		Startup: {
+			"title" : "Startup",
+			"intro" : "The Startup section includes links to help you start up a business or freelance as a developer.",
+		},
+		Tools: {
+			"title" : "Tools",
+			"intro" : "The Tools section includes links to tools that are used in a development environment.",
+		}				
 	};
 
 	exports.getCategories = function() {
