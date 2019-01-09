@@ -5,11 +5,15 @@
 	if(window.MobileHub) exports = window.MobileHub;
 
 	// Dependencies
-	const filter = window.MobileHub.Filter;
+	const filter = window.MobileHub.Filter.filter;
 	const resources = window.MobileHub.Resources;
 	const categories = window.MobileHub.Categories.data;
 	const contributors = window.MobileHub.Contributors.data;
 	
+	window.onload = function() {
+		// displayAll();
+	};
+
 	/*
 	These are HTML strings. JavaScript functions 
 	replace the %data% placeholder text you see in them.
@@ -51,8 +55,18 @@
 	}
 
 	// 
-	function parseFilteredResources(resources) {
-
+	function parseFilteredResources(name, resources) {
+		resources.forEach(function(resource){ 
+			$(".articleList ." + name).append(listedResources);
+			//Match %data% with object
+			const replaceChars={ "%link%": resource.link, "%title%": resource.title, "%description%": resource.description };
+			//Replace %data% with object informtaion
+			const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
+				function(match) {
+					return replaceChars[match];
+				});
+			$(".articleList ." + name + " li:last").append(formattedContent);	
+		})
 	}
 
 	// Display all content from topic
@@ -62,8 +76,8 @@
 
 	// Display all content from topic matching field
 	function displayCategoryProperty(category, property, searchText) {
-		filter.setSearchCriteria({categories: category, propertyText: { property: property, text: searchText }});
-		parseFilteredResources(filter.getFilteredResults());
+		filter.setFilterCriteria({categories: category, propertyText: [{ property: property, text: searchText }]});
+		parseFilteredResources(category, filter.getFilteredResults());
 	}
 
 	// Categories title and intro displayed
@@ -83,27 +97,23 @@
 		})(category);
 	}
 
-	displayAll();
+	// Displays all resources
+	exports.displayAll = displayAll;
 
+	// exports.removeAll = removeAll;
+
+	// Displays resources of a given category
 	// Tied to exports to make it usable in HTML
-	exports.show = function(difficulty) {
-		switch (difficulty) {
-			case 'Beginner':
-				// selected category and difficulty
-				displayCategoryProperty('CSS', 'difficulty', difficulty);
-			break;
-			case 'Intermediate':
-				// selected category and difficulty
-				displayCategoryProperty('Intermediate', 'difficulty', difficulty);;
-			break;
-			case 'Advanced':
-				// selected category and difficulty selected
-				displayCategoryProperty('Advanced', 'difficulty', difficulty);;
-			break;
-			default:
-				displayCategory("CSS");
-			break;
+	exports.showCategory = function(category) {
+		if (category) {
+			// selected category and difficulty
+			displayCategoryProperty(category);
 		}
-	};	
+	};
+
+	// Displays resources of a given difficulty
+	exports.showDifficulty = function(difficulty) {
+		displayCategoryProperty(undefined, 'difficulty', difficulty);
+	}
 
 })(jQuery);
