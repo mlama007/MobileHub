@@ -5,4 +5,5 @@
 ## Tasks
 - Filter
    - create functionality for difficultities
-   - create funcitonality for categories
+   - create functionality for categories
+   - create functionality for search bar
