@@ -1,6 +1,6 @@
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
-   html {
+html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -14,6 +14,10 @@
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
+}
+
+a:-webkit-any-link{
+    text-decoration: none;
 }
 
 hr {
@@ -67,6 +71,7 @@ html, body {
     margin: 0;
     height: 100%;
     color: #828282;
+    background-color: #171D1C;
 }
 
 body {     
@@ -89,30 +94,32 @@ h2, h3, h4{ color: #171D1C;}
 
 .githubbookmark {
     position: fixed;
-    top: -0.75em;
     right: 2em;
-    width: 3.5em
+    width: 3.5em;
+    z-index: 0;
 }
 
 .minilogoLetters{
     font-size: 20px;
     font-family: 'Yantramanav', sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     color: #96E6b3;
     text-decoration: none;
 
 }
 .logoSection{
-    margin-top: 20px;
-    text-align: center; 
+    text-align: center;
     font-family: 'Yantramanav', sans-serif;
+    background-color: #ffffff;
 }
 
 .logoSection a img{
     margin:0 20px; 
+    padding-top: 22px;
     vertical-align: middle;
     border: 1px solid white;
     z-index: 100;
+
 
 }
 
@@ -140,19 +147,19 @@ h2, h3, h4{ color: #171D1C;}
 .wrapper {
     display: flex;  
     flex-flow: row wrap;
-    font-weight: bold;
+    font-weight: 500;
     flex: 1 0 auto;
 }
   
 .wrapper > * {
-    padding: 10px;
     flex: 1 100%;
 }
   
 .header{ 
     justify-content: center;
     padding: 2% 25%;
-    text-align: justify;
+    text-align: left;
+    background-color: #ffffff;
 
 
 }
@@ -176,7 +183,7 @@ h2, h3, h4{ color: #171D1C;}
   #menuToggle input {
     display: block;
     width: 30px;
-    height: 32px;
+    height: 60px;
     position: absolute;
     cursor: pointer;
     opacity: 0; 
@@ -225,10 +232,11 @@ h2, h3, h4{ color: #171D1C;}
   }
   
   #menu {
-    position: absolute;
+    position: fixed;
+    height:100%;
     width: 300px;
-    margin: -100px 0 0 -65px;
-    padding: 130px 50px 50px 60px;
+    margin:-57px 0 0 -50px;
+    padding-top:100px;
     background: #44Abe2;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -238,24 +246,56 @@ h2, h3, h4{ color: #171D1C;}
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     font-family: 'Yantramanav', sans-serif;
     font-weight: 100;
-    line-height: 1em;
   }
-  
-  #menu li {
-    padding: 10px 0;
-    font-size: 22px;
-  }
-  
+
   #menu a {color: white; text-decoration: none;}
-  #menu a:hover{color: black; font-weight: bold;}
+  #menu a:hover{color: black; font-weight: 500;}
 
   #menuToggle input:checked ~ ul { transform: none;}
   
+  #menu li{
+    padding: 20px;
+    font-size: 22px;
+  }
+  button.dropdown-btn a:hover{
+    color: black; font-weight: 500;
+  }
+  .dropdown-btn, .dropdown-container a {
+    display: block;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 21px;
+  }
+
+  .active, .dropdown-container a {
+    background-color:rgb(63, 150, 197);
+    color: #ffffff;
+    width: 303px;
+    padding: 15px 15px 15px 62px;
+    margin: 0 -43px;
+    text-align: left;
+  }
+
+  .dropdown-container {
+    display: none;
+    background-color: rgb(63, 150, 197);
+    padding: 15px 15px 15px -62px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 400px;
+    margin-left: -2em;
+}
+ 
   nav {
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 73px;
+    width: 8%;
+    height: 20%;
   }
   
   .collapse {
@@ -324,7 +364,7 @@ h2, h3, h4{ color: #171D1C;}
 .nav ul li{ list-style-type: none;}
 .nav p {
     color: #ffffff;
-    padding: 0 0 0 25%;
+    text-align: center;
 }
 
 hr.style {
@@ -347,9 +387,8 @@ hr.style2 {
 
 .main {
     background: #ffffff;
-    padding: 2% 25%;
-    text-align: justify;
-
+    padding: 5% 15%;
+    text-align: left;
   }
 
 
@@ -366,18 +405,29 @@ hr.style2 {
 
 /* Profile Container's Children's Style */
 .contributorProfile-item{
-    padding: 28px;
-    width: 155px;
-    height: 275px;
-    margin: 30px 5px 5px 5px;
+    font-size: 15px;
+    padding: 1em;
+    width: 31%;
     text-align: center;
-    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
+
+.contributorProfile-item h3{
+    font-weight: bold;   
+  }
 
 .contributorProfile-item img{
   width: 100%;    
+}
+
+.profileLinks img{
+  height: 1.2em;
+  width: auto;
+  padding-right: 1em;
+}
+
+.positions {
+    color: #44ABE2;
 }
 
 /*********************** Flex for submodules */
@@ -394,39 +444,30 @@ hr.style2 {
     padding: 0px;
     width: auto;
     margin-top: 0px;
-    font-weight: bold;
+    font-weight: 500;
 }
-
- .flex-emphasis-item{
-    flex-grow: 2;
-}  
 
 
 .containerlist {
     padding: 0;
     margin: 0;
-    list-style: none;
     display: flex; 
     justify-content: center;
     flex-wrap: wrap;
-    align-content: flex-start;
-
-}
-.containerlist p{
-    flex-direction: column;
 }
 
 .topics {
     display: flex;
-    width: 55%;
     height: 200px;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 0;
+    margin-left: -5em;
+}
+.topics li{    
+    padding-right: 8em;    
 }
 
-ul li.boxes {
-    padding: 5px;
-}
 .viewAll{
     text-align: right;
 }
@@ -443,21 +484,64 @@ ul li.boxes {
 }
 .visible {
     list-style-type: none;
-    justify-content: center;
+    /* justify-content: center; */
 }
 li.Topics-Content{
     background: #ffffff;
-    margin: 15px 0;
-    padding: 5px 20px;
-    border: 1px solid gold;
+    margin: 15px -240px 45px 25px;
+    padding: 6px 30px;
+    width: 90%;
+}
+
+li.Topics-Content.flex-item{
+    border-left: 15px solid #0b7dda;
+}
+
+li.Topics-Content.flex-item p:nth-child(2){
+    margin-top: -15px;
+}
+
+/* Color for filtration of articles */
+#beginnerHighlight{border-left: 15px solid #0b7dda;}
+#intermediateHighlight{border-left: 15px solid #0b7dda;}
+#advanceHighlight{border-left: 15px solid #f1bf98;}
+
+p.articleCount{
+    color: #ffffff;
+    background-color: #171D1C;
+    font-size: .75em;
+    margin-bottom: -10px;
+}
+
+#matchedArticles{
+    color:#0b7dda; 
+    text-decoration: underline;
+}
+
+#totalArticles{
+    color: #f1bf98;
+    text-decoration: underline;
 }
 
 
-.topicimg.visible{
-    /* border: 1px solid red; */
+
+span.text-content{
+    color: #171D1C;
+    font-weight: 800;
+    font-size: 1.35em;
+    text-decoration: none;
+}
+
+span.text-content:hover{
+    text-decoration: underline;
+}
+.topicimg.visible,  div.articleCountContainer.flex-container{
     justify-content: center;
     margin: 0;
     padding: 2% 25%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
 }
 
 .NoContent{
@@ -475,32 +559,23 @@ li.Topics-Content{
 /* This also works as the flex container for the articles section */
 .header2 {
     color: #f1f1f1;
-    text-align: center;
     display: flex;
     justify-content: center;
-    padding: 2% 20%;
-
 }
 
 /* These are the items*/
 .header2 .logoSection {
-
-    padding: 10px;
-    margin: 25px;
     flex: 0 0 auto; 
-    background-color: white;
-
-
 }
 .categoryName {
     flex: 1 0 auto; 
-    text-align: left;
+    text-align: center;
+    margin-bottom: -15px;
 }
 
 p.intro.header-content{
     line-height: 35px;
     text-align: left;
-    padding-right: 60px;
 }
 
 
@@ -508,15 +583,33 @@ p.intro.header-content{
 
 /*********************** LINK STYLES */
 
-a:link, :visited {color: #F1BF98;}
+/* a:link, :visited {color: #F1BF98;} */
 .nav a:hover {color: #96E6b3;}
 
-.nav a:link{
+.nav a{
+    color:#f1bf98;
     text-decoration: none;
     font-family: 'Yantramanav', sans-serif;
-    font-weight: 200;
+    font-weight: 500;
     font-size: 1.5em;
+    line-height: 2em;
 }
+
+#down {
+    display: flex;
+    height: auto;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+#down ul{
+    margin-left: 1em;
+}
+#down li{
+    padding: 0 0 0 3em;
+}
+
 
 /*********************** Footer Section*/
 footer {
@@ -536,33 +629,28 @@ input {	outline: none;}
 input[type=search] {
 	-webkit-appearance: textfield;
 	-webkit-box-sizing: content-box;
-	font-family: inherit;
+    font-family: 'Yantramanav', sans-serif;
     font-size: 100%;
+
 }
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
-	display: none;    ;
+	display: none; 
 }
 
 input[type=search] {
-	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	/*background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;*/
 	border: solid 1px #ccc;
-	padding: 9px 10px 9px 32px;
-    width: 60%;
-	-webkit-border-radius: 1em;
-	-moz-border-radius: 1em;
-	border-radius: 1em;
+	padding: 11px 10px 9px 11px;
+    width: 40%;
 	-webkit-transition: all .5s;
 	-moz-transition: all .5s;
     transition: all .5s;
-
 }
 
 input[type=search]:focus {
-	width: 130px;
 	background-color: #fff;
 	border-color: #66CC75;
-	
 	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	box-shadow: 0 0 5px rgba(109,207,246,.5);
@@ -571,33 +659,39 @@ input[type=search]:focus {
 input:-moz-placeholder {color: #999;}
 input::-webkit-input-placeholder {	color: #999;}
 
-
+.searchForm {
+    background-color: #171D1C;
+}
 /*********************** Filter Buttons  */
 .filterSection-Container {
   font-family: 'Yantramanav', sans-serif;
   padding: 0;
-  margin: 0;
+  margin: 20px 0 45px 0;
   list-style: none;
   display: flex;
   justify-content: center;
 }
 
 .filterflex-item {
-   background-color: #171D1C;
-  padding: 10px 50px;
-  margin: 0 10px;
-  border: 2px solid #ffffff;
-  width: auto;
-    height: 50px;
-  color: white;
-  font-weight: bold;
-    font-size: .80em;
-  text-align: center;
+    background-color: #171D1C;
+    padding: 0px 20px;
+    margin: 0 5px;
+    border: 1px solid #ffffff;
+    width: auto;
+    height: 35px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
 }
 
 .filterflex-item:hover {
     background-color: #96E6b3;
     color:#171D1C;
+}
+
+[data-selected="true"] {
+    background-color: #96E6b3;
+    opacity: .8;
 }
 
 /* ==========================================================================
@@ -673,120 +767,3 @@ input::-webkit-input-placeholder {	color: #999;}
     clear: both;
 }
 
-/*********************** Media Queries*/
-@media all and (min-width: 600px) {
-    .aside { flex: 1 auto; }
-    .header-content {
-        /*background-color: #96E6b3;Testing colors*/
-    } 
-}
-@media all and (max-width: 600px) {
-    .aside { flex: 1 auto; }
-    .header-content {
-        /*background-color: #96E6b3;Testing colors*/
-    } 
-} 
-
-@media all and (min-width: 800px) {
-     /* We invert order of first sidebar and main
-   * And tell the main element to take twice as much width as the other two sidebars 
-   */
-    .main    { 
-        /*background-color: pink; Testing colors*/
-        flex: 3 0px; 
-    }
-}
-  
-@media screen and (min-width: 1750px) {  
-    .topics {
-        margin: 0 8em;
-    }
-}
-@media screen and (min-width: 2050px) {  
-    .topics {
-        margin: 0 15em;
-    }
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}

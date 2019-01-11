@@ -2,10 +2,9 @@
 
 	let exports = {};
 	window.MobileHub = window.MobileHub || {};
-	window.MobileHub.topics = exports;
-
+	
 	//array of objects conatining Resource Links
-	exports.data = {
+	window.MobileHub.Resources = {
 		//CSS Resources
 		"CSS":
 		[
@@ -23,6 +22,13 @@
 				"difficulty" :"Beginner",
 				"description" : "CSS Gradient is a happy little website and web tool that allows you to get creative with gradients.",
 				"tag" : [],
+			},
+			{
+				title: "Background & Text Colors",
+				link: "http://www.debmark.com/colors.htm",
+				difficulty: "Beginner",
+				description: "See how the text colors look on the various background colors.",
+				tag: [],
 			},
 			// Intermediate
 			{
@@ -68,7 +74,6 @@
 				"description" : "A look at new CSS tools and new possibilities in web design, with Singapore-based Hui Jing Chen.",
 				"tag" : ["CSS Grid"],
 			},
-			//Varell
 			{
 				"title": "CSS Reference",
 				"link": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference",
@@ -115,6 +120,13 @@
 				"description" : "25 Videos that go through fundamentals to real world appliation of css grid.",
 				"tag" : ['CSS', 'Grid'],
 				'type': 'Video'
+			},
+			{
+				"title": "CSS Validation Service",
+				"link": "https://validator.w3.org/nu/#textarea",
+				"difficulty" :"Advanced",
+				"description" : "This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change.",
+				"tag" : ["Validation"],
 			},
 		],
 	
@@ -165,14 +177,6 @@
 				"description" : "Explore best practices for implementing designs using HTML and CSS.",
 				"tag" : [],
 			},
-			{
-				"title": "CSS Validation Service",
-				"link": "https://validator.w3.org/nu/#textarea",
-				"difficulty" :"Advanced",
-				"description" : "This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change.",
-				"tag" : ["Validation"],
-			},
-			//Varell
 			{
 				"title": "Html",
 				"link": "https://www.htmlgoodies.com/",
@@ -245,6 +249,13 @@
 				"description" : "Learn vanilla JavaScript.",
 				"tag" : [],
 			},
+			{
+				"title": "Quizlet: Javascript Methods",
+				"link": "https://quizlet.com/86381862/javascript-methods-flash-cards/",
+				"difficulty" :"Beginner",
+				"description" : "Search millions of study sets or create your own. Improve your grades by studying with flashcards, games and more",
+				"tag" : [],
+			},
 			// Intermediate
 			{
 				"title": "Javascript Tutorial",
@@ -274,6 +285,13 @@
 				"description" : "Explination on JS Promises",
 				"tag" : ["Promises"],
 			},
+			{
+				"title": "A beginner’s guide to Service Workers",
+				"link": "https://medium.com/samsung-internet-dev/a-beginners-guide-to-service-workers-f76abf1960f6",
+				"difficulty" :"Intermediate",
+				"description" : "Covers the basics of service workers and how to use them without going into too much detail, with the aim of letting you build a prototype as quickly as possible.",
+				"tag" : ["Service Worker"],
+			},
 			// Advanced
 			{
 				"title": "Implementing A Service Worker For Single-Page App WordPress Sites",
@@ -289,7 +307,6 @@
 				"description" : "Copy and paste, directly type, or input a URL in the editor and let JSONLint tidy and validate your messy JSON code.",
 				"tag" : ["Validator"],
 			},
-			//Varell
 			{
 				"title": "JavaScript.com",
 				"link": "https://www.javascript.com/",
@@ -301,7 +318,8 @@
 				"title": "Javascript.info",
 				"link": "https://javascript.info/",
 				"difficulty" :"Intermediate",
-				"description" : ""
+				"description" : "",
+				"tag" : [],
 			},
 			{
 				"title": "Learning JavaScript Design Patterns",
@@ -311,13 +329,12 @@
 				"tag" : [],
 			},
 			{
-				"title": "",
-				"link": "",
-				"difficulty" :"",
-				"description" : "",
-				"tag" : [''],
-				'type': ''
-			},
+				"title": "Free React Bootcamp",
+				"link": "https://tylermcginnis.com/free-react-bootcamp/",
+				"difficulty": "Advanced",
+				"description": "This course has completed and the recording are included.  You can also sign up for future free bootcamps.",
+				"tag": [],
+			}
 		],
 		
 		//Git Resources
@@ -374,7 +391,6 @@
 				"description" : "Atlassian’s Git tutorials introduce the most common Git commands, and our Git Workflows modules discuss how these commands are typically used to facilitate collaboration.",
 				"tag" : [],
 			},	
-			//Varell
 			{
 				"title": "Git2",
 				"link": "https://www.codecademy.com/learn",
@@ -431,8 +447,7 @@
 				"difficulty" :"Beginner",
 				"description" : "Codecademy is an online freemium interactive platform that offers free coding classes in 12 different programming languages.",
 				"tag" : [],
-			},
-			
+			},			
 			{
 				"title": "Ready to try JavaScript?",
 				"link": "https://www.javascript.com/",
@@ -470,7 +485,6 @@
 				"description" : "Udacity is a for-profit educational organization founded by Sebastian Thrun, David Stavens, and Mike Sokolsky offering massive open online courses.",
 				"tag" : [],
 			},
-			//Varell
 			{
 				"title": "Learning2",
 				"link": "https://www.codecademy.com/learn",
@@ -491,30 +505,6 @@
 				"difficulty" :"Advanced",
 				"description" : "",
 				"tag" : [],
-			},
-			{
-				"title": "",
-				"link": "",
-				"difficulty" :"",
-				"description" : "",
-				"tag" : [''],
-				'type': ''
-			},
-			{
-				"title": "",
-				"link": "",
-				"difficulty" :"",
-				"description" : "",
-				"tag" : [''],
-				'type': ''
-			},
-			{
-				"title": "",
-				"link": "",
-				"difficulty" :"",
-				"description" : "",
-				"tag" : [''],
-				'type': ''
 			},
 		],
 		
@@ -640,6 +630,29 @@
 				"description" : "A collection of free books for developers.",
 				"tag" : ["Books"],
 			},
+			{
+				"title": "Unsplash",
+				"link": "https://unsplash.com/",
+				"difficulty" :"Beginner",
+				"description" : "Beautiful, free images and photos that you can download and use for any project. Better than any royalty free or stock photos.",
+				"tag" : ["image"],
+			},
+			{
+				"title": "20 cutting-edge web tools to try now",
+				"link": "https://www.creativebloq.com/features/20-cutting-edge-web-tools-to-try-now",
+				"difficulty" :"Beginner",
+				"description" : "Get up to date with the hottest new tools around.",
+				"tag" : ["tools"],
+				"createdDate": "2018-07-03",
+			},
+			{
+				"title": "API Directory",
+				"link": "https://www.programmableweb.com/apis/directory",
+				"difficulty" :"Beginner",
+				"description" : "Maintained database of APIs along with tutorials on how to use APIs",
+				"tag" : ["tools"],
+				"createdDate": "2018-08-02",
+			},
 			// Intermediate
 			{
 				"title": "Markup Validation Service",
@@ -698,7 +711,6 @@
 				"description" : "Upgrade your skills with courses on the most popular programming languages, developer tools, software practices and application development platforms.",
 				"tag" : [],
 			},
-			//Varell
 			{
 				"title": "HTML Goodies",
 				"link": "https://www.htmlgoodies.com/",
@@ -707,11 +719,11 @@
 				"tag" : [],
 			},
 			{
-				"title": "Resources2",
-				"link": "https://www.codecademy.com/learn",
-				"difficulty" :"Intermediate",
+				"title": "Hello Web Books",
+				"link": "https://hellowebbooks.com/",
+				"difficulty" :"Beginner",
 				"description" : "",
-				"tag" : [],
+				"tag" : ["Articles", "Tutorials"],
 			},			
 			{
 				"title": "Resources2",
@@ -719,6 +731,14 @@
 				"difficulty" :"Advanced",
 				"description" : "",
 				"tag" : [],
+			},
+			{
+				"title": "Don’t be a Junior Developer",
+				"link": "https://hackernoon.com/dont-be-a-junior-developer-608c255b3056",
+				"difficulty" :"Advanced",
+				"description" : "Describes why you should not say you're a junior developer.",
+				"tag" : ['Motivational'],
+				"type" : 'Article',
 			},			
 		],
 		
@@ -783,7 +803,6 @@
 				"description" : "You'll learn key architectural design techniques that make frameworks incredibly powerful.",
 				"tag" : [],
 			},
-			//Varell
 			{
 				"title": "Angular",
 				"link": "https://angular.io/",
@@ -834,6 +853,14 @@
 				"description" : "Learn anything for free.",
 				"tag" : [],
 			},
+			{
+				"title": "Design Challenge",
+				"link": "https://designchallenge.xyz/",
+				"difficulty" :"Beginner",
+				"description" : "Design Challenge is a directory of challenges created to test the processes and creativity of any designer in settings such as mentoring, hiring, and self-improvement of skills.",
+				"tag" : ["design", "exercises"],
+				"createdDate": "2018-08-02",
+			},
 			// Intermediate
 			{
 				"title": "The Odin Project",
@@ -864,7 +891,6 @@
 				"description" : "Free Microsoft training delivered by experts",
 				"tag" : [],
 			},
-			//Varell
 			{
 				"title": "Codecademy",
 				"link": "https://www.codecademy.com/",
@@ -891,6 +917,26 @@
 			},
 		],
 
+		"Startup": [
+			{
+				"title": "Samaschool",
+				"link": "https://www.samaschool.org/",
+				"description" : "Samaschool equips people to benefit from independent work and advocates for an economy in which all workers thrive.",
+				"difficulty" :"",
+				"tag" : ['entrepreneur', 'startup'],
+				'type': 'education'
+			},
+			{
+				"title": "Dubsado",
+				"link": "https://www.dubsado.com/",
+				"description" : "Dubsado is a business management software built to save you time, impress your clients, and grow your business. ",
+				"difficulty" :"",
+				"tag" : ['entrepreneur', 'startup'],
+				'type': 'tool'
+			}
+
+		],
+
 		// Tools Resources
 		"Tools": [
 			{
@@ -909,7 +955,56 @@
 				"tag" : [''],
 				'type': 'Tool'
 			},
-		]
+			{
+				"title": "Tailwind",
+				"link": "https://tailwindcss.com/",
+				"description" : "A Utility-First CSS Framework for Rapid UI Development",
+				"difficulty" :"Intermediate",
+				"tag" : ['CSS'],
+				'type': 'Tool'
+			},
+			{
+				"title": "First Site Guide",
+				"link": "https://firstsiteguide.com/tools/",
+				"description" : "The Ultimate List of Tools for Bloggers, Webmasters, and Startups",
+				"difficulty" :"Beginner",
+				"tag" : [''],
+				'type': 'Tool'
+			},
+			{
+				"title": "WakaTime",
+				"link": "https://wakatime.com/",
+				"description" : "In editor Open source plugins for automatic programming metrics.",
+				"difficulty" :"Beginner",
+				"tag" : ['free'],
+				'type': 'Tool'
+			},
+			{
+				"title": "colorsafe",
+				"link": "http://colorsafe.co/",
+				"description" : "Enter a background color, and determine the styling of your text. Accessible text colors are generated with WCAG Guidelines recommend contrast ratio of 4.5 for small text or 3 for large text which is 24px or 18px bold.",
+				"difficulty" :"Beginner",
+				"tag" : ['color scheme', 'generator'],
+				'type': 'Tool'
+			},
+			{
+				"title": "stackshare",
+				"link": "https://stackshare.io/",
+				"description" : "Discover & compare tech stacks.",
+				"difficulty" :"Beginner",
+				"tag" : ['job search', 'generator'],
+				'type': 'Tool'
+			},
+			{
+				"title": "Chrome: Command Line API Reference",
+				"link": "https://developers.google.com/web/tools/chrome-devtools/console/command-line-reference",
+				"description" : "The Command Line API contains a collection of convenience functions for performing common tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and starting the profiler, and monitoring DOM events.",
+				"difficulty" :"Intermediate",
+				"tag" : ['chrome', 'console', 'api'],
+				'type': 'Tool'
+			},
+		],
+
 	};
 
 })();
