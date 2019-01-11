@@ -1,21 +1,8 @@
-https://mlama007.github.io/MobileHub/
+* MobileHub Beta
 
-#Mobile Hub
-* This is a tool which students can use to browse a collection of resources. These will cover beginner, intermediate and advanced skills and other requirements.
+[MobileHub Beta](https://participator.github.io/MobileHub-Beta/) is a beta version of [MobileHub](https://mlama007.github.io/MobileHub/) where beta updates will be added.
 
-##To do
-* Add css to match sketches
-* Add header
-* When clicked, all other boxes disppear and new 'view' shows up
-* When re-clicked, it closes and all boxes show up again
-* Filter by difficulty using buttons (make other boxes disappear). 
-    * "Beginner" "Intermediate" "Advanced" x3 Add 'ALL" to show all
-    * Filter by multiple options
-* Find resources (each find 5 resources for each category)
-* Service Workers
-
-##Future Ideas
-* Upvote
-* Downvote
-* Logins
-
+* Tasks
+- Filter
+   - create functionality for difficultities
+   - create funcitonality for categories
