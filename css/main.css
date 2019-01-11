@@ -451,13 +451,9 @@ hr.style2 {
 .containerlist {
     padding: 0;
     margin: 0;
-    list-style: none;
     display: flex; 
     justify-content: center;
     flex-wrap: wrap;
-}
-.containerlist p{
-    flex-direction: column;
 }
 
 .topics {
@@ -693,7 +689,7 @@ input::-webkit-input-placeholder {	color: #999;}
     color:#171D1C;
 }
 
-.selected-difficulty {
+[data-selected="true"] {
     background-color: #96E6b3;
     opacity: .8;
 }
