@@ -61,6 +61,14 @@
 			const results = document.querySelectorAll('.topicImg');
 			console.info('[biaFilterArray]', biaFilterArray);
 
+			biaFilterArray.forEach(element => {
+				if (element.dataset.selected === 'true') {
+					console.info('[selected]', element.dataset.selected);
+					// Get selected difficulty data
+					window.MobileHub.displayDataDifficulty(element.dataset.difficulty);
+				}
+			});
+
 			// Check if any difficulty filter is selected
 			if (biaFilterArray.every(element => {
 				console.info('[selected]', element.dataset);
@@ -73,23 +81,7 @@
 				// Show results
 				results.forEach(result => result.classList.remove('content'));
 			}
-
-			biaFilterArray.forEach(element => {
-				
-				if (element.dataset.selected === 'true') {
-					console.info('[selected]', element.dataset.selected);
-					// Get selected difficulty data
-					window.MobileHub.displayDataDifficulty(element.dataset.difficulty);
-
-					// Show content
-					results.forEach(result => result.classList.remove('content'));
-				}
-				else {
-					// Hide content
-					// results.forEach(result => result.classList.add('content'));
-				}
-			})
-		})
+		});
 	})
 
 })();
