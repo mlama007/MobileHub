@@ -68,17 +68,17 @@
         // search only provided Categories
         if (Array.isArray(resourceCategory) && resourceCategory.length) {
             for (var i in resourceCategory) {
-                resourcesMatching.push(..._getResource(allResources[resourceCategory[i]], propertyText));                
+                resourcesMatching.push(..._getResource(catergoryArray[cIndex], allResources[resourceCategory[i]], propertyText));                
             }
         }
         else if (typeof resourceCategory === 'string') {
-            resourcesMatching.push(..._getResource(allResources[resourceCategory], propertyText));
+            resourcesMatching.push(..._getResource(catergoryArray[cIndex], allResources[resourceCategory], propertyText));
         }
         // search all Categories
         else if (resourceCategory === undefined || resourceCategory === 'undefined' ) {
             var catergoryArray = categories.getCategories();
             for(var cIndex=0; cIndex < catergoryArray.length; cIndex++) {
-                resourcesMatching.push(..._getResource(allResources[catergoryArray[cIndex]], propertyText));
+                resourcesMatching.push(..._getResource(catergoryArray[cIndex], allResources[catergoryArray[cIndex]], propertyText));
             }
         }
         else {
@@ -96,12 +96,12 @@
     // Search a resource
     // @params {array, array} resources, propertyText
     // @returns {array} matching resources
-    function _getResource(resourcesForOneCategory, propertyText) {
+    function _getResource(category, resourcesForOneCategory, propertyText) {
         var resourcesMatching = [];
         for (var i=0; i < resourcesForOneCategory.length; i++) {
             for (var ptIndex=0; ptIndex < propertyText.length; ptIndex++) {
                 for (var resourceProperty in resourcesForOneCategory[i]) {
-                    resourcesMatching.push(_getPropertyMatch(resourcesForOneCategory[i], resourceProperty, propertyText[ptIndex]));
+                    resourcesMatching.push(_getPropertyMatch(category, resourcesForOneCategory[i], resourceProperty, propertyText[ptIndex]));
                 }
             }
         }
@@ -112,40 +112,47 @@
     // If no propertyToMatch is provided, searches all properties
     // @params {object, string, string}
     // @returns {object} resource with a property that matches text
-    function _getPropertyMatch(resource, property, propertyTextToMatch) {
+    function _getPropertyMatch(category, resource, property, propertyTextToMatch) {
         if (!propertyTextToMatch.property || (property === propertyTextToMatch.property)) {
-            return _getPropertyTextInResource(resource, property, propertyTextToMatch.text);
+            return _getPropertyTextInResource(category, resource, property, propertyTextToMatch.text);
         }
     }
 
     // Search if match of text is found in resource property
     // @params {object, string, string}
     // @returns {object} resource with a property that matches text
-    function _getPropertyTextInResource(resource, matchedProperty, textToMatch) {
+    function _getPropertyTextInResource(category, resource, matchedProperty, textToMatch) {
         // check for both string case
         if (typeof textToMatch === 'string') {
             if (typeof resource[matchedProperty] === 'string') {
-                if (resource[matchedProperty].toLowerCase().includes(textToMatch.toLowerCase())) 
+                if (resource[matchedProperty].toLowerCase().includes(textToMatch.toLowerCase())) {
+                    resource.category = category;
                     return resource;
+                }
             }
             else if (Array.isArray(resource[matchedProperty])) {
                 for (var rIndex=0; rIndex < resource[matchedProperty].length; rIndex++) {
-                    if (resource[matchedProperty][rIndex].toLowerCase().includes(textToMatch.toLowerCase()))
+                    if (resource[matchedProperty][rIndex].toLowerCase().includes(textToMatch.toLowerCase())) {
+                        resource.category = category;
                         return resource;
+                    }
                 }
             }
         }
         else if (Array.isArray(textToMatch)) {
             if (typeof resource[matchedProperty] === 'string') {
                 for (var ttmIndex=0; ttmIndex < textToMatch.length; ttmIndex++) {
-                    if (resource[matchedProperty].toLowerCase().includes(textToMatch[ttmIndex].toLowerCase()))
+                    if (resource[matchedProperty].toLowerCase().includes(textToMatch[ttmIndex].toLowerCase())) {
+                        resource.category = category;
                         return resource;
+                    }
                 }
             }
             else if (Array.isArray(resource[matchedProperty])) {
                 for (var rIndex=0; rIndex < resource[matchedProperty].length; rIndex++) {
                     for (var ttmIndex=0; ttmIndex < textToMatch.length; ttmIndex++) {
                         if (resource[matchedProperty][rIndex].toLowerCase().includes(textToMatch[ttmIndex].toLowerCase())) {
+                            resource.category = category;
                             return resource;
                         }
                     }
