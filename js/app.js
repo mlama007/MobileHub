@@ -41,6 +41,14 @@
 		displayCategoryProperty(undefined, 'difficulty', difficulty);
 	}
 
+	// Clear all resources from DOM
+	function removeAll() {
+		const articleLists = document.querySelector('.articleList');
+		Array.from(articleLists.children).forEach(articleList => {
+			articleList.innerHTML = '';
+		});
+	}
+
 	// Display all resources given and displays in browser
 	function parseResources(name) {
 		//displays Category topic resources
@@ -122,7 +130,7 @@
 	// Displays selected difficulties resources
 	exports.displayDataDifficulty = displayDataDifficulty;
 
-	// exports.removeAll = removeAll;
+	exports.removeAll = removeAll;
 
 	// Displays resources of a given category
 	// Tied to exports to make it usable in HTML

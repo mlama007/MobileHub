@@ -27,6 +27,9 @@
 		// Toggle All difficulty
 		element.dataset.selected = !(element.dataset.selected === "true");
 
+		// Remove old resources
+		window.MobileHub.removeAll();
+
 		// .content hides all results
 		const results = document.querySelectorAll('.topicImg');
 		if (element.dataset.selected === 'true') {
@@ -37,7 +40,6 @@
 		}
 		else {
 			// Hide results
-			// window.MobileHub.removeAll();
 			results.forEach(result => result.classList.add('content'));
 			console.info('[All Hide]');
 		}
@@ -61,14 +63,20 @@
 			const results = document.querySelectorAll('.topicImg');
 			console.info('[biaFilterArray]', biaFilterArray);
 
+			let difficultiesSelected = [];
 			biaFilterArray.forEach(element => {
 				if (element.dataset.selected === 'true') {
 					console.info('[selected]', element.dataset.selected);
-					// Get selected difficulty data
-					window.MobileHub.displayDataDifficulty(element.dataset.difficulty);
+					// Store difficulties selected
+					difficultiesSelected.push(element.dataset.difficulty);
 				}
 			});
-
+			
+			// Remove old resources
+			window.MobileHub.removeAll();
+			// Get and show newest resources
+			difficultiesSelected.forEach(difficulties => window.MobileHub.displayDataDifficulty(difficulties));
+			
 			// Check if any difficulty filter is selected
 			if (biaFilterArray.every(element => {
 				console.info('[selected]', element.dataset);
