@@ -1,5 +1,9 @@
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     color: #222;
     font-size: 1em;
@@ -361,7 +365,6 @@ h2, h3, h4{ color: #171D1C;}
     text-align: left;
 }  
 
-.nav ul li{ list-style-type: none;}
 .nav p {
     color: #ffffff;
     text-align: center;
@@ -377,9 +380,6 @@ hr.style2 {
     border-top: 1px solid #d3d3d3;
     margin: 5px 0;
 }
-
-
-
 
 /*********************** Main Section */
 .aside-1 { background:  #ffffff;}
@@ -434,7 +434,6 @@ hr.style2 {
  .flex-container{
     padding: 0;
     margin: 0;
-    list-style: none;
     display: flex; 
     justify-content: center;
     flex-wrap: wrap;
@@ -449,23 +448,22 @@ hr.style2 {
 
 
 .containerlist {
-    padding: 0;
-    margin: 0;
-    display: flex; 
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .topics {
+    align-content: space-between;
     display: flex;
-    height: 200px;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
+    height: 250px;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0 auto;
     padding: 0;
-    margin-left: -5em;
+    width: 40%;
 }
-.topics li{    
-    padding-right: 8em;    
+.topics li{
+       
 }
 
 .viewAll{
@@ -485,6 +483,9 @@ hr.style2 {
 .visible {
     list-style-type: none;
     /* justify-content: center; */
+}
+.topicImg {    
+    list-style-type: none;
 }
 li.Topics-Content{
     background: #ffffff;
@@ -661,7 +662,13 @@ input::-webkit-input-placeholder {	color: #999;}
 
 .searchForm {
     background-color: #171D1C;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
 /*********************** Filter Buttons  */
 .filterSection-Container {
   font-family: 'Yantramanav', sans-serif;
