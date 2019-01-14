@@ -11,7 +11,7 @@
 	const contributors = window.MobileHub.Contributors.data;
 	
 	window.onload = function() {
-		// displayAll();
+		// displayDataAll();
 	};
 
 	/*
@@ -27,14 +27,25 @@
 	const resourcesContent = '<p><a href="%link%" target="_blank"><span class="text-content"><span>%title%</span></span></a><p>%description%</p></p>';
 
 	//Display all content from all topics
-	function displayAll() {
+	function displayDataAll() {
 		
 		const categories = window.MobileHub.Categories.getCategories();
 		categories.forEach(function(category){
 			parseResources(category);
-		});
-		categories.forEach(function(category){
 			categoriesIntro(category);
+		});
+	}
+
+	// Display content from selected difficulties
+	function displayDataDifficulty(difficulty) {
+		displayCategoryProperty(undefined, 'difficulty', difficulty);
+	}
+
+	// Clear all resources from DOM
+	function removeAll() {
+		const articleLists = document.querySelector('.articleList');
+		Array.from(articleLists.children).forEach(articleList => {
+			articleList.innerHTML = '';
 		});
 	}
 
@@ -69,6 +80,19 @@
 		})
 	}
 
+	// 
+	function parseFilteredResource(name, resource) {
+		$(".articleList ." + name).append(listedResources);
+		//Match %data% with object
+		const replaceChars={ "%link%": resource.link, "%title%": resource.title, "%description%": resource.description };
+		//Replace %data% with object informtaion
+		const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
+			function(match) {
+				return replaceChars[match];
+			});
+		$(".articleList ." + name + " li:last").append(formattedContent);
+	}
+
 	// Display all content from topic
 	function displayCategory(category) {
 		displayCategoryProperty(category);
@@ -77,7 +101,10 @@
 	// Display all content from topic matching field
 	function displayCategoryProperty(category, property, searchText) {
 		filter.setFilterCriteria({categories: category, propertyText: [{ property: property, text: searchText }]});
-		parseFilteredResources(category, filter.getFilteredResults());
+		var filteredResults = filter.getFilteredResults();
+		filteredResults.forEach(result => {
+			parseFilteredResource(result.category, result);
+		});
 	}
 
 	// Categories title and intro displayed
@@ -98,9 +125,12 @@
 	}
 
 	// Displays all resources
-	exports.displayAll = displayAll;
+	exports.displayDataAll = displayDataAll;
 
-	// exports.removeAll = removeAll;
+	// Displays selected difficulties resources
+	exports.displayDataDifficulty = displayDataDifficulty;
+
+	exports.removeAll = removeAll;
 
 	// Displays resources of a given category
 	// Tied to exports to make it usable in HTML
