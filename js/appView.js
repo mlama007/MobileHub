@@ -31,16 +31,16 @@
 		window.MobileHub.removeAll();
 
 		// .content hides all results
-		const results = document.querySelectorAll('.topicImg');
+		const results = document.querySelectorAll('.category-content');
 		if (element.dataset.selected === 'true') {
 			// Show results
 			window.MobileHub.displayDataAll();
-			results.forEach(result => result.classList.remove('content'));
+			results.forEach(result => result.classList.remove('hidden'));
 			console.info('[All Show]');
 		}
 		else {
 			// Hide results
-			results.forEach(result => result.classList.add('content'));
+			results.forEach(result => result.classList.add('hidden'));
 			console.info('[All Hide]');
 		}
 	});
@@ -60,7 +60,7 @@
 			let selected = event.target;
 			selected.dataset.selected = !(selected.dataset.selected === "true");
 
-			const results = document.querySelectorAll('.topicImg');
+			const results = document.querySelectorAll('.category-content');
 			console.info('[biaFilterArray]', biaFilterArray);
 
 			let difficultiesSelected = [];
@@ -83,11 +83,11 @@
 				return element.dataset.selected === 'false';
 			})) {
 				// Hide results
-				results.forEach(result => result.classList.add('content'));
+				results.forEach(result => result.classList.add('hidden'));
 			}
 			else {
 				// Show results
-				results.forEach(result => result.classList.remove('content'));
+				results.forEach(result => result.classList.remove('hidden'));
 			}
 		});
 	})

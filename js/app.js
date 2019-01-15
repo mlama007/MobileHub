@@ -23,7 +23,7 @@
 	const categoryDetails = '<h1 class = "categoryName">%title%</h1><p class="intro header-content">%intro%</p>';
 
 	// Create list with content
-	const listedResources = '<li class="Topics-Content flex-item"></li>';
+	const listedResources = '<li class="category-content_item flex-item"></li>';
 	const resourcesContent = '<p><a href="%link%" target="_blank"><span class="text-content"><span>%title%</span></span></a><p>%description%</p></p>';
 
 	//Display all content from all topics
