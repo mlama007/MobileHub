@@ -149,14 +149,9 @@ h2, h3, h4{ color: #171D1C;}
     Flex Wrappers and Controls
 ========================================================================== */
 .wrapper {
-    display: flex;  
-    flex-flow: row wrap;
-    font-weight: 500;
-    flex: 1 0 auto;
 }
   
 .wrapper > * {
-    flex: 1 100%;
 }
   
 .header{ 
@@ -431,6 +426,12 @@ hr.style2 {
 }
 
 /*********************** Flex for submodules */
+.articleList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
  .flex-container{
     padding: 0;
     margin: 0;
@@ -440,9 +441,6 @@ hr.style2 {
 }
 
 .flex-item {
-    padding: 0px;
-    width: auto;
-    margin-top: 0px;
     font-weight: 500;
 }
 
@@ -483,23 +481,6 @@ hr.style2 {
 .visible {
     list-style-type: none;
     /* justify-content: center; */
-}
-.topicImg {    
-    list-style-type: none;
-}
-li.Topics-Content{
-    background: #ffffff;
-    margin: 15px -240px 45px 25px;
-    padding: 6px 30px;
-    width: 90%;
-}
-
-li.Topics-Content.flex-item{
-    border-left: 15px solid #0b7dda;
-}
-
-li.Topics-Content.flex-item p:nth-child(2){
-    margin-top: -15px;
 }
 
 /* Color for filtration of articles */
@@ -568,19 +549,41 @@ span.text-content:hover{
 .header2 .logoSection {
     flex: 0 0 auto; 
 }
-.categoryName {
-    flex: 1 0 auto; 
-    text-align: center;
-    margin-bottom: -15px;
-}
 
 p.intro.header-content{
     line-height: 35px;
     text-align: left;
 }
 
+.category-heading {
 
+}
+.category-content {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    width: 65%;
+}
 
+.category-content_item {
+    background: #ffffff;
+    border-left: 15px solid #0b7dda;
+    font-weight: 500;
+    margin: 45px 0;
+    padding: 6px 30px;
+}
+.category-content_item p:first-child{
+    margin-bottom: 0px;
+}
+.category-content_item p:nth-child(2){
+    margin-top: 5px;
+}
+/* 
+* Add margin-bottom:0 to all last category-content_item except the very last one
+*/
+.category-content:nth-last-child(n+2) .category-content_item:last-child {
+    margin-bottom: 0;
+}
 
 /*********************** LINK STYLES */
 
@@ -710,7 +713,12 @@ input::-webkit-input-placeholder {	color: #999;}
  */
 
  .hidden {
-    display: none !important;
+    display: none;
+}
+
+.shidden {
+    background-color: white;
+    padding: 0;
 }
 
 /*
