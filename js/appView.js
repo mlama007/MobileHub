@@ -15,6 +15,30 @@
 
 	//--- Events Section ---//
 
+	// Category Filter event
+	const categoryFilterItems = document.querySelectorAll('.category-filter__item');
+	categoryFilterItems.forEach(filterItem => {
+		filterItem.addEventListener('click', function(event) {
+			const element = event.currentTarget;
+			const category = event.currentTarget.dataset.category;
+
+			// Remove all data from DOM
+			// Hide all elements
+			window.MobileHub.removeAll();
+			
+			// Toggle Category selected state
+			element.dataset.selected = !(element.dataset.selected === 'true');
+
+			const categoryContentList = Array.from(document.querySelectorAll('.category-content')).filter(content => {
+				return content.dataset.category === category
+			});
+
+			if (element.dataset.selected) {
+				window.MobileHub.displayDataCategory(category);
+				categoryContentList[0].classList.remove('hidden');
+			}
+		});
+	});
 	// All difficulty filter event
 	document.querySelector('[data-difficulty="All"]').addEventListener('click', function(event) {
 		const element = event.target;
@@ -30,7 +54,7 @@
 		// Remove old resources
 		window.MobileHub.removeAll();
 
-		// .content hides all results
+		// .hidden hides all results
 		const results = document.querySelectorAll('.category-content');
 		if (element.dataset.selected === 'true') {
 			// Show results

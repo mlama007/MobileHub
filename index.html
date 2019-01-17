@@ -74,17 +74,17 @@
                 <!-- <hr class="style2"> -->
 
                 <div class="containerlist">
-                    <ul id="css" class= "topics">
-                        <li class="boxes HTMLBox" data-category="HTML"><a href="#View">HTML</a></li>
-                        <li class="boxes CSSBox" data-category="CSS"><a href="#View">CSS</a></li>
-                        <li class="boxes JSBox" data-category="JS"><a href="#View">Javascript</a></li>
-                        <li class="boxes GitBox" data-category="Git"><a href="#View">Git</a></li>
-                        <li class="boxes LearningBox" data-category="Learning"><a href="#View">Learning</a></li>
-                        <li class="boxes ResourcesBox" data-category="Resources"><a href="#View">Resources</a></li>
-                        <li class="boxes FrameworksBox" data-category="Frameworks"><a href="#View">Frameworks</a></li>
-                        <li class="boxes PracticeBox" data-category="Practice"><a href="#View">Practice</a></li>
-                        <li class="boxes StartupBox" data-category="Startup"><a href="#View">Startup</a></li>
-                        <li class="boxes ToolsBox" data-category="Tools"><a href="#View">Tools</a></li>
+                    <ul class= "category-filter">
+                        <li class="category-filter__item" data-category="HTML" data-selected="false"><a href="#View">HTML</a></li>
+                        <li class="category-filter__item" data-category="CSS" data-selected="false"><a href="#View">CSS</a></li>
+                        <li class="category-filter__item" data-category="JS" data-selected="false"><a href="#View">Javascript</a></li>
+                        <li class="category-filter__item" data-category="Git" data-selected="false"><a href="#View">Git</a></li>
+                        <li class="category-filter__item" data-category="Learning" data-selected="false"><a href="#View">Learning</a></li>
+                        <li class="category-filter__item" data-category="Resources" data-selected="false"><a href="#View">Resources</a></li>
+                        <li class="category-filter__item" data-category="Frameworks" data-selected="false"><a href="#View">Frameworks</a></li>
+                        <li class="category-filter__item" data-category="Practice" data-selected="false"><a href="#View">Practice</a></li>
+                        <li class="category-filter__item" data-category="Startup" data-selected="false"><a href="#View">Startup</a></li>
+                        <li class="category-filter__item" data-category="Tools" data-selected="false"><a href="#View">Tools</a></li>
                     </ul>
                 </div>        
             </article>
@@ -99,7 +99,7 @@
         <!-- Topics Section -->
             <!--filter buttons-->
             <article class="nav" id="filterSection">
-                <div id="css" class="filterSection-Container">
+                <div class="filterSection-Container">
                     <button class="filterflex-item" data-difficulty="All" data-selected="false">All</button>
                     <button class="filterflex-item" data-difficulty="Beginner" data-selected="false">Beginner</button>
                     <button class="filterflex-item" data-difficulty="Intermediate" data-selected="false">Intermediate</button>
@@ -107,18 +107,19 @@
                 <div>
             </article>
 
-            <div id="View" class="All NoContent">
+            <div id="View" class="All hidden">
                 <div class="header2">
                     <!-- <img class="logoSection" src="img/logo-white.svg" width="95px;"> why is this not showing up? -->
-                    <ul class="category-heading content CSS topicImg" data-category="CSS"></ul>
-                    <ul class="category-heading content HTML topicImg" data-category="HTML"></ul>
-                    <ul class="category-heading content JS topicImg" data-category="JS"></ul>
-                    <ul class="category-heading content Git topicImg" data-category="Git"></ul>
-                    <ul class="category-heading content Learning topicImg" data-category="Learning"></ul>
-                    <ul class="category-heading content Resources topicImg" data-category="Resources"></ul>
-                    <ul class="category-heading content Frameworks topicImg" data-category="Frameworks"></ul>
-                    <ul class="category-heading content Practice topicImg" data-category="Practice"></ul>
-                    <ul class="category-heading content Tools topicImg" data-category="Tools"></ul>
+                    <ul class="category-heading hidden CSS topicImg" data-category="CSS"></ul>
+                    <ul class="category-heading hidden HTML topicImg" data-category="HTML"></ul>
+                    <ul class="category-heading hidden JS topicImg" data-category="JS"></ul>
+                    <ul class="category-heading hidden Git topicImg" data-category="Git"></ul>
+                    <ul class="category-heading hidden Learning topicImg" data-category="Learning"></ul>
+                    <ul class="category-heading hidden Resources topicImg" data-category="Resources"></ul>
+                    <ul class="category-heading hidden Frameworks topicImg" data-category="Frameworks"></ul>
+                    <ul class="category-heading hidden Practice topicImg" data-category="Practice"></ul>
+                    <ul class="category-heading hidden Startup topicImg" data-category="Startup"></ul>
+                    <ul class="category-heading hidden Tools topicImg" data-category="Tools"></ul>
                 </div>
 
                 <div class="articleCountContainer flex-container">
@@ -136,6 +137,7 @@
                 <ul class="category-content Resources hidden" data-category="Resources"></ul>
                 <ul class="category-content Frameworks hidden" data-category="Frameworks"></ul>
                 <ul class="category-content Practice hidden" data-category="Practice"></ul>
+                <ul class="category-content Startup hidden" data-category="Startup"></ul>
                 <ul class="category-content Tools hidden" data-category="Tools"></ul>
             </div>
 

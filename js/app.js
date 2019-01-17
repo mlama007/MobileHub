@@ -23,7 +23,7 @@
 	const categoryDetails = '<h1 class = "categoryName">%title%</h1><p class="intro header-content">%intro%</p>';
 
 	// Create list with content
-	const listedResources = '<li class="category-content_item flex-item"></li>';
+	const listedResources = '<li class="category-content__item flex-item"></li>';
 	const resourcesContent = '<p><a href="%link%" target="_blank"><span class="text-content"><span>%title%</span></span></a><p>%description%</p></p>';
 
 	//Display all content from all topics
@@ -34,6 +34,10 @@
 			parseResources(category);
 			categoriesIntro(category);
 		});
+	}
+
+	function displayDataCategory(category) {
+		displayCategory(category);
 	}
 
 	// Display content from selected difficulties
@@ -93,12 +97,12 @@
 		$(".articleList ." + name + " li:last").append(formattedContent);
 	}
 
-	// Display all content from topic
+	// Display all content from category
 	function displayCategory(category) {
 		displayCategoryProperty(category);
 	}
 
-	// Display all content from topic matching field
+	// Display all content from category matching field
 	function displayCategoryProperty(category, property, searchText) {
 		filter.setFilterCriteria({categories: category, propertyText: [{ property: property, text: searchText }]});
 		var filteredResults = filter.getFilteredResults();
@@ -126,6 +130,9 @@
 
 	// Displays all resources
 	exports.displayDataAll = displayDataAll;
+
+	// Displays selected categories resources
+	exports.displayDataCategory = displayDataCategory;
 
 	// Displays selected difficulties resources
 	exports.displayDataDifficulty = displayDataDifficulty;
