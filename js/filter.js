@@ -34,15 +34,15 @@
             if (!this.allTextsHaveValue) {
                 if (Array.isArray(this.categories) && this.categories.length) {
                     for (var cIndex=0; cIndex < this.categories.length; cIndex++) {
-                        matchedResources.push(...resources[this.categories[cIndex]]);
+                        matchedResources.push(...addCategoryToResource(resources[this.categories[cIndex]], this.categories[cIndex]));
                     }
                 }
                 else if (typeof this.categories === 'string' && this.categories.trim) {
-                    matchedResources.push(...resources[this.categories]);
+                    matchedResources.push(...addCategoryToResource(resources[this.categories], this.categories));
                 }
                 else {
                     for ( var category in resources) {
-                        matchedResources.push(...resources[category]);
+                        matchedResources.push(...addCategoryToResource(resources[category], category));
                     }                    
                 }
                 // debugging purposes
@@ -162,6 +162,12 @@
         return null; // no match
     }
     
+    // Add category to resource when there is no {property, text} defined
+    function addCategoryToResource(resources, category) {
+        resources.forEach(resource => resource.category = category);
+        return resources;
+    }
+
     exports.filter = Object.create(_filter);
 
     // Example of how to use filter
