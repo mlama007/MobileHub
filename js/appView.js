@@ -17,26 +17,36 @@
 
 	// Category Filter event
 	const categoryFilterItems = document.querySelectorAll('.category-filter__item');
+
 	categoryFilterItems.forEach(filterItem => {
 		filterItem.addEventListener('click', function(event) {
 			const element = event.currentTarget;
-			const category = event.currentTarget.dataset.category;
+
+			// Toggle Category selected state
+			element.dataset.selected = !(element.dataset.selected === 'true');
+
+			const categoryFilterSeletectedArray = Array.from(categoryFilterItems).filter(element => {
+				return element.dataset.selected === 'true'
+			}).map(element => element.dataset.category);
+			console.info('[categoryFilterSeletectedArray]: ', categoryFilterSeletectedArray);
 
 			// Remove all data from DOM
 			// Hide all elements
 			window.MobileHub.removeAll();
-			
-			// Toggle Category selected state
-			element.dataset.selected = !(element.dataset.selected === 'true');
 
+			// Get elements to add data to
 			const categoryContentList = Array.from(document.querySelectorAll('.category-content')).filter(content => {
-				return content.dataset.category === category
+				return categoryFilterSeletectedArray.includes(content.dataset.category);
 			});
-
-			if (element.dataset.selected) {
-				window.MobileHub.displayDataCategory(category);
-				categoryContentList[0].classList.remove('hidden');
-			}
+			
+			// Get data and remove .hidden from UI elements
+			window.MobileHub.displayDataCategory(categoryFilterSeletectedArray);
+			categoryContentList.forEach(categoryContentItem =>
+				{
+					categoryContentItem.classList.remove('hidden');
+				}
+			);
+			console.info('[categoryContentList]: ', categoryContentList);
 		});
 	});
 	// All difficulty filter event

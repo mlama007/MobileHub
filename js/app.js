@@ -36,8 +36,12 @@
 		});
 	}
 
-	function displayDataCategory(category) {
-		displayCategory(category);
+	//
+	// Get data from filter based on categories
+	// @param {string[]}
+	//
+	function displayDataCategory(categories) {
+		displayCategory(categories);
 	}
 
 	// Display content from selected difficulties
@@ -98,13 +102,13 @@
 	}
 
 	// Display all content from category
-	function displayCategory(category) {
-		displayCategoryProperty(category);
+	function displayCategory(categories) {
+		displayCategoryProperty(categories);
 	}
 
 	// Display all content from category matching field
-	function displayCategoryProperty(category, property, searchText) {
-		filter.setFilterCriteria({categories: category, propertyText: [{ property: property, text: searchText }]});
+	function displayCategoryProperty(categories, property, searchText) {
+		filter.setFilterCriteria({categories: categories, propertyText: [{ property: property, text: searchText }]});
 		var filteredResults = filter.getFilteredResults();
 		filteredResults.forEach(result => {
 			parseFilteredResource(result.category, result);
