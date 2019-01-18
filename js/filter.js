@@ -94,7 +94,7 @@
     }
 
     // Search a resource
-    // @params {array, array} resources, propertyText
+    // @params {string, array, propertyText} resources, propertyText
     // @returns {array} matching resources
     function _getResource(category, resourcesForOneCategory, propertyText) {
         var resourcesMatching = [];
@@ -163,6 +163,7 @@
     }
     
     // Add category to resource when there is no {property, text} defined
+    // @params {resources, category} 
     function addCategoryToResource(resources, category) {
         resources.forEach(resource => resource.category = category);
         return resources;
