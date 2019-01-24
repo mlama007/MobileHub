@@ -19,7 +19,7 @@
 	const categoryFilterItems = document.querySelectorAll('.category-filter__item');
 
 	categoryFilterItems.forEach(filterItem => {
-		filterItem.addEventListener('click', function(event) {
+		filterItem.addEventListener('click', event => {
 			const element = event.currentTarget;
 
 			// Toggle Category selected state
@@ -40,17 +40,60 @@
 			});
 			
 			// Get data and remove .hidden from UI elements
-			window.MobileHub.displayDataCategory(categoryFilterSeletectedArray);
-			categoryContentList.forEach(categoryContentItem =>
-				{
-					categoryContentItem.classList.remove('hidden');
-				}
-			);
+			if (categoryFilterSeletectedArray.length) {
+				// Only display data when category is selected				
+				window.MobileHub.displayDataCategory(categoryFilterSeletectedArray);
+				categoryContentList.forEach(categoryContentItem =>
+					{
+						categoryContentItem.classList.remove('hidden');
+					}
+				);
+			}
 			console.info('[categoryContentList]: ', categoryContentList);
 		});
 	});
+
+	// Search form event 
+	// Stop default submit event
+	document.querySelector('form.searchForm').addEventListener('submit', event => { 
+		console.info('[form event]', event.cancelable);
+		event.preventDefault();
+	}, false);
+
+	// Search filter event
+	// Show submit magnifying glass when input receives focus
+	document.querySelector('[name="resources-search"]').addEventListener('focus', event => {
+		const element = event.target;
+		// console.info('[search input backgroundColor]', window.getComputedStyle(element, null).backgroundColor);
+		// if (window.getComputedStyle(element, null).backgroundColor === 'rgb(237, 237, 237)') {
+		// 	console.info('[search]');
+		// }
+
+		const submit = document.querySelector('.searchForm__submit');
+		submit.classList.add('searchForm__submit--left'); 
+		console.info('[resources-search]', 'added searchForm__submit--left');
+	}, false);
+
+	// Searh input event
+	// Remove submit maginfying glass
+	document.querySelector('[name="resources-search"]').addEventListener('blur', event => {
+		const submit = document.querySelector('.searchForm__submit');
+		console.info(document.activeElement.tagName);
+		if (submit.classList.value === document.activeElement.classList.value) {
+			submit.classList.remove('searchForm__submit--left');
+			console.info('[resources-search]', 'removed searchForm__submit--left');
+		}
+	}, false);
+	
+	// Search submit event
+	// Submit form when maginfying glass is clicked
+	document.querySelector('.searchForm__submit').addEventListener('click', event => {
+		document.querySelector('form.searchForm').submit();
+		console.info('[searhForm__submit]', 'event submit called');
+	});
+
 	// All difficulty filter event
-	document.querySelector('[data-difficulty="All"]').addEventListener('click', function(event) {
+	document.querySelector('[data-difficulty="All"]').addEventListener('click', event => {
 		const element = event.target;
 		// Deselect Beginner, Imtermidate, & Advanced difficulty
 		Array.from(element.parentElement.children).forEach(elem => {
