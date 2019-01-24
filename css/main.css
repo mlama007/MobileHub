@@ -636,8 +636,8 @@ input::-webkit-search-cancel-button {
 }
 
 input[type=search] {
-	/*background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;*/
-	border: solid 1px #ccc;
+    background: #fff 110%/1em;
+    border: solid 1px #ccc;
 	padding: 11px 10px 9px 11px;
     width: 40%;
 	-webkit-transition: all .5s;
@@ -645,13 +645,13 @@ input[type=search] {
     transition: all .5s;
 }
 
-input[type=search]:focus {
-	background-color: #fff;
+/* input[type=search]:focus {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 98%/1em;
 	border-color: #66CC75;
 	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
 	box-shadow: 0 0 5px rgba(109,207,246,.5);
-}
+} */
 
 input:-moz-placeholder {color: #999;}
 input::-webkit-input-placeholder {	color: #999;}
@@ -663,6 +663,20 @@ input::-webkit-input-placeholder {	color: #999;}
     display: flex; 
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.searchForm__submit {
+    background: none;
+    border: none;
+    visibility: hidden;
+    padding: 0;
+    position: relative;
+    right: 2em;
+    transition: all 2s ease-out;
+}
+
+.searchForm__submit--left {
+    visibility: visible;
 }
 
 /*********************** Filter Buttons  */
