@@ -58,7 +58,6 @@
 	document.querySelector('form.searchForm').addEventListener('submit', event => { 
 		console.info('[form event]', 'event.cancelable', event.cancelable);
 		event.preventDefault();
-		return false;
 
 		// Grab search terms
 		const search = document.querySelector('[name="resources-search"]');
@@ -93,13 +92,6 @@
 			submit.classList.remove('searchForm__submit--left');
 			console.info('[resources-search]', 'removed searchForm__submit--left');
 		// }
-	});
-	
-	// Search submit event
-	// Submit form when maginfying glass is clicked
-	document.querySelector('.searchForm__submit').addEventListener('click', event => {
-		document.querySelector('form.searchForm').submit();
-		console.info('[searhForm__submit]', 'event submit called');
 	});
 
 	// All difficulty filter event

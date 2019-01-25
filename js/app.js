@@ -53,7 +53,7 @@
 	// @param {string[]}
 	//
 	function displayDataSearch(searchTerms) {
-		let propertyTexts = [];
+		const propertyTexts = [];
 		
 		// Parse searchTerms into propertyText object
 		searchTerms.forEach(term => {
@@ -138,7 +138,7 @@
 
 	// Display all content matching categories and propertyTexts
 	function displayCategoryPropertyTexts(categories, propertyTexts) {
-		filter.setFilterCriteria({categories: categories, propertyText: propertyText});
+		filter.setFilterCriteria({categories: categories, propertyText: propertyTexts});
 		var filteredResults = filter.getFilteredResults();
 		filteredResults.forEach(result => {
 			parseFilteredResource(result.category, result);
