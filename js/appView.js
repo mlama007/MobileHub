@@ -56,9 +56,19 @@
 	// Search form event 
 	// Stop default submit event
 	document.querySelector('form.searchForm').addEventListener('submit', event => { 
-		console.info('[form event]', event.cancelable);
+		console.info('[form event]', 'event.cancelable', event.cancelable);
 		event.preventDefault();
-	}, false);
+		return false;
+
+		// Grab search terms
+		const search = document.querySelector('[name="resources-search"]');
+		const input = search.value.split(' ');
+
+		// Search has a non-whitespace value
+		if (search.value && input.length) {
+			window.MobileHub.displayDataSearch(input);
+		}
+	});
 
 	// Search filter event
 	// Show submit magnifying glass when input receives focus
@@ -72,18 +82,18 @@
 		const submit = document.querySelector('.searchForm__submit');
 		submit.classList.add('searchForm__submit--left'); 
 		console.info('[resources-search]', 'added searchForm__submit--left');
-	}, false);
+	});
 
 	// Searh input event
 	// Remove submit maginfying glass
 	document.querySelector('[name="resources-search"]').addEventListener('blur', event => {
 		const submit = document.querySelector('.searchForm__submit');
 		console.info(document.activeElement.tagName);
-		if (submit.classList.value === document.activeElement.classList.value) {
+		// if (submit.classList.value === document.activeElement.classList.value) {
 			submit.classList.remove('searchForm__submit--left');
 			console.info('[resources-search]', 'removed searchForm__submit--left');
-		}
-	}, false);
+		// }
+	});
 	
 	// Search submit event
 	// Submit form when maginfying glass is clicked
