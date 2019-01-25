@@ -44,6 +44,27 @@
 		displayCategory(categories);
 	}
 
+	const propertyText = function (property, text) {
+		this.property = property;
+		this.text = text;
+	};
+
+	// Get data from filter based on user words entered in search input
+	// @param {string[]}
+	//
+	function displayDataSearch(searchTerms) {
+		let propertyTexts = [];
+		
+		// Parse searchTerms into propertyText object
+		searchTerms.forEach(term => {
+			const pt = new propertyText(undefined, term);
+			propertyTexts.push(pt);
+		});
+
+		// Call filter with propertyText array
+		displayCategoryPropertyTexts(undefined, propertyTexts);
+	}
+
 	// Display content from selected difficulties
 	function displayDataDifficulty(difficulty) {
 		displayCategoryProperty(undefined, 'difficulty', difficulty);
@@ -115,6 +136,15 @@
 		});
 	}
 
+	// Display all content matching categories and propertyTexts
+	function displayCategoryPropertyTexts(categories, propertyTexts) {
+		filter.setFilterCriteria({categories: categories, propertyText: propertyText});
+		var filteredResults = filter.getFilteredResults();
+		filteredResults.forEach(result => {
+			parseFilteredResource(result.category, result);
+		})
+	}
+
 	// Categories title and intro displayed
 	function categoriesIntro(name){
 		const category = categories[name];
@@ -137,6 +167,9 @@
 
 	// Displays selected categories resources
 	exports.displayDataCategory = displayDataCategory;
+
+	// Displays search resources
+	exports.displayDataSearch = displayDataSearch;
 
 	// Displays selected difficulties resources
 	exports.displayDataDifficulty = displayDataDifficulty;
