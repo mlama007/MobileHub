@@ -63,9 +63,19 @@
 		const search = document.querySelector('[name="resources-search"]');
 		const input = search.value.split(' ');
 
+		// Remove old resources
+		window.MobileHub.removeAll();
+
 		// Search has a non-whitespace value
 		if (search.value && input.length) {
-			window.MobileHub.displayDataSearch(input);
+			const results = window.MobileHub.displayDataSearch(input);
+			
+			// .hidden hides element
+			// remove .hidden to show certain resource category
+			// TODO: Improvement is to remove .hidden no more than once per returned //#endregionscategory
+			results.forEach(result => {
+				document.querySelector(`.category-content[data-category="${result.category}"]`).classList.remove('hidden');
+			});
 		}
 	});
 
