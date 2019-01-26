@@ -51,7 +51,7 @@
 
 	// Get data from filter based on user words entered in search input
 	// @param {string[]}
-	//
+	// @return resources[]
 	function displayDataSearch(searchTerms) {
 		const propertyTexts = [];
 		
@@ -62,7 +62,7 @@
 		});
 
 		// Call filter with propertyText array
-		displayCategoryPropertyTexts(undefined, propertyTexts);
+		return displayCategoryPropertyTexts(undefined, propertyTexts);
 	}
 
 	// Display content from selected difficulties
@@ -137,12 +137,17 @@
 	}
 
 	// Display all content matching categories and propertyTexts
+	// @param {string[]} categories
+	// @param {propertyText[]} propertyTexts
+	// @returns resources[]
 	function displayCategoryPropertyTexts(categories, propertyTexts) {
 		filter.setFilterCriteria({categories: categories, propertyText: propertyTexts});
 		var filteredResults = filter.getFilteredResults();
 		filteredResults.forEach(result => {
 			parseFilteredResource(result.category, result);
 		})
+		
+		return filteredResults;
 	}
 
 	// Categories title and intro displayed
