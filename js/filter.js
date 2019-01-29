@@ -68,11 +68,11 @@
         // search only provided Categories
         if (Array.isArray(resourceCategory) && resourceCategory.length) {
             for (var i in resourceCategory) {
-                resourcesMatching.push(..._getResource(catergoryArray[cIndex], allResources[resourceCategory[i]], propertyText));                
+                resourcesMatching.push(..._getResource(resourceCategory[i], allResources[resourceCategory[i]], propertyText));                
             }
         }
         else if (typeof resourceCategory === 'string') {
-            resourcesMatching.push(..._getResource(catergoryArray[cIndex], allResources[resourceCategory], propertyText));
+            resourcesMatching.push(..._getResource(resourceCategory, allResources[resourceCategory], propertyText));
         }
         // search all Categories
         else if (resourceCategory === undefined || resourceCategory === 'undefined' ) {

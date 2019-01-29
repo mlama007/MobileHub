@@ -69,15 +69,7 @@
 	function displayDataDifficulty(difficulty) {
 		displayCategoryProperty(undefined, 'difficulty', difficulty);
 	}
-
-	// Clear all resources from DOM
-	function removeAll() {
-		const articleLists = document.querySelector('.articleList');
-		Array.from(articleLists.children).forEach(articleList => {
-			articleList.innerHTML = '';
-		});
-	}
-
+	
 	// Display all resources given and displays in browser
 	function parseResources(name) {
 		//displays Category topic resources
@@ -167,6 +159,73 @@
 		})(category);
 	}
 
+	// Create FilterCriteria for filter
+	// @param {string[]} categories
+	// @param {string[]} difficultites
+	// @param {string[]} terms
+	// @returns 
+	function createFilterCriteria(categories, difficulties, terms) {
+		const filterCriteriaConstructor = function(categories, propertyText) {
+			this.categories = categories;
+			this.propertyText = propertyText;
+		};
+
+		const propertyTextConstructor = function (property, text) {
+			this.property = property;
+			this.text = text;
+		};
+
+		let nullPropertyText = [];
+		if (!difficulties && !terms) {
+			nullPropertyText.push(new propertyTextConstructor(undefined, undefined));
+		}
+
+		// Build propertyText for difficulties
+		const difficultiesPropertyText = [];
+		if (difficulties && difficulties.length) {
+			difficulties.forEach(difficulty => {
+				difficultiesPropertyText.push(new propertyTextConstructor('difficulty', difficulty));
+			});
+		}
+
+		// Build propertyText for terms
+		const termsPropertyText = [];
+		if (terms && terms.length) {
+			terms.forEach(term => {
+				termsPropertyText.push(new propertyTextConstructor(undefined, term));
+			});
+		}
+
+		const propertyText = [...nullPropertyText, ...difficultiesPropertyText, ...termsPropertyText];
+		const filterCriteria = new filterCriteriaConstructor(categories, propertyText);
+		return filterCriteria;		
+	}
+
+	function getFilteredResources(filterCriteria) {
+		filter.setFilterCriteria(filterCriteria);
+		
+		var filteredResults = filter.getFilteredResults();
+
+		return filteredResults;
+	}
+
+	function addFilterDataToUI(results) {
+		results.forEach(result => {
+			parseFilteredResource(result.category, result);
+		})
+	}
+
+	function filterResources(categories, difficulties, terms) {
+		const filterCriteria = createFilterCriteria(categories, difficulties, terms);
+		const filteredResults = getFilteredResources(filterCriteria);
+
+		addFilterDataToUI(filteredResults);
+	}
+
+	/**********************************/
+	// Public Functions
+	/**********************************/
+
 	// Displays all resources
 	exports.displayDataAll = displayDataAll;
 
@@ -179,10 +238,14 @@
 	// Displays selected difficulties resources
 	exports.displayDataDifficulty = displayDataDifficulty;
 
-	exports.removeAll = removeAll;
+	exports.displayFilteredData = filterResources;
 
+	
+	/*********************************/
+	// Test functions
+	/*********************************/
+	
 	// Displays resources of a given category
-	// Tied to exports to make it usable in HTML
 	exports.showCategory = function(category) {
 		if (category) {
 			// selected category and difficulty
@@ -193,6 +256,12 @@
 	// Displays resources of a given difficulty
 	exports.showDifficulty = function(difficulty) {
 		displayCategoryProperty(undefined, 'difficulty', difficulty);
+	}
+
+	exports.showSearchTerms = function(terms) {
+		var searchTerms = terms.split(' ');
+		
+		displayCategoryProperty(undefined, undefined, searchTerms);
 	}
 
 })(jQuery);

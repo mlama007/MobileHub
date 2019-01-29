@@ -16,7 +16,9 @@
 	//--- Events Section ---//
 
 	// Category Filter event
-	const categoryFilterItems = document.querySelectorAll('.category-filter__item');
+	const categoryFilterItems = Array.from(document.querySelectorAll('.category-filter__item'));
+	const difficultyFilterItems = Array.from(document.querySelectorAll('.filterflex-item[data-difficulty]'));
+	const searchFilter = document.querySelector('.searchForm [name="resources-search"]');
 
 	categoryFilterItems.forEach(filterItem => {
 		filterItem.addEventListener('click', event => {
@@ -24,37 +26,39 @@
 
 			// Toggle Category selected state
 			element.dataset.selected = !(element.dataset.selected === 'true');
-
-			const categoryFilterSeletectedArray = Array.from(categoryFilterItems).filter(element => {
-				return element.dataset.selected === 'true'
-			}).map(element => element.dataset.category);
-			console.info('[categoryFilterSeletectedArray]: ', categoryFilterSeletectedArray);
-
+			
 			// Remove all data from DOM
 			// Hide all elements
-			window.MobileHub.removeAll();
+			removeAll();
 
-			// Get elements to add data to
-			const categoryContentList = Array.from(document.querySelectorAll('.category-content')).filter(content => {
-				return categoryFilterSeletectedArray.includes(content.dataset.category);
-			});
+			// Get categories selected
+			const selectedCategories = filterResources(categoryFilterItems, difficultyFilterItems, searchFilter.value).selectedCategories;
+			console.info('[filterResources: selectedCategories]', selectedCategories);
+
 			
-			// Get data and remove .hidden from UI elements
-			if (categoryFilterSeletectedArray.length) {
+			// Get data and remove .hidden from matching content UI elements
+			if (selectedCategories && selectedCategories.length) {
 				// Only display data when category is selected				
-				window.MobileHub.displayDataCategory(categoryFilterSeletectedArray);
+				// window.MobileHub.displayDataCategory(categoryFilterSeletectedArray);
+				
+				
+				// Get content based on categories selected
+				const categoryContentList = Array.from(document.querySelectorAll('.category-content')).filter(content => {
+					return selectedCategories.includes(content.dataset.category);
+				});
+
 				categoryContentList.forEach(categoryContentItem =>
 					{
 						categoryContentItem.classList.remove('hidden');
 					}
 				);
+				// Debug trace: show which content element to unhide (remove .hide)
+				console.info('[categoryContentList]: ', categoryContentList);
 			}
-			console.info('[categoryContentList]: ', categoryContentList);
 		});
 	});
 
-	// Search form event 
-	// Stop default submit event
+	// Search form submit event 
 	document.querySelector('form.searchForm').addEventListener('submit', event => { 
 		console.info('[form event]', 'event.cancelable', event.cancelable);
 		event.preventDefault();
@@ -64,7 +68,7 @@
 		const input = search.value.split(' ');
 
 		// Remove old resources
-		window.MobileHub.removeAll();
+		removeAll();
 
 		// Search has a non-whitespace value
 		if (search.value && input.length) {
@@ -79,7 +83,7 @@
 		}
 	});
 
-	// Search filter event
+	// Search input focus event
 	// Show submit magnifying glass when input receives focus
 	document.querySelector('[name="resources-search"]').addEventListener('focus', event => {
 		const element = event.target;
@@ -93,7 +97,7 @@
 		console.info('[resources-search]', 'added searchForm__submit--left');
 	});
 
-	// Searh input event
+	// Searh input blur event
 	// Remove submit maginfying glass
 	document.querySelector('[name="resources-search"]').addEventListener('blur', event => {
 		const submit = document.querySelector('.searchForm__submit');
@@ -108,7 +112,7 @@
 	document.querySelector('[data-difficulty="All"]').addEventListener('click', event => {
 		const element = event.target;
 		// Deselect Beginner, Imtermidate, & Advanced difficulty
-		Array.from(element.parentElement.children).forEach(elem => {
+		difficultyFilterItems.forEach(elem => {
 			if (elem.getAttribute('data-difficulty') !== 'All') {
 				elem.dataset.selected = false;
 			}
@@ -116,8 +120,8 @@
 		// Toggle All difficulty
 		element.dataset.selected = !(element.dataset.selected === "true");
 
-		// Remove old resources
-		window.MobileHub.removeAll();
+		// Remove old resources from DOM
+		removeAll();
 
 		// .hidden hides all results
 		const results = document.querySelectorAll('.category-content');
@@ -162,11 +166,12 @@
 			});
 			
 			// Remove old resources
-			window.MobileHub.removeAll();
+			removeAll();
 			// Get and show newest resources
 			difficultiesSelected.forEach(difficulties => window.MobileHub.displayDataDifficulty(difficulties));
 			
 			// Check if any difficulty filter is selected
+			// TODO: remove .hidden only from categories with data
 			if (biaFilterArray.every(element => {
 				console.info('[selected]', element.dataset);
 				return element.dataset.selected === 'false';
@@ -179,6 +184,62 @@
 				results.forEach(result => result.classList.remove('hidden'));
 			}
 		});
-	})
+	});
+
+	// Helper Functions
+
+	// Get all selected categories
+	// @returns string[]
+	function filterResources(categories, difficulties, searchTerms) {
+		
+		const selectedCategories = getSelectedCategories(categories) || undefined;
+		const selectedDifficulties = getSelectedDifficulties(difficulties) || undefined;
+		const terms = SearchTerms(searchTerms) || '';
+		
+		// Do not use filter if there are no filterable items
+		if ((!selectedCategories || !selectedCategories.length) && 
+		(!selectedDifficulties || !selectedDifficulties.length) 
+		&& !terms) return [];
+
+		window.MobileHub.displayFilteredData(selectedCategories, selectedDifficulties, terms);
+
+		return {
+			selectedCategories,
+			selectedDifficulties,
+			terms
+		};
+
+	}
+
+	function getSelectedCategories(filters) {
+		const selectedCategories = filters.filter(filter => filter.dataset.selected === 'true')
+		.map(filter => filter.dataset.category);
+
+		return (selectedCategories && selectedCategories.length) ? selectedCategories : undefined;
+	};
+
+	function getSelectedDifficulties(filters) {
+		const selectedDiffulties = filters.filter(filter => filter.dataset.selected === 'true')
+		.map(filter => filter.dataset.difficulty);
+
+		return (selectedDiffulties && selectedDiffulties.length) ? selectedDiffulties : undefined;
+	}
+
+	// Split search terms
+	// @param {string} terms
+	// @returns {string[]}
+	function SearchTerms(terms) {
+		return terms.split(' ');
+	}
+
+	
+	// Clear all resources from DOM
+	function removeAll() {
+		const articleLists = document.querySelector('.articleList');
+		Array.from(articleLists.children).forEach(articleList => {
+			articleList.innerHTML = '';
+			articleList.classList.add('hidden');
+		});
+	}
 
 })();
