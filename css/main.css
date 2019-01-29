@@ -710,7 +710,7 @@ input::-webkit-input-placeholder {	color: #999;}
 }
 
 [data-selected="true"] {
-    background-color: #f1bf98; /* not sure which color is best */
+    /*background-color: #f1bf98; /* not sure which color is best */
     background-color: #96E6b3;
     opacity: .8;
 }
