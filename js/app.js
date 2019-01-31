@@ -26,83 +26,9 @@
 	const listedResources = '<li class="category-content__item flex-item"></li>';
 	const resourcesContent = '<p><a href="%link%" target="_blank"><span class="text-content"><span>%title%</span></span></a><p>%description%</p></p>';
 
-	//Display all content from all topics
-	function displayDataAll() {
-		
-		const categories = window.MobileHub.Categories.getCategories();
-		categories.forEach(function(category){
-			parseResources(category);
-			categoriesIntro(category);
-		});
-	}
-
-	//
-	// Get data from filter based on categories
-	// @param {string[]}
-	//
-	function displayDataCategory(categories) {
-		displayCategory(categories);
-	}
-
-	const propertyText = function (property, text) {
-		this.property = property;
-		this.text = text;
-	};
-
-	// Get data from filter based on user words entered in search input
-	// @param {string[]}
-	// @return resources[]
-	function displayDataSearch(searchTerms) {
-		const propertyTexts = [];
-		
-		// Parse searchTerms into propertyText object
-		searchTerms.forEach(term => {
-			const pt = new propertyText(undefined, term);
-			propertyTexts.push(pt);
-		});
-
-		// Call filter with propertyText array
-		return displayCategoryPropertyTexts(undefined, propertyTexts);
-	}
-
-	// Display content from selected difficulties
-	function displayDataDifficulty(difficulty) {
-		displayCategoryProperty(undefined, 'difficulty', difficulty);
-	}
-	
-	// Display all resources given and displays in browser
-	function parseResources(name) {
-		//displays Category topic resources
-		resources[name].forEach(function(resource){ 
-			$(".articleList ." + name).append(listedResources);
-			//Match %data% with object
-			const replaceChars={ "%link%": resource.link, "%title%": resource.title, "%description%": resource.description };
-			//Replace %data% with object informtaion
-			const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
-				function(match) {
-					return replaceChars[match];
-				});
-			$(".articleList ." + name + " li:last").append(formattedContent);	
-		})		
-	}
-
-	// 
-	function parseFilteredResources(name, resources) {
-		resources.forEach(function(resource){ 
-			$(".articleList ." + name).append(listedResources);
-			//Match %data% with object
-			const replaceChars={ "%link%": resource.link, "%title%": resource.title, "%description%": resource.description };
-			//Replace %data% with object informtaion
-			const formattedContent = resourcesContent.replace(/%link%|%title%|%description%/g,
-				function(match) {
-					return replaceChars[match];
-				});
-			$(".articleList ." + name + " li:last").append(formattedContent);	
-		})
-	}
-
-	// 
+	// Display given resource in UI
 	function parseFilteredResource(name, resource) {
+		$('.articleList .' + name).removeClass('hidden');
 		$(".articleList ." + name).append(listedResources);
 		//Match %data% with object
 		const replaceChars={ "%link%": resource.link, "%title%": resource.title, "%description%": resource.description };
@@ -114,11 +40,6 @@
 		$(".articleList ." + name + " li:last").append(formattedContent);
 	}
 
-	// Display all content from category
-	function displayCategory(categories) {
-		displayCategoryProperty(categories);
-	}
-
 	// Display all content from category matching field
 	function displayCategoryProperty(categories, property, searchText) {
 		filter.setFilterCriteria({categories: categories, propertyText: [{ property: property, text: searchText }]});
@@ -128,21 +49,7 @@
 		});
 	}
 
-	// Display all content matching categories and propertyTexts
-	// @param {string[]} categories
-	// @param {propertyText[]} propertyTexts
-	// @returns resources[]
-	function displayCategoryPropertyTexts(categories, propertyTexts) {
-		filter.setFilterCriteria({categories: categories, propertyText: propertyTexts});
-		var filteredResults = filter.getFilteredResults();
-		filteredResults.forEach(result => {
-			parseFilteredResource(result.category, result);
-		})
-		
-		return filteredResults;
-	}
-
-	// Categories title and intro displayed
+	// Displays categories title and intro
 	function categoriesIntro(name){
 		const category = categories[name];
 		// console.log(category);
@@ -165,39 +72,58 @@
 	// @param {string[]} terms
 	// @returns 
 	function createFilterCriteria(categories, difficulties, terms) {
-		const filterCriteriaConstructor = function(categories, propertyText) {
-			this.categories = categories;
-			this.propertyText = propertyText;
+		const filterCriteriaConstructor = {
+			create(categories, propertyText) {
+				this.categories = categories;
+				this.propertyText = propertyText;
+			}
 		};
 
-		const propertyTextConstructor = function (property, text) {
-			this.property = property;
-			this.text = text;
+		const propertyTextConstructor = {
+			create(property, text) {
+				this.property = property;
+				this.text = text;
+			}
 		};
 
-		let nullPropertyText = [];
+		let nullPropertyTexts = [];
 		if (!difficulties && !terms) {
-			nullPropertyText.push(new propertyTextConstructor(undefined, undefined));
+			const propertyText = Object.create(propertyTextConstructor);
+			propertyText.create(undefined, undefined);
+			nullPropertyTexts.push(propertyText);
 		}
 
 		// Build propertyText for difficulties
-		const difficultiesPropertyText = [];
-		if (difficulties && difficulties.length) {
-			difficulties.forEach(difficulty => {
-				difficultiesPropertyText.push(new propertyTextConstructor('difficulty', difficulty));
-			});
+		const difficultiesPropertyTexts = [];
+
+		if (difficulties && Array.isArray(difficulties) && difficulties.length) {
+			const propertyText = Object.create(propertyTextConstructor);
+			
+
+			if (difficulties[0].toLowerCase() === 'all') {
+				propertyText.create('difficulty', undefined);
+				difficultiesPropertyTexts.push(propertyText);				
+			}
+			else {
+				propertyText.create('difficulty', difficulties);
+				difficultiesPropertyTexts.push(propertyText);
+			}
 		}
 
 		// Build propertyText for terms
-		const termsPropertyText = [];
+		const termsPropertyTexts = [];
 		if (terms && terms.length) {
 			terms.forEach(term => {
-				termsPropertyText.push(new propertyTextConstructor(undefined, term));
+				const propertyText = Object.create(propertyTextConstructor);
+				propertyText.create(undefined, term);
+				termsPropertyTexts.push(propertyText);
 			});
 		}
 
-		const propertyText = [...nullPropertyText, ...difficultiesPropertyText, ...termsPropertyText];
-		const filterCriteria = new filterCriteriaConstructor(categories, propertyText);
+		const propertyTextCombined = [...nullPropertyTexts, ...difficultiesPropertyTexts, ...termsPropertyTexts];
+		
+		const filterCriteria = Object.create(filterCriteriaConstructor);
+		filterCriteria.create(categories, propertyTextCombined)
 		return filterCriteria;		
 	}
 
@@ -225,18 +151,6 @@
 	/**********************************/
 	// Public Functions
 	/**********************************/
-
-	// Displays all resources
-	exports.displayDataAll = displayDataAll;
-
-	// Displays selected categories resources
-	exports.displayDataCategory = displayDataCategory;
-
-	// Displays search resources
-	exports.displayDataSearch = displayDataSearch;
-
-	// Displays selected difficulties resources
-	exports.displayDataDifficulty = displayDataDifficulty;
 
 	exports.displayFilteredData = filterResources;
 

@@ -32,7 +32,7 @@
         }
     ];
 
-    // Returns the properties of the data collection
+    // Returns the searchable properties of the data collection by default
     // @params boolean
 	exports.getProperties = function(all = false) {
         var properties = [];
