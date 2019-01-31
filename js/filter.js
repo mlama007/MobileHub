@@ -113,7 +113,8 @@
     // @params {object, string, string}
     // @returns {object} resource with a property that matches text
     function _getPropertyMatch(category, resource, property, propertyTextToMatch) {
-        if (!propertyTextToMatch.property || (property === propertyTextToMatch.property)) {
+        if (!propertyTextToMatch.property || 
+            (property === propertyTextToMatch.property && properties.getProperties(true).includes(propertyTextToMatch.property))) {
             return _getPropertyTextInResource(category, resource, property, propertyTextToMatch.text);
         }
     }

@@ -72,7 +72,7 @@
 				"link": "https://www.youtube.com/watch?v=ahPRvVyw9Eo&t=69s",
 				"difficulty" :"Advanced",
 				"description" : "A look at new CSS tools and new possibilities in web design, with Singapore-based Hui Jing Chen.",
-				"tag" : ["CSS Grid"],
+				"tag" : ["CSS", "Grid"],
 			},
 			{
 				"title": "CSS Reference",
@@ -895,7 +895,7 @@
 				"title": "Codecademy",
 				"link": "https://www.codecademy.com/",
 				"description" : "Code Interactively for Freed",
-				"difficulty" :"Beginneer",
+				"difficulty" :"Beginner",
 				"tag" : [''],
 				'type': ''
 			},
@@ -903,7 +903,7 @@
 				"title": "Free Code Camp (FCC)",
 				"link": "https://www.freecodecamp.org/",
 				"description" : "Ever growing resources to learn to code for free with an in-depth front-end cirriculum that over covers server and database programming.",
-				"difficulty" : "Advance",
+				"difficulty" : "Advanced",
 				"tag" : [''],
 				'type': ''
 			},
