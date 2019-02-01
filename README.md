@@ -1,7 +1,3 @@
-# MobileHub Beta
-
-[MobileHub Beta](https://participator.github.io/MobileHub-Beta/) is a beta version of [MobileHub](https://mlama007.github.io/MobileHub/) where beta updates will be added.
-
 # Mobile Hub
 * This is a tool which students can use to browse a collection of resources. These will cover beginner, intermediate and advanced skills and other requirements.
 
@@ -21,8 +17,5 @@
 * Downvote
 * Logins
 
-## Tasks
-- Filter
-   - create functionality for difficultities
-   - create functionality for categories
-   - create functionality for search bar
+### MobileHub Beta
+[MobileHub Beta](https://participator.github.io/MobileHub-Beta/) is a live beta version of [MobileHub](https://mlama007.github.io/MobileHub/) where beta updates will be added.
