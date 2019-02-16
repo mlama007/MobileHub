@@ -24,11 +24,11 @@
 				"tag" : [],
 			},
 			{
-				title: "Background & Text Colors",
-				link: "http://www.debmark.com/colors.htm",
-				difficulty: "Beginner",
-				description: "See how the text colors look on the various background colors.",
-				tag: [],
+				"title": "Background & Text Colors",
+				"link": "http://www.debmark.com/colors.htm",
+				"difficulty": "Beginner",
+				"description": "See how the text colors look on the various background colors.",
+				"tag": [],
 			},
 			// Intermediate
 			{
@@ -127,6 +127,14 @@
 				"difficulty" :"Advanced",
 				"description" : "This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change.",
 				"tag" : ["Validation"],
+			},
+			{
+				"title": "cssreference.io",
+				"link": "https://cssreference.io/",
+				"difficulty" :"Beginner",
+				"description" : "A free visual guide to CSS",
+				"tag" : [""],
+				"type": ""
 			},
 		],
 	
@@ -646,6 +654,15 @@
 				"createdDate": "2018-07-03",
 			},
 			{
+				"title": "Design Better Forms",
+				"link": "https://uxdesign.cc/design-better-forms-96fadca0f49c",
+				"createdDate": "2019-15-02",
+				"difficulty" :"Intermediate",
+				"description" : "Common mistakes designers make and how to fix them",
+				"tag" : ["Design", "Form", "UX", "Opinion"],
+				"type": "Blog"
+			},
+			{
 				"title": "API Directory",
 				"link": "https://www.programmableweb.com/apis/directory",
 				"difficulty" :"Beginner",
@@ -780,13 +797,20 @@
 				"difficulty" :"Intermediate",
 				"description" : "A set of small, responsive CSS modules that you can use in every web project.",
 				"tag" : [],
-			},			
+			},
 			{
 				"title": "React JS Tutorials",
 				"link": "https://www.youtube.com/playlist?list=PLoYCgNOIyGABj2GQSlDRjgvXtqfDxKm5b",
 				"difficulty" :"Intermediate",
 				"description" : "React JS video tutorials playlist.",
 				"tag" : [],
+			},
+			{
+				"title": "JAMstack WTF",
+				"link": "https://jamstack.wtf",
+				"difficulty" :"Intermediate",
+				"description" : "This guide will help you understand why the JAMstack exists and how to get started using it.",
+				"tag" : ['Static Site Generator', 'Serverless'],
 			},
 			// Advanced
 			{
