@@ -6,8 +6,7 @@
 	//array of objects conatining Resource Links
 	window.MobileHub.Resources = {
 		//CSS Resources
-		"CSS":
-		[
+		"CSS": [
 			// Beginner
 			{
 				"title": "Hover.css",
@@ -527,20 +526,6 @@
 				"tag" : [],
 			},
 			{
-				"title": "HERE",
-				"link": "HERE",
-				"difficulty" :"Beginner",
-				"description" : "HERE",
-				"tag" : [],
-			},
-			{
-				"title": "HERE",
-				"link": "HERE",
-				"difficulty" :"Beginner",
-				"description" : "HERE",
-				"tag" : [],
-			},
-			{
 				"title": "Friday Front-End",
 				"link": "https://fridayfrontend.curated.co/",
 				"difficulty" :"Beginner",
@@ -643,7 +628,14 @@
 				"link": "https://unsplash.com/",
 				"difficulty" :"Beginner",
 				"description" : "Beautiful, free images and photos that you can download and use for any project. Better than any royalty free or stock photos.",
-				"tag" : ["image"],
+				"tag" : ["image", "stock"],
+			},
+			{
+				"title": "Envato Elements",
+				"link": "https://elements.envato.com/?utm_source=envatocom&utm_medium=promos&utm_campaign=elements_envatocom_selector&utm_content=env_selector",
+				"difficulty" :"Beginner",
+				"description" : "Browse through thousands of stock photos, fonts and web templates. With unlimited downloads of all of our items, your project will be perfect in no time.",
+				"tag" : ["image", "stock"],
 			},
 			{
 				"title": "20 cutting-edge web tools to try now",
@@ -1027,6 +1019,14 @@
 				"tag" : ['chrome', 'console', 'api'],
 				'type': 'Tool'
 			},
+			{
+				"title": "Built With",
+				"link": "https://builtwith.com/",
+				"description" : "Web technology information profiler tool. Find out what a website is built with.",
+				"difficulty" :"Easy",
+				"tag" : ['web', 'seo'],
+				'type': 'Tool'
+			}
 		],
 
 	};
