@@ -1026,6 +1026,14 @@
 				"difficulty" :"Easy",
 				"tag" : ['web', 'seo'],
 				'type': 'Tool'
+			},
+			{
+				"title": "Cypress",
+				"link": "https://www.cypress.io/",
+				"description": "Fast, easy and reliable testing for anything that runs in a browser. Install Cypress in seconds and take the pain out of front-end testing.",
+				"difficulty": "Intermediate",
+				"tag": ["web", "frontend"],
+				"type": "Tool"
 			}
 		],
 
