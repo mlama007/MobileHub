@@ -662,6 +662,14 @@
 				"tag" : ["tools"],
 				"createdDate": "2018-08-02",
 			},
+			{
+				"title": "Career Cup",
+				"link": "https://careercup.com/page?pid=google-interview-questions",
+				"difficulty" :"Beginner",
+				"description" : "Interview questions from top companies and top positions, ",
+				"tag" : ["Resources"],
+				"createdDate": "2019-30-04",
+			},
 			// Intermediate
 			{
 				"title": "Markup Validation Service",
