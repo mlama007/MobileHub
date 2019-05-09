@@ -756,7 +756,16 @@
 				"description" : "Describes why you should not say you're a junior developer.",
 				"tag" : ['Motivational'],
 				"type" : 'Article',
-			},			
+			},
+			{
+				"title": "How Browsers Work",
+				"link": "http://taligarsiel.com/Projects/howbrowserswork1.htm",
+				"difficulty" :"Advanced",
+				"description" : "Behind the scenes of modern web browsers",
+				"tag" : ["Resources"],
+				"type" : "Research Paper",
+				"createdDate": "2019-09-05",
+			},
 		],
 		
 		//Frameworks Resources
