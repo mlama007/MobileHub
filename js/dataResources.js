@@ -135,6 +135,14 @@
 				"tag" : [""],
 				"type": ""
 			},
+			{
+				"title": "Web Design in 4 Minutes",
+				"link": "https://jgthms.com/web-design-in-4-minutes",
+				"difficulty" :"Beginner",
+				"description" : "Learn the basics of web design in 4 minutes with this interactive tutorial.",
+				"tag" : ["Design"],
+				"type": "Interactive Article"
+			},
 		],
 	
 		//HTML Resources
@@ -763,7 +771,7 @@
 				"difficulty" :"Advanced",
 				"description" : "Behind the scenes of modern web browsers",
 				"tag" : ["Resources"],
-				"type" : "Research Paper",
+				"type" : "Article",
 				"createdDate": "2019-09-05",
 			},
 		],
