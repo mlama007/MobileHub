@@ -29,6 +29,13 @@
 				"description": "See how the text colors look on the various background colors.",
 				"tag": [],
 			},
+			{
+				"title": "CSSFX",
+				"link": "https://cssfx.dev/",
+				"difficulty": "Beginner",
+				"description": "Browse a carefully crafted collection of loaders, hover effects, transitions, and other CSS effects to use in your next project. Effects are designed with an emphasis on fluidity, simplicity, and ease of use.",
+				"tag": ['Animation', 'Templates'],
+			},
 			// Intermediate
 			{
 				"title": "30 Seconds of CSS",
