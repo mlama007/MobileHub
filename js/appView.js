@@ -10,7 +10,8 @@
 	
 	//--- Run when page loads ---//
 	window.onload = function() {
-
+		const copyright = document.querySelector('footer.footer');
+		copyright.innerHTML = copyright.innerHTML.replace('{{year}}', getCurrentYear());
 	};
 
 	//--- Events Section ---//
@@ -196,6 +197,10 @@
 			articleList.innerHTML = '';
 			articleList.classList.add('hidden');
 		});
+	}
+
+	function getCurrentYear() {
+		return new Date().getFullYear();
 	}
 
 })();
